@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/oysteR
     docker:
       - image: rocker/verse:3.5.3
     steps:
@@ -15,4 +16,4 @@ jobs:
           name: Check package
           command: R CMD check *tar.gz --as-cran --no-manual
       - store_artifacts:
-          path: oysteR.Rcheck/
+          path: ~/oysteR/oysteR.Rcheck/

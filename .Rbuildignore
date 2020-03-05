@@ -1,1 +1,1 @@
-usethis::use_build_ignore(".circleci")
+^.circleci$
