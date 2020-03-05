@@ -20,3 +20,6 @@ LazyData: true
 Imports:
     httr,
     rjson
+Suggests:
+    testthat (>= 2.1.0),
+    httptest

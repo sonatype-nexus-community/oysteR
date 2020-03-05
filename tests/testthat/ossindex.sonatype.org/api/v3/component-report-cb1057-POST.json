@@ -1,0 +1,806 @@
+[
+    {
+        "coordinates": "pkg:cran/abc@2.1",
+        "description": "abc:  Tools for Approximate Bayesian Computation (ABC)\n\nImplements several ABC algorithms for performing parameter estimation, model selection, and goodness-of-fit.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/abc@2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/abc.data@1.0",
+        "description": "abc.data:  Data Only: Tools for Approximate Bayesian Computation (ABC)\n\nContains data which are used by functions of the 'abc' package.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/abc.data@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/askpass@1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/askpass@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/assertthat@0.2.1",
+        "description": "assertthat:  Easy Pre and Post Assertions\n\nassertthat is an extension to stopifnot() that makes it easy to declare the pre and post conditions that you code should satisfy, while also producing friendly error messages so that your users know what they've done wrong.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/assertthat@0.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/backports@1.1.5",
+        "description": "backports:  Reimplementations of Functions Introduced Since R-3.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/backports@1.1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BH@1.69.0-1",
+        "description": "BH:  Boost C++ Header Files\n\nBoost provides free peer-reviewed portable C++ source libraries.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BH@1.69.0-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/brew@1.0-6",
+        "description": "brew:  Templating Framework for Report Generation\n\nbrew implements a templating framework for mixing text and R code for report generation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/brew@1.0-6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/callr@3.3.2",
+        "description": "callr:  Call R from R\n\nIt is sometimes useful to perform a computation in a separate R process, without affecting the current R process at all.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/callr@3.3.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/cli@1.1.0",
+        "description": "cli:  Helpers for Developing Command Line Interfaces\n\nA suite of tools designed to build attractive command line interfaces ('CLIs').",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/cli@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/clipr@0.7.0",
+        "description": "clipr:  Read and Write from the System Clipboard\n\nSimple utility functions to read from and write to the Windows, OS X, and X11 clipboards.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/clipr@0.7.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/clisymbols@1.2.0",
+        "description": "clisymbols:  Unicode Symbols at the R Prompt\n\nA small subset of Unicode symbols, that are useful when building command line applications.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/clisymbols@1.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/colorspace@1.4-1",
+        "description": "colorspace:  Color Space Manipulation\n\nCarries out mapping between assorted color spaces including RGB, HSV, HLS, CIEXYZ, CIELUV, HCL (polar CIELUV), CIELAB and polar CIELAB.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/colorspace@1.4-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/commonmark@1.7",
+        "description": "commonmark:  High Performance CommonMark and Github Markdown Rendering in R\n\nThe CommonMark specification defines a rationalized version of markdown syntax.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/commonmark@1.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/covr@3.4.0",
+        "description": "covr:  Test Coverage for Packages\n\nTrack and report code coverage for your package and (optionally) upload the results to a coverage service like 'Codecov' <http://codecov.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/covr@3.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/crayon@1.3.4",
+        "description": "crayon:  Colored Terminal Output\n\nColored terminal output on terminals that support 'ANSI' color and highlight codes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/crayon@1.3.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/crosstalk@1.0.0",
+        "description": "crosstalk:  Inter-Widget Interactivity for HTML Widgets\n\nProvides building blocks for allowing HTML widgets to communicate with each other, with Shiny or without (i.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/crosstalk@1.0.0",
+        "vulnerabilities": [
+            {
+                "id": "49da4413-af2b-4e55-acc0-9c752e30dde4",
+                "title": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "description": "The software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+                "cvssScore": 7.2,
+                "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                "cwe": "CWE-79",
+                "reference": "https://ossindex.sonatype.org/vuln/49da4413-af2b-4e55-acc0-9c752e30dde4"
+            }
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/curl@4.2",
+        "description": "curl:  A Modern and Flexible Web Client for R\n\nThe curl() and curl_download() functions provide highly configurable drop-in replacements for base url() and download.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/curl@4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/data.table@1.12.6",
+        "description": "data.table:  Extension of 'data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/data.table@1.12.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/desc@1.2.0",
+        "description": "desc:  Manipulate DESCRIPTION Files\n\nTools to read, write, create, and manipulate DESCRIPTION files.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/desc@1.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/devtools@2.2.1",
+        "description": "devtools:  Tools to Make Developing R Packages Easier\n\nCollection of package development tools.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/devtools@2.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/digest@0.6.23",
+        "description": "digest:  Create Compact Hash Digests of R Objects\n\nImplementation of a function 'digest()' for the creation of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 'crc32', 'xxhash' and 'murmurhash' algorithms) permitting easy comparison of R language objects, as well as a function 'hmac()' to create hash-based message authentication code.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/digest@0.6.23",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DT@0.10",
+        "description": "DT:  A Wrapper of the JavaScript Library 'DataTables'\n\nData objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DT@0.10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ellipsis@0.3.0",
+        "description": "ellipsis:  Tools for Working with .",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ellipsis@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/evaluate@0.14",
+        "description": "evaluate:  Parsing and Evaluation Tools that Provide More Details than the Default\n\nParsing and evaluation tools that make it easy to recreate the command line behaviour of R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/evaluate@0.14",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/fansi@0.4.0",
+        "description": "fansi:  ANSI Control Sequence Aware String Functions\n\nCounterparts to R string manipulation functions that account for the effects of ANSI text formatting control sequences.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/fansi@0.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/farver@2.0.1",
+        "description": "farver:  Vectorised Colour Conversion and Comparison\n\nThe encoding of colour can be handled in many different ways, using different colour spaces.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/farver@2.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/fastmap@1.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/fastmap@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/fs@1.3.1",
+        "description": "fs:  Cross-Platform File System Operations Based on 'libuv'\n\nA cross-platform interface to file system operations, built on top of the 'libuv' C library.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/fs@1.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ggplot2@3.2.1",
+        "description": "ggplot2:  Create Elegant Data Visualisations Using the Grammar of Graphics\n\nA system for 'declaratively' creating graphics, based on \"The Grammar of Graphics\".",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ggplot2@3.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/gh@1.0.1",
+        "description": "gh:  'GitHub' 'API'\n\nMinimal client to access the 'GitHub' 'API'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/gh@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/git2r@0.26.1",
+        "description": "git2r:  Provides Access to Git Repositories\n\nInterface to the 'libgit2' library, which is a pure C implementation of the 'Git' core methods.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/git2r@0.26.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/glue@1.3.1",
+        "description": "glue:  Interpreted String Literals\n\nAn implementation of interpreted string literals, inspired by Python's Literal String Interpolation <https://www.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/glue@1.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/gtable@0.3.0",
+        "description": "gtable:  Arrange 'Grobs' in Tables\n\nTools to make it easier to work with \"tables\" of 'grobs'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/gtable@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/htmltools@0.4.0",
+        "description": "htmltools:  Tools for HTML\n\nTools for HTML generation and output.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/htmltools@0.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/htmlwidgets@1.5.1",
+        "description": "htmlwidgets:  HTML Widgets for R\n\nA framework for creating HTML widgets that render in various contexts including the R console, 'R Markdown' documents, and 'Shiny' web applications.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/htmlwidgets@1.5.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/httptest@3.3.0",
+        "description": "httptest:  A Test Environment for HTTP Requests\n\nTesting and documenting code that communicates with remote servers can be painful.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/httptest@3.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/httpuv@1.5.2",
+        "description": "httpuv:  HTTP and WebSocket Server Library\n\nProvides low-level socket and protocol support for handling HTTP and WebSocket requests directly from within R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/httpuv@1.5.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/httr@1.4.1",
+        "description": "httr:  Tools for Working with URLs and HTTP\n\nUseful tools for working with HTTP organised by HTTP verbs (GET(), POST(), etc).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/httr@1.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ini@0.3.1",
+        "description": "ini:  Read and Write '.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ini@0.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/jsonlite@1.6",
+        "description": "jsonlite:  A Robust, High Performance JSON Parser and Generator for R\n\nA fast JSON parser and generator optimized for statistical data and the web.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/jsonlite@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/labeling@0.3",
+        "description": "labeling:  Axis Labeling\n\nProvides a range of axis labeling algorithms.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/labeling@0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/later@1.0.0",
+        "description": "later:  Utilities for Delaying Function Execution\n\nExecutes arbitrary R or C functions some time after the current time, after the R execution stack has emptied.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/later@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/lazyeval@0.2.2",
+        "description": "lazyeval:  Lazy (Non-Standard) Evaluation\n\nAn alternative approach to non-standard evaluation using formulas.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/lazyeval@0.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/lifecycle@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/lifecycle@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/locfit@1.5-9.1",
+        "description": "locfit:  Local Regression, Likelihood and Density Estimation\n\nLocal regression, likelihood and density estimation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/locfit@1.5-9.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/magrittr@1.5",
+        "description": "magrittr:  A Forward-Pipe Operator for R\n\nProvides a mechanism for chaining commands with a new forward-pipe operator, %>%.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/magrittr@1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/MatrixModels@0.4-1",
+        "description": "MatrixModels:  Modelling with Sparse And Dense Matrices\n\nModelling with sparse and dense 'Matrix' matrices, using modular prediction and response module classes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/MatrixModels@0.4-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/memoise@1.1.0",
+        "description": "memoise:  Memoisation of Functions\n\nCache the results of a function so that when you call it again with the same arguments it returns the pre-computed value.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/memoise@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/mime@0.7",
+        "description": "mime:  Map Filenames to MIME Types\n\nGuesses the MIME type from a filename extension using the data derived from /etc/mime.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/mime@0.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/modules@0.8.0",
+        "description": "modules:  Self Contained Units of Source Code\n\nProvides modules as an organizational unit for source code.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/modules@0.8.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/munsell@0.5.0",
+        "description": "munsell:  Utilities for Using Munsell Colours\n\nProvides easy access to, and manipulation of, the Munsell colours.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/munsell@0.5.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/openssl@1.4.1",
+        "description": "openssl:  Toolkit for Encryption, Signatures and Certificates Based on OpenSSL\n\nBindings to OpenSSL libssl and libcrypto, plus custom SSH pubkey parsers.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/openssl@1.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/pillar@1.4.2",
+        "description": "pillar:  Coloured Formatting for Columns\n\nProvides a 'pillar' generic designed for formatting columns of data using the full range of colours provided by modern terminals.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/pillar@1.4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/pkgbuild@1.0.6",
+        "description": "pkgbuild:  Find Tools Needed to Build R Packages\n\nProvides functions used to build R packages.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/pkgbuild@1.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/pkgconfig@2.0.3",
+        "description": "pkgconfig:  Private Configuration for 'R' Packages\n\nSet configuration options on a per-package basis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/pkgconfig@2.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/pkgload@1.0.2",
+        "description": "pkgload:  Simulate Package Installation and Attach\n\nSimulates the process of installing a package and then attaching it.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/pkgload@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/plyr@1.8.4",
+        "description": "plyr:  Tools for Splitting, Applying and Combining Data\n\nA set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all the pieces back together.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/plyr@1.8.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/praise@1.0.0",
+        "description": "praise:  Praise Users\n\nBuild friendly R packages that praise their users if they have done something good, or they just need it to feel better.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/praise@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/prettyunits@1.0.2",
+        "description": "prettyunits:  Pretty, Human Readable Formatting of Quantities\n\nPretty, human readable formatting of quantities.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/prettyunits@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/processx@3.4.1",
+        "description": "processx:  Execute and Control System Processes\n\nTools to run system processes in the background.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/processx@3.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/promises@1.1.0",
+        "description": "promises:  Abstractions for Promise-Based Asynchronous Programming\n\nProvides fundamental abstractions for doing asynchronous programming in R using promises.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/promises@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ps@1.3.0",
+        "description": "ps:  List, Query, Manipulate System Processes\n\nList, query and manipulate all system processes, on 'Windows', 'Linux' and 'macOS'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ps@1.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/purrr@0.3.3",
+        "description": "purrr:  Functional Programming Tools\n\nA complete and consistent functional programming toolkit for R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/purrr@0.3.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/quantreg@5.52",
+        "description": "quantreg:  Quantile Regression\n\nEstimation and inference methods for models of conditional quantiles: Linear and nonlinear parametric and non-parametric (total variation penalized) models for conditional quantiles of a univariate response and several methods for handling censored survival data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/quantreg@5.52",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/R6@2.4.1",
+        "description": "R6:  Classes with Reference Semantics\n\nCreates classes with reference semantics, similar to R's built-in reference classes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/R6@2.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rcmdcheck@1.3.3",
+        "description": "rcmdcheck:  Run 'R CMD check' from 'R' and Capture Results\n\nRun 'R CMD check' from 'R' programmatically, and capture the results of the individual checks.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rcmdcheck@1.3.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/RColorBrewer@1.1-2",
+        "description": "RColorBrewer:  ColorBrewer Palettes\n\nProvides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/RColorBrewer@1.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Rcpp@1.0.3",
+        "description": "Rcpp:  Seamless R and C++ Integration\n\nThe 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Rcpp@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/remotes@2.1.0",
+        "description": "remotes:  R Package Installation from Remote Repositories, Including 'GitHub'\n\nDownload and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/remotes@2.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/reshape2@1.4.3",
+        "description": "reshape2:  Flexibly Reshape Data: A Reboot of the Reshape Package\n\nFlexibly restructure and aggregate data using just two functions: melt and 'dcast' (or 'acast').",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/reshape2@1.4.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rex@1.1.2",
+        "description": "rex:  Friendly Regular Expressions\n\nA friendly interface for the construction of regular expressions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rex@1.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rjson@0.2.20",
+        "description": "rjson:  JSON for R\n\nConverts R object into JSON objects and vice-versa.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rjson@0.2.20",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rlang@0.4.2",
+        "description": "rlang:  Functions for Base Types and Core R and 'Tidyverse' Features\n\nA toolbox for working with base types, core R features like the condition system, and core 'Tidyverse' features like tidy evaluation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rlang@0.4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/roxygen2@7.0.1",
+        "description": "roxygen2:  In-Line Documentation for R\n\nGenerate your Rd documentation, 'NAMESPACE' file, and collation field using specially formatted comments.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/roxygen2@7.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rprojroot@1.3-2",
+        "description": "rprojroot:  Finding Files in Project Subdirectories\n\nRobust, reliable and flexible paths to files below a project root.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rprojroot@1.3-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rstudioapi@0.10",
+        "description": "rstudioapi:  Safely Access the RStudio API\n\nAccess the RStudio API (if available) and provide informative error messages when it's not.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rstudioapi@0.10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/rversions@2.0.0",
+        "description": "rversions:  Query 'R' Versions, Including 'r-release' and 'r-oldrel'\n\nQuery the main 'R' 'SVN' repository to find the versions 'r-release' and 'r-oldrel' refer to, and also all previous 'R' versions and their release dates.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/rversions@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/scales@1.1.0",
+        "description": "scales:  Scale Functions for Visualization\n\nGraphical scales map data to aesthetics, and provide methods for automatically determining breaks and labels for axes and legends.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/scales@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/sessioninfo@1.1.1",
+        "description": "sessioninfo:  R Session Information\n\nQuery and print information about the current R session.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/sessioninfo@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/shiny@1.4.0",
+        "description": "shiny:  Web Application Framework for R\n\nMakes it incredibly easy to build interactive web applications with R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/shiny@1.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/sourcetools@0.1.7",
+        "description": "sourcetools:  Tools for Reading, Tokenizing and Parsing R Code\n\nTools for the reading and tokenization of R code.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/sourcetools@0.1.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/SparseM@1.77",
+        "description": "SparseM:  Sparse Linear Algebra\n\nSome basic linear algebra functionality for sparse matrices is provided: including Cholesky decomposition and backsolving as well as standard R subsetting and Kronecker products.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/SparseM@1.77",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/stringi@1.4.3",
+        "description": "stringi:  Character String Processing Facilities\n\nAllows for fast, correct, consistent, portable, as well as convenient character string/text processing in every locale and any native encoding.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/stringi@1.4.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/stringr@1.4.0",
+        "description": "stringr:  Simple, Consistent Wrappers for Common String Operations\n\nA consistent, simple and easy to use set of wrappers around the fantastic 'stringi' package.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/stringr@1.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/sys@3.3",
+        "description": "sys:  Portable System Utilities\n\nPowerful replacements for base system2 with consistent behavior across platforms.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/sys@3.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/testthat@2.3.0",
+        "description": "testthat:  Unit Testing for R\n\nSoftware testing is important, but, in part because it is frustrating and boring, many of us avoid it.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/testthat@2.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/tibble@2.1.3",
+        "description": "tibble:  Simple Data Frames\n\nProvides a 'tbl_df' class (the 'tibble') that provides stricter checking and better formatting than the traditional data frame.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/tibble@2.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/usethis@1.5.1",
+        "description": "usethis:  Automate Package and Project Setup\n\nAutomate package and project setup tasks that are otherwise performed manually.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/usethis@1.5.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/utf8@1.1.4",
+        "description": "utf8:  Unicode Text Processing\n\nProcess and print 'UTF-8' encoded international text (Unicode).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/utf8@1.1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/vctrs@0.2.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/vctrs@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/viridisLite@0.3.0",
+        "description": "viridisLite:  Default Color Maps from 'matplotlib' (Lite Version)\n\nImplementation of the 'viridis' - the default -, 'magma', 'plasma', 'inferno', and 'cividis' color maps for 'R'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/viridisLite@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/whisker@0.4",
+        "description": "whisker:  {{mustache}} for R, logicless templating\n\nlogicless templating, reuse templates in many programming languages including R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/whisker@0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/withr@2.1.2",
+        "description": "withr:  Run Code 'With' Temporarily Modified Global State\n\nA set of functions to run code 'with' safely and temporarily modified global state.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/withr@2.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/xgboost@0.90.0.2",
+        "description": "xgboost:  Extreme Gradient Boosting\n\nExtreme Gradient Boosting, which is an efficient implementation of the gradient boosting framework from Chen & Guestrin (2016) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/xgboost@0.90.0.2",
+        "vulnerabilities": [
+            {
+                "id": "4dae2e0b-d6ea-48a1-a8f3-98cd9c865824",
+                "title": "CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+                "description": "The program copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow.",
+                "cvssScore": 7.0,
+                "cvssVector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+                "cwe": "CWE-120",
+                "reference": "https://ossindex.sonatype.org/vuln/4dae2e0b-d6ea-48a1-a8f3-98cd9c865824"
+            }
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/xml2@1.2.2",
+        "description": "xml2:  Parse XML\n\nWork with XML files using a simple, consistent interface.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/xml2@1.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/xopen@1.0.0",
+        "description": "xopen:  Open System Files, 'URLs', Anything\n\nCross platform solution to open files, directories or 'URLs' with their associated programs.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/xopen@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/xtable@1.8-4",
+        "description": "xtable:  Export Tables to LaTeX or HTML\n\nCoerce data to LaTeX and HTML tables.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/xtable@1.8-4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/yaml@2.2.0",
+        "description": "yaml:  Methods to Convert R Data to YAML and Back\n\nImplements the 'libyaml' 'YAML' 1.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/yaml@2.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/zeallot@0.1.0",
+        "description": "zeallot:  Multiple, Unpacking, and Destructuring Assignment\n\nProvides a %<-% operator to perform multiple, unpacking, and destructuring assignment in R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/zeallot@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    }
+]

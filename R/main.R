@@ -12,12 +12,66 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License."
 
-setwd(dirname(getwd()))
+library("httr")
+library("rjson")
 
-source('ossindex.R')
-source('collectdeps.R')
-source('audit.R')
+collect_dependencies_and_turn_into_purls <- function() {
+  ip = as.data.frame(installed.packages()[,c(1,3:4)])
+  ip = ip[is.na(ip$Priority),0:2,drop=FALSE]
 
-purls <- collect_dependencies_and_turn_into_purls()
-res <- call_oss_index(purls)
-audit_response_from_oss_index(res)
+  purls <- list()
+  for(row in 1:nrow(ip)) {
+    name <- ip[row, 1]
+    version <- ip[row, 2]
+
+    purl <- sprintf("pkg:cran/%s@%s", name, version)
+    purls <- append(purls, purl)
+  }
+  return(purls)
+}
+
+call_oss_index <- function(purls) {
+  OSS_INDEX_URL <- "https://ossindex.sonatype.org/api/v3/component-report"
+
+  BODY <- list(coordinates = purls)
+
+  r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json")
+
+  result <- rjson::fromJSON(httr::content(r, "text", encoding="UTF-8"))
+  return(result)
+}
+
+audit_response_from_oss_index <- function(response) {
+  cat("Sonabot here, beep boop beep boop, here are the results from OSS Index\n")
+  for(i in response) {
+    cat("\n")
+    cat(sprintf("Coordinates: %s\n", i["coordinates"]))
+    cat(sprintf("Description: %s\n", i["description"]))
+    cat(sprintf("Reference: %s\n", i["reference"]))
+    if (length(i$vulnerabilities) > 0) {
+      print_vulnerability(i$vulnerabilities)
+    }
+    cat("\n")
+  }
+}
+
+print_vulnerability <- function(vulnerabilities) {
+  cat("\n")
+  cat("Vulnerability found\n")
+  for(i in vulnerabilities) {
+    cat("\n")
+    cat(sprintf("ID: %s\n", i["id"]))
+    cat(sprintf("Title: %s\n", i["title"]))
+    cat(sprintf("Description: %s\n", i["description"]))
+    cat(sprintf("CVSS Score: %s\n", i["cvssScore"]))
+    cat(sprintf("CVSS Vector: %s\n", i["cvssVector"]))
+    cat(sprintf("CWE: %s\n", i["cwe"]))
+    cat(sprintf("Reference: %s\n", i["reference"]))
+  }
+}
+
+audit_deps_with_oss_index <- function() {
+  purls <- collect_dependencies_and_turn_into_purls()
+  res <- call_oss_index(purls)
+  audit_response_from_oss_index(res)
+}
