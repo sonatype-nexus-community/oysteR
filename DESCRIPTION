@@ -16,9 +16,14 @@ URL: https://github.com/sonatype-nexus-community/oysteR
 BugReports: https://github.com/sonatype-nexus-community/oysteR/issues
 License: Apache License 2.0 | file LICENSE
 Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE)
 Imports:
     httr,
     rjson
 Suggests:
     testthat (>= 2.1.0),
-    httptest
+    httptest,
+    knitr,
+    rmarkdown
