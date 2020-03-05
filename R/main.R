@@ -42,13 +42,13 @@ call_oss_index <- function(purls) {
 }
 
 audit_response_from_oss_index <- function(response) {
-  vulnerableComponents <- extract_vulnerable_components(response)
+  vulnerableComponents <- .extract_vulnerable_components(response)
 
   numberOfComponents <- length(response)
   numberOfVulnerableComponents <- length(vulnerableComponents)
-  numberOfVulnerabilities <- count_vulnerabilities(vulnerableComponents)
+  numberOfVulnerabilities <- .count_vulnerabilities(vulnerableComponents)
 
-  print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
+  .print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
 
   index <- 1
   for(i in response) {
@@ -66,17 +66,17 @@ audit_response_from_oss_index <- function(response) {
       )
     if (numberOfVulnsForThisComponent > 0) {
       cat(sprintf("\n===\nVulnerabilities were detected for this component\n===\n\n"))
-      print_vulnerability(vulnerabilities)
+      .print_vulnerability(vulnerabilities)
     }
     index <- index + 1
   }
 }
 
-extract_vulnerable_components <- function(allComponents) {
+.extract_vulnerable_components <- function(allComponents) {
   return(Filter(function(l) length(l["vulnerabilities"]) > 0, allComponents))
 }
 
-count_vulnerabilities <- function(vulnerableComponents) {
+.count_vulnerabilities <- function(vulnerableComponents) {
   totalVulnerabilities <- 0
   for (component in vulnerableComponents) {
     totalVulnerabilities <- totalVulnerabilities + length(component["vulnerabilities"])
@@ -84,7 +84,7 @@ count_vulnerabilities <- function(vulnerableComponents) {
   return(totalVulnerabilities)
 }
 
-print_summary <- function(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities) {
+.print_summary <- function(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities) {
   pluralizer = ""
   if (numberOfVulnerableComponents == 1) {
     pluralizer = "s"
@@ -95,7 +95,7 @@ print_summary <- function(numberOfComponents, numberOfVulnerableComponents, numb
   cat(sprintf("\tA total of %d known vulnerabilities were identified.\n", numberOfVulnerabilities))
 }
 
-print_vulnerability <- function(vulnerabilities) {
+.print_vulnerability <- function(vulnerabilities) {
   for(i in vulnerabilities) {
     cat("\n")
     cat(sprintf("\tCWE: %s\n", i["cwe"]))
