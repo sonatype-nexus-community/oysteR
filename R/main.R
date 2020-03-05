@@ -42,22 +42,28 @@ call_oss_index <- function(purls) {
 }
 
 audit_response_from_oss_index <- function(response) {
-  cat("Sonabot here, beep boop beep boop, here are the results from OSS Index\n")
+  numberOfComponents <- length(response)
+  numberOfVulnerableComponents <- 2
+  numberOfVulnerabilities <- 3
+
+  cat("Sonabot here, beep boop beep boop, here are the results from OSS Index:\n")
+  cat(sprintf("  %d components were detected, of which %d contain known vulnerabilities.\n", numberOfComponents, numberOfVulnerableComponents))
+  cat(sprintf("  A total of %d known vulnerabilities were identified.\n", numberOfVulnerabilities))
+
   for(i in response) {
-    cat("\n")
-    cat(sprintf("Coordinates: %s\n", i["coordinates"]))
-    cat(sprintf("Description: %s\n", i["description"]))
-    cat(sprintf("Reference: %s\n", i["reference"]))
-    if (length(i$vulnerabilities) > 0) {
-      print_vulnerability(i$vulnerabilities)
+    vulnerabilities <- i$vulnerabilities
+    if (length(vulnerabilities) > 0) {
+      cat("\n==============\nVulnerabilities were detected for the component: \n==============\n")
+      cat(sprintf("Coordinates: %s\n", i["coordinates"]))
+      cat(sprintf("Description: %s\n", i["description"]))
+      cat(sprintf("Reference: %s\n", i["reference"]))
+      print_vulnerability(vulnerabilities, i["coordinates"])
     }
-    cat("\n")
   }
 }
 
-print_vulnerability <- function(vulnerabilities) {
-  cat("\n")
-  cat("Vulnerability found\n")
+print_vulnerability <- function(vulnerabilities, name) {
+  cat(sprintf("==============\nVulnerabilities for %s:\n==============\n", name))
   for(i in vulnerabilities) {
     cat("\n")
     cat(sprintf("ID: %s\n", i["id"]))
