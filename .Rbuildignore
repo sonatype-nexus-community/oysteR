@@ -1,1 +1,3 @@
 ^.circleci$
+^README\.Rmd$
+^.*\.(tgz$)|(tar\.gz$)

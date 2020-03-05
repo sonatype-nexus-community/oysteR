@@ -33,7 +33,10 @@ collect_dependencies_and_turn_into_purls <- function() {
   return(purls)
 }
 
+#' OSS Index public URL
 OSS_INDEX_URL <- "https://ossindex.sonatype.org/api/v3/component-report"
+
+#' OSS Index max number of purls to use
 MAX_NUMBER_OF_PURLS_PER_API_CALL <- 128
 
 #' Calls OSS Index given a list of purls
@@ -41,12 +44,19 @@ MAX_NUMBER_OF_PURLS_PER_API_CALL <- 128
 #' @param allPurls A list of purls
 #' @return A list of results from OSS Index
 call_oss_index <- function(allPurls) {
+  authEmail <- Sys.getenv("OSSINDEX_USER")
+  authToken <- Sys.getenv("OSSINDEX_TOKEN")
+
   batchesOfPurls <- .batch_purls(allPurls)
 
   result <- list()
   for (batch in batchesOfPurls) {
     BODY <- list(coordinates = batch)
-    r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json", httr::authenticate("bbelle@sonatype.com", "API_TOKEN_HERE", type = "basic"))
+    if (nchar(authEmail) > 0 && nchar(authToken) > 0) {
+      r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json", authenticate(authEmail, authToken, type = "basic"))
+    } else {
+      r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json")
+    }
     tryCatch({
       batchResult <- rjson::fromJSON(httr::content(r, "text", encoding="UTF-8"))
       result <- c(result, batchResult)
@@ -191,6 +201,7 @@ audit_response_from_oss_index <- function(response) {
   }
 }
 
+#' Convenient function that collects dependencies, checks them against OSS Index, and audits them
 audit_deps_with_oss_index <- function() {
   purls <- collect_dependencies_and_turn_into_purls()
   results <- call_oss_index(purls)
