@@ -46,27 +46,42 @@ audit_response_from_oss_index <- function(response) {
 
   numberOfComponents <- length(response)
   numberOfVulnerableComponents <- length(vulnerableComponents)
-  numberOfVulnerabilities <- 666666
+  numberOfVulnerabilities <- count_vulnerabilities(vulnerableComponents)
 
   print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
 
+  index <- 1
   for(i in response) {
-    vulnerabilities <- i$vulnerabilities
+    vulnerabilities <- i[["vulnerabilities"]]
+
     numberOfVulnsForThisComponent <- length(vulnerabilities)
+    cat(
+      sprintf(
+        "[%s/%s] - %s - Vulnerabilities (total of %d)\n", 
+        index, 
+        length(response), 
+        i["coordinates"], 
+        numberOfVulnsForThisComponent
+        )
+      )
     if (numberOfVulnsForThisComponent > 0) {
-      coordinates <- i["coordinates"]
-      cat(sprintf("\n===\nVulnerabilities were detected for the component: %s\n===\n\n", coordinates))
-      cat(sprintf("*  Coordinates: %s\n", coordinates))
-      cat(sprintf("*  Reference: %s\n", i["reference"]))
-      cat(sprintf("*  Description: %s\n\n", i["description"]))
-      cat(sprintf("*  Vulnerabilities (total of %d): \n", numberOfVulnsForThisComponent))
-      print_vulnerability(vulnerabilities, coordinates)
+      cat(sprintf("\n===\nVulnerabilities were detected for this component\n===\n\n"))
+      print_vulnerability(vulnerabilities)
     }
+    index <- index + 1
   }
 }
 
 extract_vulnerable_components <- function(allComponents) {
-  return(Filter(function(l) length(l$vulnerabilities) > 0, allComponents))
+  return(Filter(function(l) length(l["vulnerabilities"]) > 0, allComponents))
+}
+
+count_vulnerabilities <- function(vulnerableComponents) {
+  totalVulnerabilities <- 0
+  for (component in vulnerableComponents) {
+    totalVulnerabilities <- totalVulnerabilities + length(component["vulnerabilities"])
+  }
+  return(totalVulnerabilities)
 }
 
 print_summary <- function(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities) {
@@ -76,20 +91,20 @@ print_summary <- function(numberOfComponents, numberOfVulnerableComponents, numb
   }
 
   cat("\nSonabot here, beep boop beep boop, here are the results from OSS Index:\n")
-  cat(sprintf("  %d components were detected, of which %d contain%s known vulnerabilities.\n", numberOfComponents, numberOfVulnerableComponents, pluralizer))
-  cat(sprintf("  A total of %d known vulnerabilities were identified.\n", numberOfVulnerabilities))
+  cat(sprintf("\t%d components were detected, of which %d contain%s known vulnerabilities.\n", numberOfComponents, numberOfVulnerableComponents, pluralizer))
+  cat(sprintf("\tA total of %d known vulnerabilities were identified.\n", numberOfVulnerabilities))
 }
 
-print_vulnerability <- function(vulnerabilities, name) {
+print_vulnerability <- function(vulnerabilities) {
   for(i in vulnerabilities) {
     cat("\n")
-    cat(sprintf("    CWE: %s\n", i["cwe"]))
-    cat(sprintf("    Title: %s\n", i["title"]))
-    cat(sprintf("    Description: %s\n", i["description"]))
-    cat(sprintf("    CVSS Score: %s\n", i["cvssScore"]))
-    cat(sprintf("    CVSS Vector: %s\n", i["cvssVector"]))
-    cat(sprintf("    ID: %s\n", i["id"]))
-    cat(sprintf("    Reference: %s\n", i["reference"]))
+    cat(sprintf("\tCWE: %s\n", i["cwe"]))
+    cat(sprintf("\tTitle: %s\n", i["title"]))
+    cat(sprintf("\tDescription: %s\n", i["description"]))
+    cat(sprintf("\tCVSS Score: %s\n", i["cvssScore"]))
+    cat(sprintf("\tCVSS Vector: %s\n", i["cvssVector"]))
+    cat(sprintf("\tID: %s\n", i["id"]))
+    cat(sprintf("\tReference: %s\n", i["reference"]))
   }
 }
 
