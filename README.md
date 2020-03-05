@@ -1,10 +1,9 @@
 ---
-title: "oysteR"
-output:
-  html_document:
-    toc: yes
-pagetitle: oysteR
+output: github_document
+bibliography: "references.bib"
 ---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # oysteR
 

@@ -57,13 +57,19 @@ call_oss_index <- function(allPurls) {
     } else {
       r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json")
     }
+
     tryCatch({
+      status_code <- status_code(r)
+      if(status_code == 401) {
+        stop("Invalid credentials for OSS Index. Please check your username and API token and try again.\n")
+      }
+
       batchResult <- rjson::fromJSON(httr::content(r, "text", encoding="UTF-8"))
       result <- c(result, batchResult)
     }, warning = function(w) {
       print(w)
     }, error = function(e) {
-      print(e)
+      cat(sprintf("\nError: %s", e["message"]))
     }, finally = {
       # NO OP
     })
@@ -142,7 +148,7 @@ audit_response_from_oss_index <- function(response) {
 
 .extract_vulnerable_components <- function(allComponents) {
   tryCatch({
-    result <- Filter(function(l) length(l["vulnerabilities"]) > 0, allComponents)
+    result <- Filter(function(l) length(l[["vulnerabilities"]]) > 0, allComponents)
   }, warning = function(w) {
     print(w)
   }, error = function(e) {
@@ -205,7 +211,9 @@ audit_response_from_oss_index <- function(response) {
 audit_deps_with_oss_index <- function() {
   purls <- collect_dependencies_and_turn_into_purls()
   results <- call_oss_index(purls)
-  audit_response_from_oss_index(results)
+  if (length(results) > 0) {
+    audit_response_from_oss_index(results)
+  }
 }
 
 audit_deps_with_oss_index()

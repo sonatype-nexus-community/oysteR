@@ -14,6 +14,6 @@ jobs:
           command: R CMD build .
       - run:
           name: Check package
-          command: R CMD check *tar.gz --as-cran --no-manual
+          command: R CMD check *tar.gz --as-cran
       - store_artifacts:
           path: ~/oysteR/oysteR.Rcheck/
