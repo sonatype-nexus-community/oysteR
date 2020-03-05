@@ -48,32 +48,48 @@ audit_response_from_oss_index <- function(response) {
   numberOfVulnerableComponents <- length(vulnerableComponents)
   numberOfVulnerabilities <- .count_vulnerabilities(vulnerableComponents)
 
-  .print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
-
   index <- 1
   for(i in response) {
-    vulnerabilities <- i[["vulnerabilities"]]
-
-    numberOfVulnsForThisComponent <- length(vulnerabilities)
-    cat(
-      sprintf(
-        "[%s/%s] - %s - Vulnerabilities (total of %d)\n", 
-        index, 
-        length(response), 
-        i["coordinates"], 
-        numberOfVulnsForThisComponent
-        )
-      )
+    numberOfVulnsForThisComponent <- 0
+    tryCatch({
+      numberOfVulnsForThisComponent <- length(i[["vulnerabilities"]])
+    }, warning = function(w) {
+      print(w)
+    }, error = function(e) {
+      print(e)
+    }, finally = {
+      # NO OP
+    })
+    
+    .print_component_summary(index, numberOfComponents, i["coordinates"], numberOfVulnsForThisComponent)
     if (numberOfVulnsForThisComponent > 0) {
-      cat(sprintf("\n===\nVulnerabilities were detected for this component\n===\n\n"))
-      .print_vulnerability(vulnerabilities)
+      cat(sprintf("Vulnerabilities detected for this component:\n"))
+      tryCatch({
+        .print_vulnerabilities(i[["vulnerabilities"]])
+      }, warning = function(w) {
+        print(w)
+      }, error = function(e) {
+        print(e)
+      }, finally = {
+        # NO OP
+      })
     }
     index <- index + 1
   }
+
+  .print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
 }
 
 .extract_vulnerable_components <- function(allComponents) {
-  return(Filter(function(l) length(l["vulnerabilities"]) > 0, allComponents))
+  tryCatch({
+    result <- Filter(function(l) length(l["vulnerabilities"]) > 0, allComponents)
+  }, warning = function(w) {
+    print(w)
+  }, error = function(e) {
+    print(e)
+  }, finally = {
+    return(result)
+  })
 }
 
 .count_vulnerabilities <- function(vulnerableComponents) {
@@ -95,7 +111,24 @@ audit_response_from_oss_index <- function(response) {
   cat(sprintf("\tA total of %d known vulnerabilities were identified.\n", numberOfVulnerabilities))
 }
 
-.print_vulnerability <- function(vulnerabilities) {
+.print_component_summary <- function(index, totalItems, coordinates, numberOfVulnsForThisComponent) {
+  vulnerabilitiesFound <- "No vulnerabilities found"
+  if (numberOfVulnsForThisComponent > 0) {
+    vulnerabilitiesFound <- sprintf("Total vulnerabilities found: %d", numberOfVulnsForThisComponent)
+  }
+
+  cat(
+    sprintf(
+      "[%s/%s] - %s - %s\n", 
+      index, 
+      totalItems, 
+      coordinates, 
+      vulnerabilitiesFound
+    )
+  )
+}
+
+.print_vulnerabilities <- function(vulnerabilities) {
   for(i in vulnerabilities) {
     cat("\n")
     cat(sprintf("\tCWE: %s\n", i["cwe"]))
