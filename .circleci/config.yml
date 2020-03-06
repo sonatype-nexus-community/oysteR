@@ -42,26 +42,25 @@ jobs:
   release:
     executor: rocker-verse-executor
     steps:
+      - checkout
       - *attach_workspace
-      - run:
-          name: Test
-          command: ls -la
-      - run:
-          name: Test
-          command: echo $PWD
       - run:
           name: Install Fledge
           command: R -e "devtools::install_github('krlmlr/fledge')"
       - run:
+          name: Use Fledge and bump version
+          command: R -e "library('fledge'); fledge::bump_version('patch')"
+      - run:
+          name: Test
+          command: ls -la 
+      - run:
+          name: Test2
+          command: cat DESCRIPTION
+      - run:
           name: Check package
           command: R CMD check *tar.gz --as-cran
-      - run:
-          name: Move R built package
-          command: mkdir built && mv oysteR_*.tar.gz built
       - store_artifacts:
           path: ~/oysteR.Rcheck/
-      - store_artifacts:
-          path: ~/built/
 
 workflows:
   version: 2
