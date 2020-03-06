@@ -1,15 +1,23 @@
 version: 2.1
 
+references:
+  workspace_root: &workspace_root
+    ~/
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
 executors:
   rocker-verse-executor:
     docker:
         - image: rocker/verse:3.6.1
-    working_directory: ~/oysteR
+    working_directory: *workspace_root
 
 jobs:
   build:
     executor: rocker-verse-executor
     steps:
+      - *attach_workspace
       - checkout
       - restore_cache:
           keys:
@@ -28,15 +36,14 @@ jobs:
           name: Check package
           command: R CMD check *tar.gz --as-cran
       - persist_to_workspace:
-          root: ~/
+          root: *workspace_root
           paths: 
-            - oysteR
-            - oysteR/oysteR.Rcheck/
+            - oysteR.Rcheck/
   release:
     executor: rocker-verse-executor
     steps:
-      - attach_workspace:
-          at: ~/oysterR
+      - *attach_workspace
+      - checkout
       - run:
           name: Test
           command: ls -la
@@ -53,9 +60,9 @@ jobs:
           name: Move R built package
           command: mkdir built && mv oysteR_*.tar.gz built
       - store_artifacts:
-          path: ~/oysteR/oysteR.Rcheck/
+          path: ~/oysteR.Rcheck/
       - store_artifacts:
-          path: ~/oysteR/built/
+          path: ~/built/
 
 workflows:
   version: 2
