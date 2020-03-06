@@ -154,7 +154,7 @@ audit_response_from_oss_index <- function(response) {
   }
 
   .print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
-  stopifnot(numberOfVulnerableComponents == 0)
+  return(numberOfVulnerableComponents)
 }
 
 .extract_vulnerable_components <- function(allComponents) {
@@ -225,13 +225,18 @@ audit_response_from_oss_index <- function(response) {
 }
 
 #' Convenient function that collects dependencies, checks them against OSS Index, and audits them
-audit_deps_with_oss_index <- function() {
-  .print_header()
+audit_deps_with_oss_index <- function(quiet = FALSE, exit_on_vulnerability = FALSE) {
+  if (! quiet) {
+    .print_header()
+  }
   purls <- collect_dependencies_and_turn_into_purls()
   results <- call_oss_index(purls)
   if (length(results) > 0) {
-    audit_response_from_oss_index(results)
+    vulnerable <- audit_response_from_oss_index(results)
+    if (exit_on_vulnerability) {
+      stopifnot(vulnerable == 0)
+    }
   }
 }
 
-audit_deps_with_oss_index()
+audit_deps_with_oss_index(exit_on_vulnerability = FALSE)
