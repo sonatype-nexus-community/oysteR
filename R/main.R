@@ -154,6 +154,7 @@ audit_response_from_oss_index <- function(response) {
   }
 
   .print_summary(numberOfComponents, numberOfVulnerableComponents, numberOfVulnerabilities)
+  stopifnot(numberOfVulnerableComponents == 0)
 }
 
 .extract_vulnerable_components <- function(allComponents) {
