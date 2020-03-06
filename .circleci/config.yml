@@ -41,6 +41,9 @@ jobs:
           name: Test
           command: ls -la
       - run:
+          name: Test
+          command: echo $PWD
+      - run:
           name: Install Fledge
           command: R -e "devtools::install_github('krlmlr/fledge')"
       - run:
