@@ -16,8 +16,6 @@ library("httr")
 library("rjson")
 library("cowsay")
 
-.version <- "0.0.1"
-
 #' Collects dependencies installed locally, and turns them into purls
 #'
 #' @return A list of purls
@@ -219,8 +217,19 @@ audit_response_from_oss_index <- function(response) {
 }
 
 .print_header <- function() {
+  .version <- "Development"
   cowsay::say("oysteR\n\tBy Sonatype & Friends\n\nQ: Why a shark?\nA: There wasn't an oyster :(", by = "shark")
-  cat(sprintf("Version: %s\n", .version))
+  
+  tryCatch({
+    .version <- packageVersion('oysteR')
+  }, warning = function(w) {
+    # NO OP
+  }, error = function(e) {
+    # NO OP
+  }, finally = {
+    cat(sprintf("Version: %s\n", .version))
+  })
+
   cat("\n")
 }
 
