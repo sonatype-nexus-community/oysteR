@@ -38,7 +38,7 @@ jobs:
           at: ~/oysterR
       - run:
           name: Install Fledge
-          command: R -e "devtools::install_github("krlmlr/fledge")"
+          command: R -e "devtools::install_github('krlmlr/fledge')"
       - run:
           name: Check package
           command: R CMD check *tar.gz --as-cran
