@@ -31,11 +31,15 @@ jobs:
           root: ~/
           paths: 
             - oysteR
+            - oysteR/oysteR.Rcheck/
   release:
     executor: rocker-verse-executor
     steps:
       - attach_workspace:
           at: ~/oysterR
+      - run:
+          name: Test
+          command: ls -la
       - run:
           name: Install Fledge
           command: R -e "devtools::install_github('krlmlr/fledge')"
