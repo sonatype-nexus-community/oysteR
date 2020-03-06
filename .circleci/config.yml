@@ -48,8 +48,16 @@ jobs:
           name: Install Fledge
           command: R -e "devtools::install_github('krlmlr/fledge')"
       - run:
+          name: Configure GIT with user info for pushing
+          command: |
+            git config user.name "$GITHUB_USERNAME"
+            git config user.email "$GITHUB_EMAIL"
+      - run:
           name: Use Fledge and bump version
           command: R -e "library('fledge'); fledge::bump_version('patch')"
+      - run:
+          name: Test
+          command: git --no-pager log
       - run:
           name: Test
           command: ls -la 
@@ -68,5 +76,6 @@ workflows:
     jobs:
       - build
       - release:
+          context: rso-base
           requires:
             - build
