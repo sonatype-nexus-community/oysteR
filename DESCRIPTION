@@ -21,7 +21,8 @@ RoxygenNote: 7.0.2
 Roxygen: list(markdown = TRUE)
 Imports:
     httr,
-    rjson
+    rjson,
+    cowsay
 Suggests:
     testthat (>= 2.1.0),
     httptest,
