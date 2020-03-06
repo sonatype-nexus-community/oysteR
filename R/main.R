@@ -50,30 +50,35 @@ call_oss_index <- function(allPurls) {
   batchesOfPurls <- .batch_purls(allPurls)
 
   result <- list()
-  for (batch in batchesOfPurls) {
-    BODY <- list(coordinates = batch)
-    if (nchar(authEmail) > 0 && nchar(authToken) > 0) {
-      r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json", authenticate(authEmail, authToken, type = "basic"))
-    } else {
-      r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json")
-    }
+  tryCatch({
+    for (batch in batchesOfPurls) {
+      BODY <- list(coordinates = batch)
+      if (nchar(authEmail) > 0 && nchar(authToken) > 0) {
+        r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json", httr::authenticate(authEmail, authToken, type = "basic"))
+      } else {
+        r <- httr::POST(OSS_INDEX_URL, body = BODY, encode = "json")
+      }
 
-    tryCatch({
-      status_code <- status_code(r)
+      status_code <- httr::status_code(r)
       if(status_code == 401) {
         stop("Invalid credentials for OSS Index. Please check your username and API token and try again.\n")
+      } else if (status_code == 429) {
+        stop("You've made too many requests. Please wait and try again later, or use your OSS Index credentials to bypass the rate limits.\n")
+      } else if (status_code == 400) {
+        stop("The OSS Index API returned a status code of 400: Bad Request. Check the format of the purls in your request.\nSee also: https://ossindex.sonatype.org/doc/rest\n")
       }
 
       batchResult <- rjson::fromJSON(httr::content(r, "text", encoding="UTF-8"))
       result <- c(result, batchResult)
-    }, warning = function(w) {
-      print(w)
-    }, error = function(e) {
-      cat(sprintf("\nError: %s", e["message"]))
-    }, finally = {
-      # NO OP
-    })
-  }
+    }
+  }, warning = function(w) {
+    print(w)
+  }, error = function(e) {
+    cat(sprintf("\nError: %s", e["message"]))
+  }, finally = {
+    # NO OP
+  })
+
   return(result)
 }
 
