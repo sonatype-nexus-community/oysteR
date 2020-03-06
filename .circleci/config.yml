@@ -15,7 +15,11 @@ jobs:
       - run:
           name: Check package
           command: R CMD check *tar.gz --as-cran
+      - run:
+          name: Move R built package
+          command: mkdir built && mv oysteR_*.tar.gz built
       - store_artifacts:
           path: ~/oysteR/oysteR.Rcheck/
       - store_artifacts:
-          path: ~/oysteR_*.tar.gz
+          path: ~/oysteR/built/
+
