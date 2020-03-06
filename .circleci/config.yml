@@ -21,9 +21,9 @@ jobs:
           name: Check package
           command: R CMD check *tar.gz --as-cran
       - persist_to_workspace:
-          root: ~/oysteR
+          root: ~/
           paths: 
-            - /
+            - oysteR
   release:
     executor: rocker-verse-executor
     steps:
