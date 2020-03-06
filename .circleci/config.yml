@@ -1,9 +1,14 @@
-version: 2
+version: 2.1
+
+executors:
+  rocker-verse-executor:
+    docker:
+        - image: rocker/verse:3.6.1
+    working_directory: ~/oysteR
+
 jobs:
   build:
-    working_directory: ~/oysteR
-    docker:
-      - image: rocker/verse:3.6.1
+    executor: rocker-verse-executor
     steps:
       - checkout
       - run:
@@ -15,6 +20,21 @@ jobs:
       - run:
           name: Check package
           command: R CMD check *tar.gz --as-cran
+      - persist_to_workspace:
+          root: ~/oysteR
+          paths: 
+            - /
+  release:
+    executor: rocker-verse-executor
+    steps:
+      - attach_workspace:
+          at: ~/oysterR
+      - run:
+          name: Install Fledge
+          command: R -e "devtools::install_github("krlmlr/fledge")"
+      - run:
+          name: Check package
+          command: R CMD check *tar.gz --as-cran
       - run:
           name: Move R built package
           command: mkdir built && mv oysteR_*.tar.gz built
@@ -23,3 +43,9 @@ jobs:
       - store_artifacts:
           path: ~/oysteR/built/
 
+workflows:
+  version: 2
+  build_and_release:
+    jobs:
+      - build
+      - release
