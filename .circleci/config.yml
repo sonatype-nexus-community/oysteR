@@ -17,3 +17,5 @@ jobs:
           command: R CMD check *tar.gz --as-cran
       - store_artifacts:
           path: ~/oysteR/oysteR.Rcheck/
+      - store_artifacts:
+          path: ~/oysteR_*.tar.gz

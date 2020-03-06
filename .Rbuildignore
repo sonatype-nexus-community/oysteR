@@ -1,3 +1,6 @@
 ^.circleci$
 ^README\.Rmd$
+^README\.md$
+^README\.html$
 ^.*\.(tgz$)|(tar\.gz$)
+^cran_comments\.md$

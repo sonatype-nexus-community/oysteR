@@ -1,22 +1,20 @@
----
+--- 
+title: "oysteR"
 output: github_document
-bibliography: "references.bib"
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=svg)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   eval = FALSE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 library(knitr)
 ```
-# oysteR
-
-[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=svg)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 
 Create purls from the filtered sands of your dependencies, powered by OSS Index
 

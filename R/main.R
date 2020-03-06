@@ -66,6 +66,8 @@ call_oss_index <- function(allPurls) {
         stop("You've made too many requests. Please wait and try again later, or use your OSS Index credentials to bypass the rate limits.\n")
       } else if (status_code == 400) {
         stop("The OSS Index API returned a status code of 400: Bad Request. Check the format of the purls in your request.\nSee also: https://ossindex.sonatype.org/doc/rest\n")
+      } else if (status_code != 200) {
+        stop(sprintf("There was some problem connecting to the OSS Index API. The server responded with: \nStatus Code: %d\nResponse Body:\n%s\n", status_code, httr::content(r, "text", encoding="UTF-8")))
       }
 
       batchResult <- rjson::fromJSON(httr::content(r, "text", encoding="UTF-8"))
