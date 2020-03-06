@@ -2,7 +2,7 @@ version: 2.1
 
 references:
   workspace_root: &workspace_root
-    ~/
+    ~/oysteR
   attach_workspace: &attach_workspace
     attach_workspace:
       at: *workspace_root
@@ -17,8 +17,8 @@ jobs:
   build:
     executor: rocker-verse-executor
     steps:
-      - *attach_workspace
       - checkout
+      - *attach_workspace
       - restore_cache:
           keys:
             - cache-{{ .Environment.CIRCLE_JOB }}-{{ checksum "DESCRIPTION" }}
@@ -43,7 +43,6 @@ jobs:
     executor: rocker-verse-executor
     steps:
       - *attach_workspace
-      - checkout
       - run:
           name: Test
           command: ls -la
