@@ -4,3 +4,5 @@
 ^README\.html$
 ^.*\.(tgz$)|(tar\.gz$)
 ^cran_comments\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
