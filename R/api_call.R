@@ -20,7 +20,6 @@ check_status_code = function(r) {
 
 # Returns the batch number each purl belongs to.
 # E.g. A vector 1, 1, 1, ..., 2, 2, ...
-# TODO: CHECK baches < 128
 batch_purls = function(purls) {
 
   max_size = 128
