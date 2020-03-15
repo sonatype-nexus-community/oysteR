@@ -6,10 +6,12 @@ check_status_code = function(r) {
          Please check your username and API token and try again.\n")
   } else if (status_code == 429) {
     stop("You've made too many requests.
-         Please wait and try again later, or use your OSS Index credentials to bypass the rate limits.\n")
+         Please wait and try again later,
+         or use your OSS Index credentials to bypass the rate limits.\n")
   } else if (status_code == 400) {
     stop("The OSS Index API returned a status code of 400: Bad Request.
-         Check the format of the purls in your request.\nSee also: https://ossindex.sonatype.org/doc/rest\n")
+         Check the format of the purls in your request.
+         See also: https://ossindex.sonatype.org/doc/rest\n")
   } else if (status_code != 200) {
     stop(sprintf("There was some problem connecting to the OSS Index API.
                  The server responded with: \nStatus Code: %d\nResponse Body:\n%s\n",
@@ -21,15 +23,14 @@ check_status_code = function(r) {
 # Returns the batch number each purl belongs to.
 # E.g. A vector 1, 1, 1, ..., 2, 2, ...
 batch_purls = function(purls) {
-
   max_size = 128
-  no_batches = ceiling(length(purls)/max_size)
+  no_batches = ceiling(length(purls) / max_size)
   batch_no = rep(seq_len(no_batches), each = max_size)
   batch_no = batch_no[seq_along(purls)]
   return(batch_no)
 }
 
-globalVariables("vulnerabilites")
+globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
@@ -58,9 +59,9 @@ call_oss_index = function(purls) {
   results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
                                                 description = .x[[2]],
                                                 reference = .x[[3]],
-                                                vulnerabilites = .x[4])) %>%
+                                                vulnerabilities = .x[4])) %>%
     dplyr::bind_rows() %>%
-    mutate(no_of_vulnerabilites = purrr::map_dbl(vulnerabilites, length))
+    mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
 
   class(results) = c("oysteR_deps", class(results))
   return(results)

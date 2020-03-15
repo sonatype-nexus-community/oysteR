@@ -27,7 +27,6 @@ get_purls = function() {
   return(purls)
 }
 
-
 #' @title Check Package Dependencies
 #'
 #' Collects R dependencies and checks them against OSS Index.
@@ -44,21 +43,24 @@ audit_deps = function(verbose = TRUE) {
   return(results)
 }
 
-#' @title Extract Vulnerabilities
+#' @title Extract vulnerabilities
 #'
 #' Parse the audit data frame, and extract
 #' the vulnerabilities.
 #' @param audit Output from \code{audit_deps}.
+#' @importFrom purrr map_dfr map
+#' @importFrom tidyr unnest
+#' @importFrom tibble tibble
 #' @export
-get_vulnerabilies = function(audit) {
-  if (sum(audit$no_of_vulnerabilites) == 0) {
+get_vulnerabilities = function(audit) {
+  if (sum(audit$no_of_vulnerabilities) == 0) {
     return(tibble(cvss_id = character(0), cvss_title = character(0),
                   cvss_description = character(0), cvss_score = character(0),
                   cvss_vector = character(0), cvss_cwe = character(0),
                   cvss_reference = character(0)))
   }
 
-  audit$vulnerabilites = audit$vulnerabilites %>%
+  audit$vulnerabilities = audit$vulnerabilities %>%
     map(~ map_dfr(.x, ~tibble(cvss_id = .x[[1]],
                               cvss_title = .x[[2]],
                               cvss_description = .x[[3]],
@@ -66,7 +68,5 @@ get_vulnerabilies = function(audit) {
                               cvss_vector = .x[[5]],
                               cvss_cwe = .x[[6]],
                               cvss_reference = .x[[7]])))
-  tidyr::unnest(audit, vulnerabilites)
+  tidyr::unnest(audit, vulnerabilities)
 }
-
-
