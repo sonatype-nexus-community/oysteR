@@ -7,7 +7,10 @@
 Collects R dependencies and checks them against OSS Index.
 Returns a tibble of results.}
 \usage{
-audit_deps()
+audit_deps(verbose = TRUE)
+}
+\arguments{
+\item{verbose}{Default \code{TRUE}.}
 }
 \description{
 Check Package Dependencies

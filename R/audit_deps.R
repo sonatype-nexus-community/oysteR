@@ -32,10 +32,41 @@ get_purls = function() {
 #'
 #' Collects R dependencies and checks them against OSS Index.
 #' Returns a tibble of results.
+#' @param verbose Default \code{TRUE}.
 #' @export
-audit_deps = function() {
+audit_deps = function(verbose = TRUE) {
   purls = get_purls()
   results = call_oss_index(purls)
 
+  if (isTRUE(verbose)) {
+    audit_deps_verbose(results)
+  }
   return(results)
 }
+
+#' @title Extract Vulnerabilities
+#'
+#' Parse the audit data frame, and extract
+#' the vulnerabilities.
+#' @param audit Output from \code{audit_deps}.
+#' @export
+get_vulnerabilies = function(audit) {
+  if (sum(audit$no_of_vulnerabilites) == 0) {
+    return(tibble(cvss_id = character(0), cvss_title = character(0),
+                  cvss_description = character(0), cvss_score = character(0),
+                  cvss_vector = character(0), cvss_cwe = character(0),
+                  cvss_reference = character(0)))
+  }
+
+  audit$vulnerabilites = audit$vulnerabilites %>%
+    map(~ map_dfr(.x, ~tibble(cvss_id = .x[[1]],
+                              cvss_title = .x[[2]],
+                              cvss_description = .x[[3]],
+                              cvss_score = .x[[4]],
+                              cvss_vector = .x[[5]],
+                              cvss_cwe = .x[[6]],
+                              cvss_reference = .x[[7]])))
+  tidyr::unnest(audit, vulnerabilites)
+}
+
+
