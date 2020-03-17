@@ -16,7 +16,7 @@ check_status_code = function(r) {
          See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE)
   } else if (status_code != 200) {
     content = httr::content(r, "text", encoding = "UTF-8")
-    msg = glue("There was some problem connecting to the OSS Index API.\\
+    msg = glue::glue("There was some problem connecting to the OSS Index API.\\
                 The server responded with:
                   Status Code: {status_code}
                   Response Body:{content}")
@@ -25,40 +25,53 @@ check_status_code = function(r) {
   return(invisible(NULL))
 }
 
-# Returns the batch number each purl belongs to.
-# E.g. A vector 1, 1, 1, ..., 2, 2, ...
-# Could probably just do a while loop
-batch_purls = function(purls) {
-  max_size = 128
-  no_batches = ceiling(length(purls) / max_size)
-  batch_no = rep(seq_len(no_batches), each = max_size)
-  batch_no = batch_no[seq_along(purls)]
-  return(batch_no)
+# Just pass NULL to POST if no authentication
+get_post_authenticate = function(verbose) {
+  user = Sys.getenv("OSSINDEX_USER", NA)
+  token = Sys.getenv("OSSINDEX_TOKEN", NA)
+  if (!is.na(user) && !is.na(token)) {
+    authenticate = httr::authenticate(user, token, type = "basic")
+  } else {
+    authenticate = NULL
+  }
+
+  if (isTRUE(verbose)) {
+    if (!is.null(authenticate)) {
+      cli_alert("Using Sonatype tokens")
+    } else {
+      cli_alert("No Sonatype tokens found")
+    }
+  }
+  return(authenticate)
 }
 
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
-call_oss_index = function(purls) {
+call_oss_index = function(purls, verbose) {
+  max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
-  user = Sys.getenv("OSSINDEX_USER", NA)
-  token = Sys.getenv("OSSINDEX_TOKEN", NA)
 
-  batch_no = batch_purls(purls)
+  if (isTRUE(verbose)) {
+    cli_h2("Calling sonatype API")
+  }
+  authenticate = get_post_authenticate(verbose)
+  no_of_batches = ceiling(length(purls) / max_size)
   results = list()
-  for (i in unique(batch_no)) {
-
-    body = list(coordinates = purls[batch_no == i])
-    if (!is.na(user) && !is.na(token)) {
-      r = httr::POST(os_index_url, body = body, encode = "json",
-                      httr::authenticate(user, token, type = "basic"))
-    } else {
-      r = httr::POST(os_index_url, body = body, encode = "json")
+  for (i in seq_len(no_of_batches)) {
+    start = ((i - 1) * max_size + 1)
+    end = min(i * max_size, length(purls))
+    if (isTRUE(verbose)) {
+      cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
+
+    body = list(coordinates = purls[start:end])
+    r = httr::POST(os_index_url, body = body, encode = "json", authenticate)
     check_status_code(r)
     batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
     results = c(results, batchResult)
+
   }
 
   # Return as a tibble for easier manipulation

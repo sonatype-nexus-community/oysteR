@@ -11,7 +11,8 @@ OSS Index
 ## Usage
 
 The package has two main functions. The first, function extracts your
-installed R packages and uses the sonatype API to scan for vulnerabilies
+installed R packages and uses the sonatype API to scan for
+vulnerabilities
 
 ``` r
 library("oysteR")
@@ -32,9 +33,10 @@ Heavy use against OSS Index will likely run you into rate limiting
   - Register an account on OSS Index
   - Get your username and API Token after registering
 
-Set the following environment variables:
+Set the following environment variables in your `.Renviron` file:
 
-`OSSINDEX_USER` `OSSINDEX_TOKEN`
+  - `OSSINDEX_USER`
+  - `OSSINDEX_TOKEN`
 
 These will be used by `oysteR` to authenticate with OSS Index, bumping
 up the amount of requests you can make.

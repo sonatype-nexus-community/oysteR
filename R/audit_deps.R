@@ -17,12 +17,14 @@
 # List format required for httr call
 #' @importFrom tibble as_tibble tibble
 #' @importFrom utils installed.packages
-get_purls = function() {
-  ip = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
-  ip = ip[is.na(ip$Priority), ]
+get_purls = function(pkgs) {
+  if (is.null(pkgs)) {
+    pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
+    pkgs = pkgs[is.na(pkgs$Priority), ]
+  }
 
   # Extract Package and Version columns
-  purls = paste0("pkg:cran/", ip$Package, "@", ip$Version)
+  purls = paste0("pkg:cran/", pkgs$Package, "@", pkgs$Version)
   purls = as.list(purls)
   return(purls)
 }
@@ -31,11 +33,27 @@ get_purls = function() {
 #'
 #' Collects R dependencies and checks them against OSS Index.
 #' Returns a tibble of results.
+#'
+#' @details By default, packages listed in \code{installed.packages()} are scanned by sonatype.
+#' However, you can pass your own data frame of packages. This data frame should have two columns,
+#' \code{Version} and \code{Package}.
+#' @param pkgs Default \code{NULL}. See details for further information.
 #' @param verbose Default \code{TRUE}.
+#' @return A tibble/data.frame.
 #' @export
-audit_deps = function(verbose = TRUE) {
-  purls = get_purls()
-  results = call_oss_index(purls)
+#' @examples
+#' \dontrun{
+#' # Use installed.packages()
+#' audit_deps()
+#'
+#' # Pass your own packages
+#' pkgs = data.frame(Package = c("abind", "acepack"),
+#'                   Version = c("1.4-5", "1.4.1"))
+#' audit_deps(pkgs)
+#' }
+audit_deps = function(pkgs = NULL, verbose = TRUE) {
+  purls = get_purls(pkgs)
+  results = call_oss_index(purls, verbose = verbose)
 
   if (isTRUE(verbose)) {
     audit_deps_verbose(results)

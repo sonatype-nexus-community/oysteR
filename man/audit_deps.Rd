@@ -7,14 +7,35 @@
 Collects R dependencies and checks them against OSS Index.
 Returns a tibble of results.}
 \usage{
-audit_deps(verbose = TRUE)
+audit_deps(pkgs = NULL, verbose = TRUE)
 }
 \arguments{
+\item{pkgs}{Default \code{NULL}. See details for further information.}
+
 \item{verbose}{Default \code{TRUE}.}
+}
+\value{
+A tibble/data.frame.
 }
 \description{
 Check Package Dependencies
 
 Collects R dependencies and checks them against OSS Index.
 Returns a tibble of results.
+}
+\details{
+By default, packages listed in \code{installed.packages()} are scanned by sonatype.
+However, you can pass your own data frame of packages. This data frame should have two columns,
+\code{Version} and \code{Package}.
+}
+\examples{
+\dontrun{
+# Use installed.packages()
+audit_deps()
+
+# Pass your own packages
+pkgs = data.frame(Package = c("abind", "acepack"),
+                  Version = c("1.4-5", "1.4.1"))
+audit_deps(pkgs)
+}
 }

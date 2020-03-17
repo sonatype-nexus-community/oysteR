@@ -2,11 +2,10 @@
 
 export(audit_deps)
 export(get_vulnerabilities)
-importFrom(clisymbols,symbol)
+import(cli)
 importFrom(dplyr,"%>%")
 importFrom(dplyr,bind_rows)
 importFrom(dplyr,mutate)
-importFrom(glue,glue)
 importFrom(httr,POST)
 importFrom(httr,status_code)
 importFrom(purrr,map)
