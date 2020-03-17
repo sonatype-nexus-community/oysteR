@@ -10,7 +10,7 @@ test_that("Test Purls", {
   # Pass package
   pkgs = data.frame(Package = c("abind", "acepack"),
                          Version = c("1.4-5", "1.4.1"))
-  deps = audit_deps(pkgs)
+  deps = expect_message(audit_deps(pkgs))
   expect_equal(nrow(deps), 2)
   expect_equal(ncol(deps), 5)
 
