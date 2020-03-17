@@ -10,7 +10,11 @@ Authors@R:
       person(given = "Brittany",
              family = "Belle",
              role = "aut",
-             email = "bbelle@sonatype.com"))
+             email = "bbelle@sonatype.com"),
+      person(given = "Colin",
+             family = "Gillespie",
+             role = "aut",
+             email = "csgillespie@gmail.com"))
 Description: Collects your R dependencies, and scans them with
     Sonatype's OSS Index, reporting back on any vulnerabilities that are
     found.
