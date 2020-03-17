@@ -1,27 +1,33 @@
+#' @importFrom httr status_code POST
+#' @importFrom rjson fromJSON
 # Check status code
 check_status_code = function(r) {
   status_code = httr::status_code(r)
   if (status_code == 401) {
     stop("Invalid credentials for OSS Index.
-         Please check your username and API token and try again.\n")
+         Please check your username and API token and try again.", call. = FALSE)
   } else if (status_code == 429) {
     stop("You've made too many requests.
          Please wait and try again later,
-         or use your OSS Index credentials to bypass the rate limits.\n")
+         or use your OSS Index credentials to bypass the rate limits.", call. = FALSE)
   } else if (status_code == 400) {
     stop("The OSS Index API returned a status code of 400: Bad Request.
          Check the format of the purls in your request.
-         See also: https://ossindex.sonatype.org/doc/rest\n")
+         See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE)
   } else if (status_code != 200) {
-    stop(sprintf("There was some problem connecting to the OSS Index API.
-                 The server responded with: \nStatus Code: %d\nResponse Body:\n%s\n",
-                 status_code, httr::content(r, "text", encoding = "UTF-8")))
+    content = httr::content(r, "text", encoding = "UTF-8")
+    msg = glue("There was some problem connecting to the OSS Index API.\\
+                The server responded with:
+                  Status Code: {status_code}
+                  Response Body:{content}")
+    stop(msg, call. = FALSE)
   }
   return(invisible(NULL))
 }
 
 # Returns the batch number each purl belongs to.
 # E.g. A vector 1, 1, 1, ..., 2, 2, ...
+# Could probably just do a while loop
 batch_purls = function(purls) {
   max_size = 128
   no_batches = ceiling(length(purls) / max_size)

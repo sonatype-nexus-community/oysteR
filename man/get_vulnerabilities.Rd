@@ -4,7 +4,7 @@
 \alias{get_vulnerabilities}
 \title{Extract vulnerabilities
 
-Parse the audit data frame, and extract
+Parse the audit data frame (obtained via \code{audit_deps}), and extract
 the vulnerabilities.}
 \usage{
 get_vulnerabilities(audit)
@@ -15,6 +15,6 @@ get_vulnerabilities(audit)
 \description{
 Extract vulnerabilities
 
-Parse the audit data frame, and extract
+Parse the audit data frame (obtained via \code{audit_deps}), and extract
 the vulnerabilities.
 }

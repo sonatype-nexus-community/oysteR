@@ -16,7 +16,7 @@
 # Scans R packages and creates a list of purls.
 # List format required for httr call
 #' @importFrom tibble as_tibble tibble
-#' @importFrom utils installed.packages packageVersion
+#' @importFrom utils installed.packages
 get_purls = function() {
   ip = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
   ip = ip[is.na(ip$Priority), ]
@@ -45,12 +45,11 @@ audit_deps = function(verbose = TRUE) {
 
 #' @title Extract vulnerabilities
 #'
-#' Parse the audit data frame, and extract
+#' Parse the audit data frame (obtained via \code{audit_deps}), and extract
 #' the vulnerabilities.
 #' @param audit Output from \code{audit_deps}.
 #' @importFrom purrr map_dfr map
 #' @importFrom tidyr unnest
-#' @importFrom tibble tibble
 #' @export
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {

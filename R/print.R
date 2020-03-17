@@ -1,3 +1,5 @@
+#' @importFrom clisymbols symbol
+#' @importFrom glue glue
 circle = clisymbols::symbol$circle_filled
 
 audit_deps_verbose = function(results) {
