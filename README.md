@@ -11,7 +11,7 @@ OSS Index
 ## Usage
 
 The package has two main functions. The first, function extracts your
-installed R packages and uses the sonatype API to scan for
+installed R packages and uses the Sonatype OSS Index API to scan for
 vulnerabilities
 
 ``` r
