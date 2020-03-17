@@ -24,7 +24,10 @@ get_purls = function(pkgs) {
   }
 
   # Extract Package and Version columns
-  purls = paste0("pkg:cran/", pkgs$Package, "@", pkgs$Version)
+  purls = c()
+  if (nrow(pkgs) > 0) {
+    purls = paste0("pkg:cran/", pkgs$Package, "@", pkgs$Version)
+  }
   purls = as.list(purls)
   return(purls)
 }

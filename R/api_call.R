@@ -75,12 +75,20 @@ call_oss_index = function(purls, verbose) {
   }
 
   # Return as a tibble for easier manipulation
-  results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
-                                                description = .x[[2]],
-                                                reference = .x[[3]],
-                                                vulnerabilities = .x[4])) %>%
-    dplyr::bind_rows() %>%
-    mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
+  # Handle edge case
+  if (length(results) == 0) {
+    results = tibble::tibble(package = character(0), description = character(0),
+                             reference = character(0), vulnerabilities = list(),
+                             no_of_vulnerabilities = integer(0))
+  } else {
+
+    results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
+                                                  description = .x[[2]],
+                                                  reference = .x[[3]],
+                                                  vulnerabilities = .x[4])) %>%
+      dplyr::bind_rows() %>%
+      mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
+  }
 
   class(results) = c("oysteR_deps", class(results))
   return(results)
