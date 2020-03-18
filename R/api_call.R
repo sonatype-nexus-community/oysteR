@@ -59,7 +59,7 @@ globalVariables("vulnerabilities")
 #' @importFrom dplyr %>%
 call_oss_index = function(purls, verbose) {
   if (length(purls) == 0L) return(no_purls_case(verbose))
-  if (isTRUE(verbose)) cli_h2("Calling sonatype API")
+  if (isTRUE(verbose)) cli_h2("Calling sonatype API: https://www.sonatype.com/")
 
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
