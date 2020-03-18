@@ -45,17 +45,25 @@ get_post_authenticate = function(verbose) {
   return(authenticate)
 }
 
+no_purls_case = function(verbose) {
+  results = tibble::tibble(package = character(0), description = character(0),
+                           reference = character(0), vulnerabilities = list(),
+                           no_of_vulnerabilities = integer(0))
+  class(results) = c("oysteR_deps", class(results))
+  return(results)
+}
+
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
 call_oss_index = function(purls, verbose) {
+  if (length(purls) == 0L) return(no_purls_case(verbose))
+  if (isTRUE(verbose)) cli_h2("Calling sonatype API")
+
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
 
-  if (isTRUE(verbose)) {
-    cli_h2("Calling sonatype API")
-  }
   authenticate = get_post_authenticate(verbose)
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
@@ -65,30 +73,20 @@ call_oss_index = function(purls, verbose) {
     if (isTRUE(verbose)) {
       cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
-
     body = list(coordinates = purls[start:end])
     r = httr::POST(os_index_url, body = body, encode = "json", authenticate)
     check_status_code(r)
     batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
     results = c(results, batchResult)
-
   }
 
   # Return as a tibble for easier manipulation
-  # Handle edge case
-  if (length(results) == 0) {
-    results = tibble::tibble(package = character(0), description = character(0),
-                             reference = character(0), vulnerabilities = list(),
-                             no_of_vulnerabilities = integer(0))
-  } else {
-
-    results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
-                                                  description = .x[[2]],
-                                                  reference = .x[[3]],
-                                                  vulnerabilities = .x[4])) %>%
-      dplyr::bind_rows() %>%
-      mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
-  }
+  results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
+                                                description = .x[[2]],
+                                                reference = .x[[3]],
+                                                vulnerabilities = .x[4])) %>%
+    dplyr::bind_rows() %>%
+    mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
 
   class(results) = c("oysteR_deps", class(results))
   return(results)
