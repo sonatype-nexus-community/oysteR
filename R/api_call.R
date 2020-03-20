@@ -53,6 +53,18 @@ no_purls_case = function(verbose) {
   return(results)
 }
 
+clean_response = function(entry) {
+  if (is.null(entry$coordinates)) entry$coordinates = ""
+  if (is.null(entry$description)) entry$description = ""
+  if (is.null(entry$reference)) entry$reference = ""
+  entry$vulnerabilities = list(entry$vulnerabilities)
+  tibble::tibble(package = entry$coordinates,
+                 description = entry$description,
+                 reference = entry$reference,
+                 vulnerabilities = entry$vulnerabilities,
+                 no_of_vulnerabilities = length(vulnerabilities))
+}
+
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
@@ -80,14 +92,8 @@ call_oss_index = function(purls, verbose) {
     results = c(results, batchResult)
   }
 
-  # Return as a tibble for easier manipulation
-  results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
-                                                description = .x[[2]],
-                                                reference = .x[[3]],
-                                                vulnerabilities = .x[4])) %>%
-    dplyr::bind_rows() %>%
-    mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
-
+  results = purrr::map(results, clean_response) %>%
+    dplyr::bind_rows()
   class(results) = c("oysteR_deps", class(results))
   return(results)
 }

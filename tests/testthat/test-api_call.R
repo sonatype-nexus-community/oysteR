@@ -1,9 +1,18 @@
+# Generating the API data
+# av = available.packages()
+# av = tibble::as_tibble(av)[1:1280, c("Package", "Version")]
+# saveRDS(av, file = "tests/testthat/dummy_packages.rds")
+#
+# httptest::start_capturing(path = "tests/testthat")
+# oysteR::audit_deps(pkgs = av)
+# httptest::stop_capturing()
+
 httptest::with_mock_api({
   test_that("Calls to OSS Index work", {
-    r <- oysteR::call_oss_index(c("pkg:cran/thing@1.0.0",
-    "pkg:cran/thing@2.0.0", "pkg:cran/thing@3.0.0"), verbose = TRUE)
 
-    # This should be 99, but currently shows 95? Need to figure out why
-    expect_equal(nrow(r), 99)
+    pkgs = readRDS("dummy_packages.rds")
+    r = audit_deps(pkgs)
+
+    expect_equal(nrow(r), 1280)
   })
 })
