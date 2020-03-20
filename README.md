@@ -108,5 +108,5 @@ Index](https://ossindex.sonatype.org/), we are glad to have you here\!
 Looking to contribute to our code but need some help? There’s a few ways
 to get information:
 
-  - Chat with us on the [Nexus-Developers
-    Gitter](https://gitter.im/sonatype/nexus-developers)
+  - Chat with us on the [oysteR
+    Gitter](https://gitter.im/sonatype-nexus-community/oysteR)
