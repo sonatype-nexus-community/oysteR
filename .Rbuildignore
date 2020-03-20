@@ -1,6 +1,8 @@
 ^.circleci$
+^.github$
 ^README\.Rmd$
 ^README\.md$
 ^README\.html$
 ^.*\.(tgz$)|(tar\.gz$)
 ^cran_comments\.md$
+^CONTRIBUTORS.md$
