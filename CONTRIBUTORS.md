@@ -9,6 +9,6 @@ Sonatype internal people:
 
 External contributors:
 
-* [@csgillespie](https://github.com/csgillespie) (Chad Gillespie)
+* [@csgillespie](https://github.com/csgillespie) (Colin Gillespie)
 
 Possibly You!
