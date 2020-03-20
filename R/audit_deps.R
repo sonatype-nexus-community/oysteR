@@ -12,21 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License."
 
+#' @importFrom tibble as_tibble tibble
+get_pkgs = function(pkgs = NULL) {
+  if (is.null(pkgs)) {
+    pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
+    pkgs = pkgs[is.na(pkgs$Priority), c("Package", "Version")]
+    colnames(pkgs) = c("package", "version")
+  }
+  return(pkgs)
+}
 
 # Scans R packages and creates a list of purls.
 # List format required for httr call
-#' @importFrom tibble as_tibble tibble
+
 #' @importFrom utils installed.packages
 get_purls = function(pkgs) {
-  if (is.null(pkgs)) {
-    pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
-    pkgs = pkgs[is.na(pkgs$Priority), ]
-  }
 
   # Extract Package and Version columns
   purls = c()
   if (nrow(pkgs) > 0) {
-    purls = paste0("pkg:cran/", pkgs$Package, "@", pkgs$Version)
+    purls = paste0("pkg:cran/", pkgs$package, "@", pkgs$version)
   }
   purls = as.list(purls)
   return(purls)
@@ -39,7 +44,7 @@ get_purls = function(pkgs) {
 #'
 #' @details By default, packages listed in \code{installed.packages()} are scanned by sonatype.
 #' However, you can pass your own data frame of packages. This data frame should have two columns,
-#' \code{Version} and \code{Package}.
+#' \code{version} and \code{package}.
 #' @param pkgs Default \code{NULL}. See details for further information.
 #' @param verbose Default \code{TRUE}.
 #' @return A tibble/data.frame.
@@ -55,12 +60,14 @@ get_purls = function(pkgs) {
 #' audit_deps(pkgs)
 #' }
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
-  purls = get_purls(pkgs)
+  pkgs = get_pkgs(pkgs = pkgs)
+  purls = get_purls(pkgs = pkgs)
   results = call_oss_index(purls, verbose = verbose)
 
   if (isTRUE(verbose)) {
     audit_deps_verbose(results)
   }
+  results = dplyr::bind_cols(pkgs, results)
   return(results)
 }
 

@@ -1,6 +1,8 @@
-# Generating the API data
+# # Generating the API data
+# library(httptest)
 # av = available.packages()
 # av = tibble::as_tibble(av)[1:1280, c("Package", "Version")]
+# colnames(av) = c("package", "version")
 # saveRDS(av, file = "tests/testthat/dummy_packages.rds")
 #
 # httptest::start_capturing(path = "tests/testthat")

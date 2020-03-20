@@ -57,12 +57,13 @@ clean_response = function(entry) {
   if (is.null(entry$coordinates)) entry$coordinates = ""
   if (is.null(entry$description)) entry$description = ""
   if (is.null(entry$reference)) entry$reference = ""
+  no_of_vulnerabilities = length(entry$vulnerabilities)
   entry$vulnerabilities = list(entry$vulnerabilities)
-  tibble::tibble(package = entry$coordinates,
+  tibble::tibble(oss_package = entry$coordinates,
                  description = entry$description,
                  reference = entry$reference,
                  vulnerabilities = entry$vulnerabilities,
-                 no_of_vulnerabilities = length(vulnerabilities))
+                 no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
 globalVariables("vulnerabilities")
