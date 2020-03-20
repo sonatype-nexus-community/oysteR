@@ -1,4 +1,5 @@
 ^.circleci$
+^.github$
 ^README\.Rmd$
 ^README\.md$
 ^README\.html$
@@ -7,3 +8,4 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.lintr$
+^CONTRIBUTORS.md$
