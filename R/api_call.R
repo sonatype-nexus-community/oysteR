@@ -66,6 +66,24 @@ clean_response = function(entry) {
                  no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
+get_version = function() {
+  .version <- "development"
+  tryCatch({
+    .version <- utils::packageVersion('oysteR')
+  }, warning = function(w) {
+    # NO OP
+  }, error = function(e) {
+    # NO OP
+  }, finally = {
+    return(.version)
+  })
+}
+
+get_user_agent = function() {
+  version <- get_version()
+  return(sprintf("oysteR/%s", version))
+}
+
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
@@ -78,6 +96,7 @@ call_oss_index = function(purls, verbose) {
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
 
   authenticate = get_post_authenticate(verbose)
+  agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
   for (i in seq_len(no_of_batches)) {
@@ -87,7 +106,7 @@ call_oss_index = function(purls, verbose) {
       cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
     body = list(coordinates = purls[start:end])
-    r = httr::POST(os_index_url, body = body, encode = "json", authenticate)
+    r = httr::POST(os_index_url, httr::user_agent(agent), body = body, encode = "json", authenticate)
     check_status_code(r)
     batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
     results = c(results, batchResult)
