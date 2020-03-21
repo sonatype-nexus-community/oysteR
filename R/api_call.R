@@ -54,9 +54,9 @@ no_purls_case = function(verbose) {
 }
 
 clean_response = function(entry) {
-  if (is.null(entry$coordinates)) entry$coordinates = ""
-  if (is.null(entry$description)) entry$description = ""
-  if (is.null(entry$reference)) entry$reference = ""
+  if (is.null(entry$coordinates)) entry$coordinates = NA_character_
+  if (is.null(entry$description)) entry$description = NA_character_
+  if (is.null(entry$reference)) entry$reference = NA_character_
   no_of_vulnerabilities = length(entry$vulnerabilities)
   entry$vulnerabilities = list(entry$vulnerabilities)
   tibble::tibble(oss_package = entry$coordinates,
