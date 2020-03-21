@@ -8,4 +8,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.lintr$
-^CONTRIBUTORS.md$
+^\.travis\.yml$
+^CONTRIBUTORS\.md$
