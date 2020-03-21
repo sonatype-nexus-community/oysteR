@@ -3,7 +3,11 @@ oysteR
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
 [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
+[![Travis build
+status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
 
 Create purls from the filtered sands of your dependencies, powered by
 OSS Index
