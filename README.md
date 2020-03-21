@@ -10,21 +10,20 @@ OSS Index
 
 ## Usage
 
-If this project is run independently, one can run:
-
-`Rscript R/main.R`
-
-`main.R` has a call to `audit_deps_with_oss_index()` by default, as a
-convenience.
-
-If installed, you can do:
+The package has two main functions. The first, function extracts your
+installed R packages and uses the Sonatype OSS Index API to scan for
+vulnerabilities
 
 ``` r
-library(oysteR)
-oysteR::audit_deps_with_oss_index()
+library("oysteR")
+audit = audit_deps()
 ```
 
-This will accomplish the same behavior as running `main.R`.
+To extract the vulnerabilities into a nice data frame, use
+
+``` r
+get_vulnerabilities(audit)
+```
 
 ### Authentication
 
@@ -34,30 +33,13 @@ Heavy use against OSS Index will likely run you into rate limiting
   - Register an account on OSS Index
   - Get your username and API Token after registering
 
-Set the following environment variables:
+Set the following environment variables in your `.Renviron` file:
 
-`OSSINDEX_USER` `OSSINDEX_TOKEN`
+  - `OSSINDEX_USER`
+  - `OSSINDEX_TOKEN`
 
 These will be used by `oysteR` to authenticate with OSS Index, bumping
 up the amount of requests you can make.
-
-## Development
-
-Generally, you are going to need:
-
-  - R installed (we all used 3.6.x)
-
-After you have cloned this repo:
-
-  - `R -e "devtools::install_deps(dep = TRUE)"`
-  - `R CMD build .`
-
-You can test that everything works by running:
-
-  - `Rscript R\main.R`
-
-This should list and audit your local dependencies, if all has gone
-well\!
 
 ### Tests
 

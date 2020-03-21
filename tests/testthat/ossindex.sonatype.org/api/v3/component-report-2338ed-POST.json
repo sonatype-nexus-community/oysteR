@@ -1,0 +1,1005 @@
+[
+    {
+        "coordinates": "pkg:cran/Brq@2.5",
+        "description": "Brq:  Bayesian Analysis of Quantile Regression Models\n\nBayesian estimation and variable selection for quantile regression models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Brq@2.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Brundle@1.0.9",
+        "description": "Brundle:  Normalisation Tools for Inter-Condition Variability of ChIP-Seq Data\n\nInter-sample condition variability is a key challenge of normalising ChIP-seq data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Brundle@1.0.9",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BsMD@2013.0718-1",
+        "description": "BsMD:  Bayes Screening and Model Discrimination\n\nBayes screening and model discrimination follow-up designs.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BsMD@2013.0718-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Buddle@2.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Buddle@2.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BullsEyeR@0.2.0",
+        "description": "BullsEyeR:  Topic Modelling\n\nHelps in initial processing like converting text to lower case, removing punctuation, numbers, stop words, stemming, sparsity control and term frequency inverse document frequency processing.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BullsEyeR@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BurStFin@1.02",
+        "description": "BurStFin:  Burns Statistics Financial\n\nA suite of functions for finance, including the estimation of variance matrices via a statistical factor model or Ledoit-Wolf shrinkage.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BurStFin@1.02",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BurStMisc@1.1",
+        "description": "BurStMisc:  Burns Statistics Miscellaneous\n\nScript search, corner, genetic optimization, permutation tests, write expect test.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BurStMisc@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BusinessDuration@0.2.0",
+        "description": "BusinessDuration:  Calculates Business Duration Between Two Dates\n\nCalculates business duration between two dates.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BusinessDuration@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BuyseTest@1.8.5",
+        "description": "BuyseTest:  Generalized Pairwise Comparisons\n\nImplementation of the Generalized Pairwise Comparisons.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BuyseTest@1.8.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bvalue@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bvalue@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/C443@1.0.0",
+        "description": "C443:  See a Forest for the Trees\n\nGetting insight into a forest of classification trees, by calculating similarities between the trees, and subsequently clustering them.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/C443@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/C50@0.1.3",
+        "description": "C50:  C5.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/C50@0.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CA3variants@2.0",
+        "description": "CA3variants:  Three-Way Correspondence Analysis Variants\n\nProvides three variants of three-way correspondence analysis (ca) three-way symmetrical ca, three-way non-symmetrical ca, three-way ordered symmetrical ca.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CA3variants@2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CADFtest@0.3-3",
+        "description": "CADFtest:  A Package to Perform Covariate Augmented Dickey-Fuller Unit Root Tests\n\nHansen's (1995) Covariate-Augmented Dickey-Fuller (CADF) test.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CADFtest@0.3-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CADStat@3.0.8",
+        "description": "CADStat:  Provides a GUI to Several Statistical Methods\n\nUsing Java GUI for R (JGR), CADStat provides a user interface for several statistical methods - scatterplot, boxplot, linear regression, generalized linear regression, quantile regression, conditional probability calculations, and regression trees.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CADStat@3.0.8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAISEr@1.0.16",
+        "description": "CAISEr:  Comparison of Algorithms with Iterative Sample Size Estimation\n\nFunctions for performing experimental comparisons of algorithms using adequate sample sizes for power and accuracy.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAISEr@1.0.16",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CALF@0.2.0",
+        "description": "CALF:  Coarse Approximation Linear Function\n\nContains greedy algorithms for coarse approximation linear functions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CALF@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAMAN@0.74",
+        "description": "CAMAN:  Finite Mixture Models and Meta-Analysis Tools - Based on C.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAMAN@0.74",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CANSIM2R@1.14.1",
+        "description": "CANSIM2R:  Directly Extracts Complete CANSIM Data Tables\n\nExtract CANSIM (Statistics Canada) tables and transform them into readily usable data in panel (wide) format.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CANSIM2R@1.14.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARBayes@5.2",
+        "description": "CARBayes:  Spatial Generalised Linear Mixed Models for Areal Unit Data\n\nImplements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARBayes@5.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARBayesST@3.1",
+        "description": "CARBayesST:  Spatio-Temporal Generalised Linear Mixed Models for Areal Unit Data\n\nImplements a class of spatio-temporal generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARBayesST@3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARBayesdata@2.1",
+        "description": "CARBayesdata:  Data Used in the Vignettes Accompanying the CARBayes and CARBayesST Packages\n\nSpatio-temporal data from Scotland used in the vignettes accompanying the CARBayes (spatial modelling) and CARBayesST (spatio-temporal modelling) packages.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARBayesdata@2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARE1@1.1.0",
+        "description": "CARE1:  Statistical package for population size estimation in capture-recapture models\n\nThe R package CARE1, the first part of the program CARE (Capture-Recapture) in http://chao.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARE1@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARLIT@1.0",
+        "description": "CARLIT:  Ecological Quality Ratios Calculation and Plot\n\nFunctions to calculate and plot ecological quality ratios (EQR) as specified by Ballesteros et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARLIT@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARRoT@2.0.0",
+        "description": "CARRoT:  Predicting Categorical and Continuous Outcomes Using One in Ten Rule\n\nPredicts categorical or continuous outcomes while concentrating on four key points.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARRoT@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CARS@0.2.2",
+        "description": "CARS:  Covariate Assisted Ranking and Screening for Large-Scale Two-Sample Inference\n\nIt implements the CARS procedure, which is a two-sample multiple testing procedure that utilizes an additional auxiliary variable to capture the sparsity information, hence improving power.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CARS@0.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CASMAP@0.6.0",
+        "description": "CASMAP:  Detection of Statistically Significant Combinations of SNPs in Association Mapping\n\nA significant pattern mining-based toolbox for region-based genome-wide association studies and higher-order epistasis analyses, implementing the methods described in Llinares-López et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CASMAP@0.6.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAST@0.3.1",
+        "description": "CAST:  'caret' Applications for Spatial-Temporal Models\n\nSupporting functionality to run 'caret' with spatial or spatial-temporal data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAST@0.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CATT@2.0",
+        "description": "CATT:  The Cochran-Armitage Trend Test\n\nThis function conducts the Cochran-Armitage trend test to a 2 by k contingency table.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CATT@2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CATTexact@0.1.0",
+        "description": "CATTexact:  Computation of the p-Value for the Exact Conditional Cochran-Armitage Trend Test\n\nProvides functions for computing the one-sided p-values of the Cochran-Armitage trend test statistic for the asymptotic and the exact conditional test.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CATTexact@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CATkit@3.3.3",
+        "description": "CATkit:  Chronomics Analysis Toolkit (CAT): Periodicity Analysis\n\nCalculates auto- and cross-correlation functions and plots an actogram and a smoothing function from a time series to identify and visualize periodic components.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CATkit@3.3.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAWaR@0.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAWaR@0.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAinterprTools@1.0.0",
+        "description": "CAinterprTools:  Graphical Aid in Correspondence Analysis Interpretation and Significance Testings\n\nAllows to plot a number of information related to the interpretation of Correspondence Analysis' results.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAinterprTools@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CAvariants@5.0",
+        "description": "CAvariants:  Correspondence Analysis Variants\n\nProvides six variants of two-way correspondence analysis (ca): simple ca, singly ordered ca, doubly ordered ca, non symmetrical ca, singly ordered non symmetrical ca, and doubly ordered non symmetrical ca.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CAvariants@5.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CB2@1.3.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CB2@1.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CBCgrps@2.7",
+        "description": "CBCgrps:  Compare Baseline Characteristics Between Groups\n\nCompare baseline characteristics between two or more groups.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CBCgrps@2.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CBDA@1.0.0",
+        "description": "CBDA:  Compressive Big Data Analytics\n\nClassification performed on Big Data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CBDA@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CBPS@0.21",
+        "description": "CBPS:  Covariate Balancing Propensity Score\n\nImplements the covariate balancing propensity score (CBPS) proposed by Imai and Ratkovic (2014) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CBPS@0.21",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CBSr@1.0.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CBSr@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CBT@1.0",
+        "description": "CBT:  Confidence Bound Target Algorithm\n\nThe Confidence Bound Target (CBT) algorithm is designed for infinite arms bandit problem.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CBT@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CC@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CC@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCA@1.2",
+        "description": "CCA:  Canonical correlation analysis\n\nThe package provide a set of functions that extend the cancor function with new numerical and graphical outputs.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCA@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCAGFA@1.0.8",
+        "description": "CCAGFA:  Bayesian Canonical Correlation Analysis and Group Factor Analysis\n\nVariational Bayesian algorithms for learning canonical correlation analysis (CCA), inter-battery factor analysis (IBFA), and group factor analysis (GFA).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCAGFA@1.0.8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCAMLRGIS@3.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCAMLRGIS@3.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCM@1.2",
+        "description": "CCM:  Correlation Classification Method\n\nClassification method described in Dancik et al (2011) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCM@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCP@1.1",
+        "description": "CCP:  Significance Tests for Canonical Correlation Analysis (CCA)\n\nSignificance tests for canonical correlation analysis, including asymptotic tests and a Monte Carlo method.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCP@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCTpack@1.5.2",
+        "description": "CCTpack:  Consensus Analysis, Model-Based Clustering, and Cultural Consensus Theory Applications\n\nConsensus analysis, model-based clustering, and cultural consensus theory applications to response data (e.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCTpack@1.5.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CCpop@1.0",
+        "description": "CCpop:  One and two locus GWAS of binary phenotype with case-control-population design\n\nTests of association between SNPs or pairs of SNPs and binary phenotypes, in case-control / case-population / case-control-population studies.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CCpop@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDFt@1.0.1",
+        "description": "CDFt:  Statistical downscaling through CDF-transform\n\nThis package proposes a statistical downscaling method for cumulative distribution functions (CDF), as well as the computation of the Cram\\'er-von Mises statistics U, and the Kolmogorov-Smirnov statistics KS.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDFt@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDLasso@1.1",
+        "description": "CDLasso:  Coordinate Descent Algorithms for Lasso Penalized L1, L2, and Logistic Regression\n\nCoordinate Descent Algorithms for Lasso Penalized L1, L2, and Logistic Regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDLasso@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDM@7.5-15",
+        "description": "CDM:  Cognitive Diagnosis Modeling\n\n Functions for cognitive diagnosis modeling and multidimensional item response modeling for dichotomous and polytomous item responses.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDM@7.5-15",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDNmoney@2012.4-2",
+        "description": "CDNmoney:  Components of Canadian Monetary and Credit Aggregates\n\nComponents of Canadian Credit Aggregates and Monetary Aggregates with continuity adjustments.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDNmoney@2012.4-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDROM@1.1",
+        "description": "CDROM:  Phylogenetically Classifies Retention Mechanisms of Duplicate Genes from Gene Expression Data\n\nClassification is based on the recently developed phylogenetic approach by Assis and Bachtrog (2013).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDROM@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDVine@1.4",
+        "description": "CDVine:  Statistical Inference of C- And D-Vine Copulas\n\nFunctions for statistical inference of canonical vine (C-vine) and D-vine copulas.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDVine@1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CDVineCopulaConditional@0.1.1",
+        "description": "CDVineCopulaConditional:  Sampling from Conditional C- and D-Vine Copulas\n\nProvides tools for sampling from a conditional copula density decomposed via Pair-Copula Constructions as C- or D- vine.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CDVineCopulaConditional@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CEC@0.10.2",
+        "description": "CEC:  Cross-Entropy Clustering\n\nCEC divides data into Gaussian type clusters.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CEC@0.10.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CEGO@2.4.0",
+        "description": "CEGO:  Combinatorial Efficient Global Optimization\n\nModel building, surrogate model based optimization and Efficient Global Optimization in combinatorial or mixed search spaces.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CEGO@2.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CENFA@1.1.0",
+        "description": "CENFA:  Climate and Ecological Niche Factor Analysis\n\nTools for climate- and ecological-niche factor analysis of spatial data, including methods for visualization of spatial variability of species sensitivity, exposure, and vulnerability to climate change.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CENFA@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CEoptim@1.2",
+        "description": "CEoptim:  Cross-Entropy R Package for Optimization\n\nOptimization solver based on the Cross-Entropy method.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CEoptim@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CFC@1.1.2",
+        "description": "CFC:  Cause-Specific Framework for Competing-Risk Analysis\n\nNumerical integration of cause-specific survival curves to arrive at cause-specific cumulative incidence functions, with three usage modes: 1) Convenient API for parametric survival regression followed by competing-risk analysis, 2) API for CFC, accepting user-specified survival functions in R, and 3) Same as 2, but accepting survival functions in C++.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CFC@1.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CFF@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CFF@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CGE@0.3.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CGE@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CGGP@1.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CGGP@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CGManalyzer@1.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CGManalyzer@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CGP@2.1-1",
+        "description": "CGP:  Composite Gaussian Process Models\n\nFit composite Gaussian process (CGP) models as described in Ba and Joseph (2012) \"Composite Gaussian Process Models for Emulating Expensive Functions\", Annals of Applied Statistics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CGP@2.1-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CGPfunctions@0.5.9",
+        "description": "CGPfunctions:  Powell Miscellaneous Functions for Teaching and Learning Statistics\n\nMiscellaneous functions useful for teaching statistics as well as actually practicing the art.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CGPfunctions@0.5.9",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CHCN@1.5",
+        "description": "CHCN:  Canadian Historical Climate Network\n\nA compilation of historical through contemporary climate measurements scraped from the Environment Canada Website Including tools for scraping data, creating metadata and formating temperature files.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CHCN@1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CHFF@0.1.0",
+        "description": "CHFF:  Closest History Flow Field Forecasting for Bivariate Time Series\n\nThe software matches the current history to the closest history in a time series to build a forecast.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CHFF@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CHMM@0.1.1",
+        "description": "CHMM:  Coupled Hidden Markov Models\n\nAn exact and a variational inference for coupled Hidden Markov Models applied to the joint detection of copy number variations.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CHMM@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CHNOSZ@1.3.5",
+        "description": "CHNOSZ:  Thermodynamic Calculations for Geobiochemistry\n\nAn integrated set of tools for thermodynamic calculations in geochemistry and compositional biology.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CHNOSZ@1.3.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CHsharp@0.4",
+        "description": "CHsharp:  Choi and Hall Style Data Sharpening\n\nFunctions for use in perturbing data prior to use of nonparametric smoothers and clustering.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CHsharp@0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CIAAWconsensus@1.3",
+        "description": "CIAAWconsensus:  Isotope Ratio Meta-Analysis\n\nCalculation of consensus values for atomic weights, isotope amount ratios, and isotopic abundances with the associated uncertainties using multivariate meta-regression approach for consensus building.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CIAAWconsensus@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CIEE@0.1.1",
+        "description": "CIEE:  Estimating and Testing Direct Effects in Directed Acyclic Graphs using Estimating Equations\n\nIn many studies across different disciplines, detailed measures of the variables of interest are available.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CIEE@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CIFsmry@1.0.1.1",
+        "description": "CIFsmry:  Weighted summary of cumulative incidence functions\n\nEstimate of cumulative incidence function in two samples.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CIFsmry@1.0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CIM@1.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CIM@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CINID@1.2",
+        "description": "CINID:  Curculionidae INstar IDentification\n\nThis package provides functions to compute a method for identifying the instar of Curculionid larvae from the observed distribution of the headcapsule size of mature larvae.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CINID@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CINNA@1.1.53",
+        "description": "CINNA:  Deciphering Central Informative Nodes in Network Analysis\n\nFunctions for computing, comparing and demonstrating top informative centrality measures within a network.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CINNA@1.1.53",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CISE@0.1.0",
+        "description": "CISE:  Common and Individual Structure Explained for Multiple Graphs\n\nSpecific dimension reduction methods for replicated graphs (multiple undirected graphs repeatedly measured on a common set of nodes).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CISE@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CITAN@2015.12-2",
+        "description": "CITAN:  CITation ANalysis Toolpack\n\nSupports quantitative research in scientometrics and bibliometrics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CITAN@2015.12-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CIplot@1.0",
+        "description": "CIplot:  Functions to Plot Confidence Interval\n\nPlot confidence interval from the objects of statistical tests such as t.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CIplot@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CJAMP@0.1.1",
+        "description": "CJAMP:  Copula-Based Joint Analysis of Multiple Phenotypes\n\nWe provide a computationally efficient and robust implementation of the recently proposed C-JAMP (Copula-based Joint Analysis of Multiple Phenotypes) method (Konigorski et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CJAMP@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CKAT@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CKAT@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CKLRT@0.2.3",
+        "description": "CKLRT:  Composite Kernel Machine Regression Based on Likelihood Ratio Test\n\nComposite Kernel Machine Regression based on Likelihood Ratio Test (CKLRT): in this package, we develop a kernel machine regression framework to model the overall genetic effect of a SNP-set, considering the possible GE interaction.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CKLRT@0.2.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CLA@0.95-1",
+        "description": "CLA:  Critical Line Algorithm in Pure R\n\nImplements 'Markovitz' Critical Line Algorithm ('CLA') for classical mean-variance portfolio optimization.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CLA@0.95-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CLME@2.0-11",
+        "description": "CLME:  Constrained Inference for Linear Mixed Effects Models\n\nEstimation and inference for linear models where some or all of the fixed-effects coefficients are subject to order restrictions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CLME@2.0-11",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CLONETv2@2.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CLONETv2@2.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CLSOCP@1.0",
+        "description": "CLSOCP:  A smoothing Newton method SOCP solver\n\nThis package provides and implementation of a one step smoothing newton method for the solution of second order cone programming problems, originally described by Xiaoni Chi and Sanyang Liu.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CLSOCP@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CLUSTShiny@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CLUSTShiny@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMC@1.0",
+        "description": "CMC:  Cronbach-Mesbah Curve\n\nCalculation and plot of the stepwise Cronbach-Mesbah Curve.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMC@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMF@1.0.2",
+        "description": "CMF:  Collective matrix factorization\n\nCollective matrix factorization (CMF) finds joint low-rank representations for a collection of matrices with shared row or column entities.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMF@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMLS@1.0-0",
+        "description": "CMLS:  Constrained Multivariate Least Squares\n\nSolves multivariate least squares (MLS) problems subject to constraints on the coefficients, e.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMLS@1.0-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMShiny@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMShiny@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMapViz@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMapViz@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMatching@2.3.0",
+        "description": "CMatching:  Matching Algorithms for Causal Inference with Clustered Data\n\nProvides functions to perform matching algorithms for causal inference with clustered data, as described in B.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMatching@2.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CMplot@3.5.1",
+        "description": "CMplot:  Circle Manhattan Plot\n\nManhattan plot, a type of scatter plot, was widely used to display the association results.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CMplot@3.5.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNLTreg@0.1-2",
+        "description": "CNLTreg:  Complex-Valued Wavelet Lifting for Signal Denoising\n\nImplementations of recent complex-valued wavelet shrinkage procedures for smoothing irregularly sampled signals, see Hamilton et al (2018) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNLTreg@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNLTtsa@0.1-2",
+        "description": "CNLTtsa:  Complex-Valued Wavelet Lifting for Univariate and Bivariate Time Series Analysis\n\nImplementations of recent complex-valued wavelet spectral procedures for analysis of irregularly sampled signals, see Hamilton et al (2018) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNLTtsa@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNOGpro@1.1",
+        "description": "CNOGpro:  Copy Numbers of Genes in prokaryotes\n\nMethods for assigning copy number states and breakpoints in resequencing experiments of prokaryotic organisms.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNOGpro@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNVScope@2.9.4",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNVScope@2.9.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNprep@2.0",
+        "description": "CNprep:  Pre-process DNA Copy Number (CN) Data for Detection of CN Events\n\nThis package evaluates DNA copy number data, using both their initial form (copy number as a noisy function of genomic position) and their approximation by a piecewise-constant function (segmentation), for the purpose of identifying genomic regions where the copy number differs from the norm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNprep@2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CNull@1.0",
+        "description": "CNull:  Fast Algorithms for Frequency-Preserving Null Models in Ecology\n\nEfficient computations for null models that require shuffling columns on big matrix data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CNull@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COBRA@0.99.4",
+        "description": "COBRA:  Nonlinear Aggregation of Predictors\n\nThis package performs prediction for regression-oriented problems, aggregating in a nonlinear scheme any basic regression machines suggested by the context and provided by the user.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COBRA@0.99.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COCONUT@1.0.2",
+        "description": "COCONUT:  COmbat CO-Normalization Using conTrols (COCONUT)\n\nAllows for pooled analysis of microarray data by batch-correcting control samples, and then applying the derived correction parameters to non-control samples to obtain bias-free, inter-dataset corrected data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COCONUT@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COMBAT@0.0.4",
+        "description": "COMBAT:  A Combined Association Test for Genes using Summary Statistics\n\nGenome-wide association studies (GWAS) have been widely used for identifying common variants associated with complex diseases.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COMBAT@0.0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COMPoissonReg@0.7.0",
+        "description": "COMPoissonReg:  Conway-Maxwell Poisson (COM-Poisson) Regression\n\nFit Conway-Maxwell Poisson (COM-Poisson or CMP) regression models to count data (Sellers & Shmueli, 2010) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COMPoissonReg@0.7.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CONDOP@1.0",
+        "description": "CONDOP:  Condition-Dependent Operon Predictions\n\nAn implementation of the computational strategy for the comprehensive analysis of condition-dependent operon maps in prokaryotes proposed by Fortino et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CONDOP@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CONS@0.1.1",
+        "description": "CONS:  Consonance Analysis Module\n\nConsonance Analysis is a useful numerical and graphical approach for evaluating the consistency of the measurements and the panel of people involved in sensory evaluation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CONS@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CORE@3.0",
+        "description": "CORE:  Cores of Recurrent Events\n\ngiven a collection of intervals with integer start and end positions, find recurrently targeted regions and estimate the significance of finding.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CORE@3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CORElearn@1.54.2",
+        "description": "CORElearn:  Classification, Regression and Feature Evaluation\n\nA suite of machine learning algorithms written in C++ with the R interface contains several learning techniques for classification and regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CORElearn@1.54.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CORM@1.0.2",
+        "description": "CORM:  The Clustering of Regression Models Method\n\nWe proposed a new model-based clustering method, called the clustering of regression models method(CORM), which groups genes that share a similar relationship to the covariate(s).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CORM@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COSINE@2.1",
+        "description": "COSINE:  COndition SpecIfic sub-NEtwork\n\nTo identify the globally most discriminative subnetwork from gene expression profiles using an optimization model and genetic algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COSINE@2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COST@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COST@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COUNT@1.3.4",
+        "description": "COUNT:  Functions, Data and Code for Count Data\n\nFunctions, data and code for Hilbe, J.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COUNT@1.3.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/COUSCOus@1.0.0",
+        "description": "COUSCOus:  A Residue-Residue Contact Detecting Method\n\nContact prediction using shrinked covariance (COUSCOus).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/COUSCOus@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CP@1.6",
+        "description": "CP:  Conditional Power Calculations\n\nFunctions for calculating the conditional power for different models in survival time analysis within randomized clinical trials with two different treatments to be compared and survival as an endpoint.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CP@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPAT@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPAT@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPBayes@1.0.0",
+        "description": "CPBayes:  Bayesian Meta Analysis for Studying Cross-Phenotype Genetic Associations\n\nA Bayesian meta-analysis method for studying cross-phenotype genetic associations.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPBayes@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPE@1.5.1",
+        "description": "CPE:  Concordance Probability Estimates in Survival Analysis\n\nFunctions to calculate concordance probability estimates in survival analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPE@1.5.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPMCGLM@1.2",
+        "description": "CPMCGLM:  Correction of the P-Value after Multiple Coding in Generalized Linear Models\n\nWe propose to determine the correction of the significance level after multiple coding of an explanatory variable in Generalized Linear Model.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPMCGLM@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPP@0.1.0",
+        "description": "CPP:  Composition of Probabilistic Preferences (CPP)\n\nCPP is a multiple criteria decision method to evaluate alternatives on complex decision making problems, by a probabilistic approach.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPP@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CPsurv@1.0.0",
+        "description": "CPsurv:  Nonparametric Change Point Estimation for Survival Data\n\nNonparametric change point estimation for survival data based on p-values of exact binomial tests.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CPsurv@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CR@1.0",
+        "description": "CR:  Power Calculation for Weighted Log-Rank Tests in Cure Rate Models\n\nThis package contains R-functions to perform power calculation in a group sequential clinical trial with censored survival data and possibly unequal patient allocation between treatment and control groups.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CR@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CRAC@1.0",
+        "description": "CRAC:  Cosmology R Analysis Code\n\nR functions for cosmological research.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CRAC@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CRANsearcher@1.0.0",
+        "description": "CRANsearcher:  RStudio Addin for Searching Packages in CRAN Database Based on Keywords\n\nOne of the strengths of R is its vast package ecosystem.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CRANsearcher@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CREAM@1.1.1",
+        "description": "CREAM:  Clustering of Genomic Regions Analysis Method\n\nProvides a new method for identification of clusters of genomic regions within chromosomes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CREAM@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CRF@0.4-3",
+        "description": "CRF:  Conditional Random Fields\n\nImplements modeling and computational tools for conditional random fields (CRF) model as well as other probabilistic undirected graphical models of discrete data with pairwise and unary potentials.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CRF@0.4-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CRFCSD@3.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CRFCSD@3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/CRM@1.2.4",
+        "description": "CRM:  Continual Reassessment Method (CRM) for Phase I Clinical Trials\n\nFunctions for phase I clinical trials using the continual reassessment method.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/CRM@1.2.4",
+        "vulnerabilities": [
+
+        ]
+    }
+]

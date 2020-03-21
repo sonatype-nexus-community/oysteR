@@ -1,4 +1,2 @@
-library(testthat)
-library(oysteR)
-
+library("testthat")
 test_check("oysteR")

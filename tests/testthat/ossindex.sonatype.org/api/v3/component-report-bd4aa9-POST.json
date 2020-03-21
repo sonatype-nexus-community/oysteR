@@ -1,0 +1,1008 @@
+[
+    {
+        "coordinates": "pkg:cran/DatabaseConnector@2.4.2",
+        "description": "DatabaseConnector:  Connecting to Various Database Platforms\n\nAn R 'DataBase Interface' ('DBI') compatible interface to various database platforms ('PostgreSQL', 'Oracle', 'Microsoft SQL Server', 'Amazon Redshift', 'Microsoft Parallel Database Warehouse', 'IBM Netezza', 'Apache Impala', and 'Google BigQuery').",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DatabaseConnector@2.4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DatabaseConnectorJars@1.1.0",
+        "description": "DatabaseConnectorJars:  JAR Dependencies for the 'DatabaseConnector' Package\n\nProvides external JAR dependencies for the 'DatabaseConnector' package.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DatabaseConnectorJars@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DatabionicSwarm@1.1.3",
+        "description": "DatabionicSwarm:  Swarm Intelligence for Self-Organized Clustering\n\nAlgorithms implementing populations of agents that interact with one another and sense their environment may exhibit emergent behavior such as self-organization and swarm intelligence.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DatabionicSwarm@1.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Davies@1.1-9",
+        "description": "Davies:  The Davies Quantile Function\n\nVarious utilities for the Davies distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Davies@1.1-9",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeLorean@1.5.0",
+        "description": "DeLorean:  Estimates Pseudotimes for Single Cell Expression Data\n\nImplements the DeLorean model (Reid & Wernisch (2016) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeLorean@1.5.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeRezende.Ferreira@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeRezende.Ferreira@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DealGPL570@0.2.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DealGPL570@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeclareDesign@0.20.0",
+        "description": "DeclareDesign:  Declare and Diagnose Research Designs\n\nResearchers can characterize and learn about the properties of research designs before implementation using 'DeclareDesign'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeclareDesign@0.20.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DecorateR@0.1.1",
+        "description": "DecorateR:  Fit and Deploy DECORATE Trees\n\nDECORATE (Diverse Ensemble Creation by Oppositional Relabeling of Artificial Training Examples) builds an ensemble of J48 trees by recursively adding artificial samples of the training data (\"Melville, P.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DecorateR@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Deducer@0.7-9",
+        "description": "Deducer:  A Data Analysis GUI for R\n\nAn intuitive, cross-platform graphical data analysis system.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Deducer@0.7-9",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeducerPlugInExample@0.2-0",
+        "description": "DeducerPlugInExample:  Deducer Plug-in Example\n\nA example GUI plug-in package to serve as a template.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeducerPlugInExample@0.2-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeducerPlugInScaling@0.1-0",
+        "description": "DeducerPlugInScaling:  Reliability and factor analysis plugin\n\nA Deducer plug-in for factor analysis, reliability analysis and discriminant analysis, using psych, GPArotation and mvnormtest packages.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeducerPlugInScaling@0.1-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeducerSpatial@0.7",
+        "description": "DeducerSpatial:  Deducer for spatial data analysis\n\nA Deducer plug-in for spatial data analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeducerSpatial@0.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeducerSurvival@0.1-0",
+        "description": "DeducerSurvival:  Add Survival Dialogue to Deducer\n\nAdds Kaplan-Meier Survival Analysis to the Deducer GUI.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeducerSurvival@0.1-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DeducerText@0.1-2",
+        "description": "DeducerText:  Deducer GUI for Text Data\n\nA GUI for text mining.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DeducerText@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Delaporte@7.0.2",
+        "description": "Delaporte:  Statistical Functions for the Delaporte Distribution\n\nProvides probability mass, distribution, quantile, random-variate generation, and method-of-moments parameter-estimation functions for the Delaporte distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Delaporte@7.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DelayedEffect.Design@0.0.4",
+        "description": "DelayedEffect.Design:  Sample Size and Power Calculations using the APPLE and SEPPLE Methods\n\nProvides sample size and power calculations when the treatment time-lag effect is present and the lag duration is homogeneous across the individual subject.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DelayedEffect.Design@0.0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Delta@0.2.0.3",
+        "description": "Delta:  Measure of Agreement Between Two Raters\n\nMeasure of agreement delta was originally by Martín & Femia (2004) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Delta@0.2.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Demerelate@0.9-3",
+        "description": "Demerelate:  Functions to Calculate Relatedness on Diploid Genetic Data\n\nFunctions to calculate pairwise relatedness on diploid genetic datasets.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Demerelate@0.9-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DemoDecomp@1.0.1",
+        "description": "DemoDecomp:  Decompose Demographic Functions\n\nTwo general demographic decomposition methods are offered: Pseudo-continuous decomposition proposed by Horiuchi, Wilmoth, and Pletcher (2008) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DemoDecomp@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DendSer@1.0.1",
+        "description": "DendSer:  Dendrogram seriation: ordering for visualisation\n\nRe-arranges a dendrogram to optimize visualisation-based cost functions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DendSer@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DendroSync@0.1.3",
+        "description": "DendroSync:  A Set of Tools for Calculating Spatial Synchrony Between Tree-Ring Chronologies\n\nProvides functions for the calculation and plotting of synchrony in tree growth from tree-ring width chronologies (TRW index).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DendroSync@0.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DengueRT@1.0.1",
+        "description": "DengueRT:  Parameter Estimates and Real-Time Prediction of a Single Dengue Outbreak\n\nProvides functions for parameter estimation and real-time predictions of a single dengue outbreak taking into account model uncertainty using model averaging.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DengueRT@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DensParcorr@1.1",
+        "description": "DensParcorr:  Dens-Based Method for Partial Correlation Estimation in Large Scale Brain Networks\n\nProvide a Dens-based method for estimating functional connection in large scale brain networks using partial correlation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DensParcorr@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Density.T.HoldOut@2.00",
+        "description": "Density.T.HoldOut:  Density.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Density.T.HoldOut@2.00",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DepLogo@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DepLogo@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DepthProc@2.1.3",
+        "description": "DepthProc:  Statistical Depth Functions for Multivariate Analysis\n\nData depth concept offers a variety of powerful and user friendly tools for robust exploration and inference for multivariate data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DepthProc@2.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Deriv@4.0",
+        "description": "Deriv:  Symbolic Differentiation\n\nR-based solution for symbolic differentiation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Deriv@4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DescTools@0.99.34",
+        "description": "DescTools:  Tools for Descriptive Statistics\n\nA collection of miscellaneous basic statistic functions and convenience wrappers for efficiently describing data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DescTools@0.99.34",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DescToolsAddIns@1.7",
+        "description": "DescToolsAddIns:  Some Functions to be Used as Shortcuts in 'RStudio'\n\n'RStudio' as of recently offers the option to define addins and assign shortcuts to them.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DescToolsAddIns@1.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DescribeDisplay@0.2.7",
+        "description": "DescribeDisplay:  An Interface to the 'DescribeDisplay' 'GGobi' Plugin\n\nProduce publication quality graphics from output of 'GGobi' describe display plugin.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DescribeDisplay@0.2.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DescriptiveStats.OBeu@1.3.1",
+        "description": "DescriptiveStats.OBeu:  Descriptive Statistics 'OpenBudgets.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DescriptiveStats.OBeu@1.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DesignLibrary@0.1.4",
+        "description": "DesignLibrary:  Library of Research Designs\n\n A simple interface to build designs using the package 'DeclareDesign'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DesignLibrary@0.1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DetMCD@0.0.5",
+        "description": "DetMCD:  Implementation of the DetMCD Algorithm (Robust and Deterministic Estimation of Location and Scatter)\n\nImplementation of DetMCD, a new algorithm for robust and deterministic estimation of location and scatter.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DetMCD@0.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DetR@0.0.5",
+        "description": "DetR:  Suite of Deterministic and Robust Algorithms for Linear Regression\n\nDetLTS, DetMM (and DetS) Algorithms for Deterministic, Robust Linear Regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DetR@0.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DetSel@1.0.4",
+        "description": "DetSel:  A computer program to detect markers responding to selection\n\nIn the new era of population genomics, surveys of genetic polymorphism (\"genome scans\") offer the opportunity to distinguish locus-specific from genome wide effects at many loci.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DetSel@1.0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Devore7@0.7.6",
+        "description": "Devore7:  Data sets from Devore's \"Prob and Stat for Eng (7th ed)\"\n\nData sets and sample analyses from Jay L.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Devore7@0.7.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dforest@0.4.2",
+        "description": "Dforest:  Decision Forest\n\nProvides R-implementation of Decision forest algorithm, which combines the predictions of multiple independent decision tree models for a consensus decision.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dforest@0.4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiPhiSeq@0.2.0",
+        "description": "DiPhiSeq:  Robust Tests for Differential Dispersion and Differential Expression in RNA-Sequencing Data\n\nImplements the algorithm described in Jun Li and Alicia T.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiPhiSeq@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiPs@0.6.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiPs@0.6.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiSSMod@1.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiSSMod@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiagrammeR@1.0.5",
+        "description": "DiagrammeR:  Graph/Network Visualization\n\n Build graph/network structures using functions for stepwise addition and deletion of nodes and edges.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiagrammeR@1.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiagrammeRsvg@0.1",
+        "description": "DiagrammeRsvg:  Export DiagrammeR Graphviz Graphs as SVG\n\nAllows for export of DiagrammeR Graphviz objects to SVG.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiagrammeRsvg@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiallelAnalysisR@0.1.1",
+        "description": "DiallelAnalysisR:  Diallel Analysis with R\n\nPerforms Diallel Analysis with R using Griffing's and Hayman's approaches.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiallelAnalysisR@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiceDesign@1.8-1",
+        "description": "DiceDesign:  Designs of Computer Experiments\n\nSpace-Filling Designs and Uniformity Criteria.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiceDesign@1.8-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiceEval@1.4",
+        "description": "DiceEval:  Construction and Evaluation of Metamodels\n\nEstimation, validation and prediction of models of different types : linear models, additive models, MARS,PolyMARS and Kriging.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiceEval@1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiceKriging@1.5.6",
+        "description": "DiceKriging:  Kriging Methods for Computer Experiments\n\nEstimation, validation and prediction of kriging models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiceKriging@1.5.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiceOptim@2.0",
+        "description": "DiceOptim:  Kriging-Based Optimization for Computer Experiments\n\nEfficient Global Optimization (EGO) algorithm and adaptations for parallel infill (multipoint EI), problems with noise, and problems with constraints.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiceOptim@2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiceView@1.3-2",
+        "description": "DiceView:  Plot Methods for Computer Experiments Design and Surrogate\n\nView 2D/3D sections or contours of computer experiments designs, surrogates or test functions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiceView@1.3-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DidacticBoost@0.1.1",
+        "description": "DidacticBoost:  A Simple Implementation and Demonstration of Gradient Boosting\n\nA basic, clear implementation of tree-based gradient boosting designed to illustrate the core operation of boosting models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DidacticBoost@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Diderot@0.12",
+        "description": "Diderot:  Bibliographic Network Analysis\n\nEnables the user to build a citation network/graph from bibliographic data and, based on modularity and heterocitation metrics, assess the degree of awareness/cross-fertilization between two corpora/communities.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Diderot@0.12",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffCorr@0.4.1",
+        "description": "DiffCorr:  Analyzing and Visualizing Differential Correlation Networks in Biological Data\n\nA method for identifying pattern changes between 2 experimental conditions in correlation networks (e.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffCorr@0.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffNet@1.0-0",
+        "description": "DiffNet:  Detection of Statistically Significant Changes in Complex Biological Networks\n\nProvides an implementation of statistically significant differential sub-network analysis for paired biological networks.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffNet@1.0-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffXTables@0.0.2",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffXTables@0.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffusionRgqd@0.1.3",
+        "description": "DiffusionRgqd:  Inference and Analysis for Generalized Quadratic Diffusions\n\nTools for performing inference and analysis on a class of quadratic diffusion processes for both scalar and bivariate diffusion systems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffusionRgqd@0.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffusionRimp@0.1.2",
+        "description": "DiffusionRimp:  Inference and Analysis for Diffusion Processes via Data Imputation and Method of Lines\n\nTools for performing inference and analysis using a data-imputation scheme and the method of lines.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffusionRimp@0.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiffusionRjgqd@0.1.1",
+        "description": "DiffusionRjgqd:  Inference and Analysis for Jump Generalized Quadratic Diffusions\n\nTools for performing inference and analysis on a class of quadratic jump diffusion processes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiffusionRjgqd@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Digiroo2@0.6",
+        "description": "Digiroo2:  An application programming interface for generating null models of social contacts based on individuals' space use\n\nDigiroo2 is an R package developed by researchers at the University of Queensland to investigate association patterns and social structure in wild animal populations.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Digiroo2@0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DirectEffects@0.2",
+        "description": "DirectEffects:  Estimating Controlled Direct Effects for Explaining Causal Findings\n\nA set of functions to estimate the controlled direct effect of treatment fixing a potential mediator to a specific value.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DirectEffects@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DirectStandardisation@1.2",
+        "description": "DirectStandardisation:  Adjusted Means and Proportions by Direct Standardisation\n\nCalculate adjusted means and proportions of a variable by groups defined by another variable by direct standardisation, standardised to the structure of the dataset.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DirectStandardisation@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DirectedClustering@0.1.1",
+        "description": "DirectedClustering:  Directed Weighted Clustering Coefficient\n\nAllows the computation of clustering coefficients for directed and weighted networks by using different approaches.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DirectedClustering@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Directional@4.2",
+        "description": "Directional:  Directional Statistics\n\nA collection of functions for directional data analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Directional@4.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DirichletReg@0.6-3.1",
+        "description": "DirichletReg:  Dirichlet Regression in R\n\nImplements Dirichlet regression models in R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DirichletReg@0.6-3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DisHet@1.0.0",
+        "description": "DisHet:  Estimate the Gene Expression Levels and Component Proportions of the Normal, Stroma (Immune) and Tumor Components of Bulk Tumor Samples\n\nModel cell type heterogeneity of bulk renal cell carcinoma.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DisHet@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DisImpact@0.0.5",
+        "description": "DisImpact:  Calculates Disproportionate Impact When Binary Success Data are Disaggregated by Subgroups\n\nImplements methods for calculating disproportionate impact: the percentage point gap, proportionality index, and the 80% index.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DisImpact@0.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscreteFDR@1.3-4",
+        "description": "DiscreteFDR:  Multiple Testing Procedures with Adaptation for Discrete Tests\n\nMultiple testing procedures described in the paper Döhler, Durand and Roquain (2018) \"New FDR bounds for discrete and heterogeneous tests\" <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscreteFDR@1.3-4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscreteInverseWeibull@1.0.2",
+        "description": "DiscreteInverseWeibull:  Discrete Inverse Weibull Distribution\n\nProbability mass function, distribution function, quantile function, random generation and parameter estimation for the discrete inverse Weibull distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscreteInverseWeibull@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscreteLaplace@1.1.1",
+        "description": "DiscreteLaplace:  Discrete Laplace Distributions\n\nProbability mass function, distribution function, quantile function, random generation and estimation for the skew discrete Laplace distributions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscreteLaplace@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscreteQvalue@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscreteQvalue@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscreteWeibull@1.1",
+        "description": "DiscreteWeibull:  Discrete Weibull Distributions (Type 1 and 3)\n\nProbability mass function, distribution function, quantile function, random generation and parameter estimation for the type I and III discrete Weibull distributions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscreteWeibull@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiscriMiner@0.1-29",
+        "description": "DiscriMiner:  Tools of the Trade for Discriminant Analysis\n\nFunctions for Discriminant Analysis and Classification purposes covering various methods such as descriptive, geometric, linear, quadratic, PLS, as well as qualitative discriminant analyses.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiscriMiner@0.1-29",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Disequilibrium@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Disequilibrium@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DisimForMixed@0.2",
+        "description": "DisimForMixed:  Calculate Dissimilarity Matrix for Dataset with Mixed Attributes\n\nImplement the methods proposed by Ahmad & Dey (2007) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DisimForMixed@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Distance@1.0.0",
+        "description": "Distance:  Distance Sampling Detection Function and Abundance Estimation\n\nA simple way of fitting detection functions to distance sampling data for both line and point transects.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Distance@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DistatisR@1.0.1",
+        "description": "DistatisR:  DiSTATIS Three Way Metric Multidimensional Scaling\n\nImplement DiSTATIS and CovSTATIS (three-way multidimensional scaling).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DistatisR@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DistributionFitR@0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DistributionFitR@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DistributionOptimization@1.2.6",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DistributionOptimization@1.2.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DistributionTest@1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DistributionTest@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DistributionUtils@0.6-0",
+        "description": "DistributionUtils:  Distribution Utilities\n\nThis package contains utilities which are of use in the packages I have developed for dealing with distributions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DistributionUtils@0.6-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DivE@1.2",
+        "description": "DivE:  Diversity Estimator\n\nR-package DivE contains functions for the DivE estimator (Laydon, D.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DivE@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DivMelt@1.0.3",
+        "description": "DivMelt:  HRM Diversity Assay Analysis Tool\n\nThis package has tools for analyzing DNA melting data to generate HRM scores, the DNA diversity measure output of the HRM Diversity Assay.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DivMelt@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DiversityOccupancy@1.0.6",
+        "description": "DiversityOccupancy:  Building Diversity Models from Multiple Species Occupancy Models\n\nPredictions of alpha diversity are fitted from presence data, first abundance is modeled from occupancy models and then, several diversity indices are calculated and finally GLM models are used to predict diversity in different environments and select priority areas.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DiversityOccupancy@1.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DnE@2.1.0",
+        "description": "DnE:  Distribution and Equation\n\nThe DnE package involves functions to analyse the distribution of a set of given data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DnE@2.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoE.MIParray@0.13",
+        "description": "DoE.MIParray:  Creation of Arrays by Mixed Integer Programming\n\n'CRAN' package 'DoE.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoE.MIParray@0.13",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoE.base@1.1-3",
+        "description": "DoE.base:  Full Factorials, Orthogonal Arrays and Base Utilities for DoE Packages\n\nCreates full factorial experimental designs and designs based on orthogonal arrays for (industrial) experiments.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoE.base@1.1-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoE.multi.response@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoE.multi.response@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoE.wrapper@0.11",
+        "description": "DoE.wrapper:  Wrapper Package for Design of Experiments Functionality\n\nVarious kinds of designs for (industrial) experiments can be created.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoE.wrapper@0.11",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoEstRare@0.2",
+        "description": "DoEstRare:  Rare Variant Association Test Based on Position Density Estimation\n\nRare variant association test integrating variant position information.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoEstRare@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoTC@0.2",
+        "description": "DoTC:  Distribution of Typicality Coefficients\n\nCalculation of cluster typicality coefficients as being generated by fuzzy k-means clustering.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoTC@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dodge@0.9-2",
+        "description": "Dodge:  Acceptance Sampling Ideas Originated by H.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dodge@0.9-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dominance@1.1.0",
+        "description": "Dominance:  A Package to Calculate and Visualize Dominance Hierarchies\n\nFunctions to calculate ADI (Average Dominance Index) and FDI (Frequency-Based Dominance Index).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dominance@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoseFinding@0.9-17",
+        "description": "DoseFinding:  Planning and Analyzing Dose Finding Experiments\n\nThe DoseFinding package provides functions for the design and analysis of dose-finding experiments (with focus on pharmaceutical Phase II clinical trials).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoseFinding@0.9-17",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoubleCone@1.1",
+        "description": "DoubleCone:  Test Against Parametric Regression Function\n\nPerforms hypothesis tests concerning a regression function in a least-squares model, where the null is a parametric function, and the alternative is the union of large-dimensional convex polyhedral cones.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoubleCone@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DoubleExpSeq@1.1",
+        "description": "DoubleExpSeq:  Differential Exon Usage Test for RNA-Seq Data via Empirical Bayes Shrinkage of the Dispersion Parameter\n\nDifferential exon usage test for RNA-Seq data via an empirical Bayes shrinkage method for the dispersion parameter the utilizes inclusion-exclusion data to analyze the propensity to skip an exon across groups.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DoubleExpSeq@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dowd@0.12",
+        "description": "Dowd:  Functions Ported from 'MMR2' Toolbox Offered in Kevin Dowd's Book Measuring Market Risk\n\n'Kevin Dowd's' book Measuring Market Risk is a widely read book in the area of risk measurement by students and practitioners alike.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dowd@0.12",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dpit@1.0",
+        "description": "Dpit:  Distribution Pitting\n\nCompares distributions with one another in terms of their fit to each sample in a dataset that contains multiple samples, as described in Joo, Aguinis, and Bradley (in press).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dpit@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DrBats@0.1.5",
+        "description": "DrBats:  Data Representation: Bayesian Approach That's Sparse\n\nFeed longitudinal data into a Bayesian Latent Factor Model to obtain a low-rank representation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DrBats@0.1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DrImpute@1.0",
+        "description": "DrImpute:  Imputing Dropout Events in Single-Cell RNA-Sequencing Data\n\nR codes for imputing dropout events.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DrImpute@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DrInsight@0.1.1",
+        "description": "DrInsight:  Drug Repurposing: Integration and Systematic Investigation of Genomic High Throughput Data\n\nThis is a connectivity mapping-based drug repurposing tool that identifies drugs that can potentially reverse query disease phenotype or have similar functions with query drugs.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DrInsight@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DramaAnalysis@3.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DramaAnalysis@3.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DriftBurstHypothesis@0.3.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DriftBurstHypothesis@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DrillR@0.1",
+        "description": "DrillR:  R Driver for Apache Drill\n\nProvides a R driver for Apache Drill<https://drill.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DrillR@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DrugClust@0.2",
+        "description": "DrugClust:  Implementation of a Machine Learning Framework for Predicting Drugs Side Effects\n\nAn implementation of a Machine Learning Framework for prediction of new drugs Side Effects.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DrugClust@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DstarM@0.3.0",
+        "description": "DstarM:  Analyze Two Choice Reaction Time Data with the D*M Method\n\nA collection of functions to estimate parameters of a diffusion model via a D*M analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DstarM@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DtD@0.2.2",
+        "description": "DtD:  Distance to Default\n\nProvides fast methods to work with Merton's distance to default model introduced in Merton (1974) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DtD@0.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DunnettTests@2.0",
+        "description": "DunnettTests:  Software implementation of step-down and step-up Dunnett test procedures\n\nFor the implementation of the step-down or step-up Dunnett testing procedures, the package includes R functions to calculate critical constants and R functions to calculate adjusted P-values of the test statistics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DunnettTests@2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DySeq@0.22",
+        "description": "DySeq:  Functions for Dyadic Sequence Analyses\n\nFunctions for dyadic binary/dichotomous sequence analyses are implemented in this contribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DySeq@0.22",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Dykstra@1.0-0",
+        "description": "Dykstra:  Quadratic Programming using Cyclic Projections\n\nSolves quadratic programming problems using Richard L.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Dykstra@1.0-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynClust@3.13",
+        "description": "DynClust:  Denoising and clustering for dynamical image sequence (2D or 3D)+T\n\nDynClust is a two-stage procedure for the denoising and clustering of stack of noisy images acquired over time.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynClust@3.13",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynNom@5.0.1",
+        "description": "DynNom:  Dynamic Nomograms for Linear, Generalized Linear and Proportional Hazard Models\n\nDemonstrate the results of a statistical model object as a dynamic nomogram in an RStudio panel or web browser.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynNom@5.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynTxRegime@4.3",
+        "description": "DynTxRegime:  Methods for Estimating Optimal Dynamic Treatment Regimes\n\nMethods to estimate dynamic treatment regimes using Interactive Q-Learning, Q-Learning, weighted learning, and value-search methods based on Augmented Inverse Probability Weighted Estimators and Inverse Probability Weighted Estimators.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynTxRegime@4.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynaRankR@1.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynaRankR@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynamicDistribution@1.1",
+        "description": "DynamicDistribution:  Dynamically visualized probability distributions and their moments\n\nThe package is aimed at dynamically visualizing probability distributions and their moments and all the commonly used distributions are included.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynamicDistribution@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/DynamicGP@1.1-5",
+        "description": "DynamicGP:  Local Gaussian Process Model for Large-Scale Dynamic Computer Experiments\n\nFits localized GP model for dynamic computer experiments via singular value decomposition of the response matrix Y for large N (the number of observations) using the algorithm proposed by Zhang et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/DynamicGP@1.1-5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/E4tools@0.1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/E4tools@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EAinference@0.2.3",
+        "description": "EAinference:  Estimator Augmentation and Simulation-Based Inference\n\nEstimator augmentation methods for statistical inference on high-dimensional data, as described in Zhou, Q.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EAinference@0.2.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EBASS@0.1",
+        "description": "EBASS:  Sample Size Calculation Method for Cost-Effectiveness Studies Based on Expected Value of Perfect Information\n\nWe propose a new sample size calculation method for trial-based cost-effectiveness analyses.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EBASS@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EBEN@4.6",
+        "description": "EBEN:  Empirical Bayesian Elastic Net\n\nProvides the Empirical Bayesian Elastic Net for handling multicollinearity in generalized linear regression models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EBEN@4.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EBPRS@2.0.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EBPRS@2.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EBglmnet@4.1",
+        "description": "EBglmnet:  Empirical Bayesian Lasso and Elastic Net Methods for Generalized Linear Models\n\nProvides empirical Bayesian lasso and elastic net algorithms for variable selection and effect estimation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EBglmnet@4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EBrank@1.0.0",
+        "description": "EBrank:  Empirical Bayes Ranking\n\nEmpirical Bayes ranking applicable to parallel-estimation settings where the estimated parameters are asymptotically unbiased and normal, with known standard errors.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EBrank@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECFsup@0.1-2",
+        "description": "ECFsup:  Equal Covariance Functions Testing by L2-Norm and Sup-Norm\n\nTesting the equality of several covariance functions of functional data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECFsup@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECGofTestDx@0.4",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECGofTestDx@0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECLRMC@1.0",
+        "description": "ECLRMC:  Ensemble Correlation-Based Low-Rank Matrix Completion\n\nEnsemble correlation-based low-rank matrix completion method (ECLRMC) is an extension to the LRMC based methods.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECLRMC@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECOSolveR@0.5.3",
+        "description": "ECOSolveR:  Embedded Conic Solver in R\n\nR interface to the Embedded COnic Solver (ECOS), an efficient and robust C library for convex problems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECOSolveR@0.5.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECctmc@0.2.5",
+        "description": "ECctmc:  Simulation from Endpoint-Conditioned Continuous Time Markov Chains\n\nDraw sample paths for endpoint-conditioned continuous time Markov chains via modified rejection sampling or uniformization.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECctmc@0.2.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECharts2Shiny@0.2.13",
+        "description": "ECharts2Shiny:  Embedding Interactive Charts Generated with ECharts Library into Shiny Applications\n\nEmbed interactive charts to their Shiny applications.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECharts2Shiny@0.2.13",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ECoL@0.3.0",
+        "description": "ECoL:  Complexity Measures for Classification Problems\n\nProvides measures to characterize the complexity of classification problems based on the ambiguity and the separation between the classes and the data sparsity and dimensionality of the datasets.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ECoL@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    }
+]
