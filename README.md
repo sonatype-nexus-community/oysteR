@@ -3,7 +3,7 @@ oysteR
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=svg)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
+[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 
 Create purls from the filtered sands of your dependencies, powered by
 OSS Index
@@ -90,5 +90,5 @@ Index](https://ossindex.sonatype.org/), we are glad to have you here\!
 Looking to contribute to our code but need some help? There’s a few ways
 to get information:
 
-  - Chat with us on the [Nexus-Developers
-    Gitter](https://gitter.im/sonatype/nexus-developers)
+  - Chat with us on the [oysteR
+    Gitter](https://gitter.im/sonatype-nexus-community/oysteR)

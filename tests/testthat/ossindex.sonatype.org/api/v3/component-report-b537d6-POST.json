@@ -1,0 +1,1010 @@
+[
+    {
+        "coordinates": "pkg:cran/EDA@1.3",
+        "description": "EDA:  Energy Decomposition Analysis\n\nEnergy decomposition analysis for measuring contributions of components and factors on energy or carbon emission changes, as described in B.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDA@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EDFIR@1.0",
+        "description": "EDFIR:  Estimating Discrimination Factors\n\nFunctions for reading in data sets of prey and predator isotopic measurements and producing estimates for discrimination factors.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDFIR@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EDISON@1.1.1",
+        "description": "EDISON:  Network Reconstruction and Changepoint Detection\n\nPackage EDISON (Estimation of Directed Interactions from Sequences Of Non-homogeneous gene expression) runs an MCMC simulation to reconstruct networks from time series data, using a non-homogeneous, time-varying dynamic Bayesian network.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDISON@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EDMeasure@1.2.0",
+        "description": "EDMeasure:  Energy-Based Dependence Measures\n\nImplementations of (1) mutual dependence measures and mutual independence tests in Jin, Z.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDMeasure@1.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EDOIF@0.1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDOIF@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EDR@0.6-7",
+        "description": "EDR:  Estimation of the Effective Dimension Reduction ('EDR') Space\n\nThe library contains R-functions to estimate the effective dimension reduction space in 'multi-index' regression models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EDR@0.6-7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EEM@1.1.1",
+        "description": "EEM:  Read and Preprocess Fluorescence Excitation-Emission Matrix (EEM) Data\n\nRead raw EEM data and prepares them for further analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EEM@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EFA.MRFA@1.0.7",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EFA.MRFA@1.0.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EFAutilities@2.0.0",
+        "description": "EFAutilities:  Utility Functions for Exploratory Factor Analysis\n\nA number of utility function for exploratory factor analysis are included in this package.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EFAutilities@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EFDR@1.0",
+        "description": "EFDR:  Wavelet-Based Enhanced FDR for Signal Detection in Noisy Images\n\nEnhanced False Discovery Rate (EFDR) is a tool to detect anomalies in an image.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EFDR@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EFS@1.0.3",
+        "description": "EFS:  Tool for Ensemble Feature Selection\n\nProvides a function to check the importance of a feature based on a dependent classification variable.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EFS@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EGAnet@0.9.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EGAnet@0.9.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EGRET@3.0.2",
+        "description": "EGRET:  Exploration and Graphics for RivEr Trends (EGRET)\n\nStatistics and graphics for streamflow history, water quality trends, and the statistical modeling algorithm: Weighted Regressions on Time, Discharge, and Season (WRTDS).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EGRET@3.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EGRETci@2.0.3",
+        "description": "EGRETci:  Exploration and Graphics for RivEr Trends (EGRET) Confidence Intervals\n\nCollection of functions to evaluate uncertainty of results from water quality analysis using the Weighted Regressions on Time Discharge and Season (WRTDS) method.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EGRETci@2.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EHR@0.1-3",
+        "description": "EHR:  Electronic Health Record (EHR) Data Processing and Analysis Tool\n\nProcess and analyze Electronic Health Record (EHR) data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EHR@0.1-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EHRtemporalVariability@1.0.2",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EHRtemporalVariability@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EIAdata@0.0.5",
+        "description": "EIAdata:  R Wrapper for the Energy Information Administration (EIA) API\n\nAn R wrapper to allow the user to query categories and Series IDs, and import data, from the EIA's API.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EIAdata@0.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EILA@0.1-2",
+        "description": "EILA:  Efficient Inference of Local Ancestry\n\nImplementation of Efficient Inference of Local Ancestry using fused quantile regression and k-means classifier.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EILA@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EIX@1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EIX@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EKMCMC@0.1.0",
+        "description": "EKMCMC:  MCMC Procedures for Estimating Enzyme Kinetics Constants\n\nFunctions for estimating catalytic constant and Michaelis-Menten constant for enzyme kinetics model using Metropolis-Hasting algorithm within Gibbs sampler based on the Bayesian framework.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EKMCMC@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EL@1.0",
+        "description": "EL:  Two-sample Empirical Likelihood\n\nEmpirical likelihood (EL) inference for two-sample problems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EL@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EL2Surv@1.1",
+        "description": "EL2Surv:  Empirical Likelihood (EL) for Comparing Two Survival Functions\n\nFunctions for computing critical values and implementing the one-sided/two-sided EL tests.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EL2Surv@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ELISAtools@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ELISAtools@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ELMR@1.0",
+        "description": "ELMR:  Extreme Machine Learning (ELM)\n\nTraining and prediction functions are provided for the Extreme Learning Machine algorithm (ELM).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ELMR@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ELMSO@1.0.1",
+        "description": "ELMSO:  Implementation of the Efficient Large-Scale Online Display Advertising Algorithm\n\nAn implementation of the algorithm described in \"Efficient Large- Scale Internet Media Selection Optimization for Online Display Advertising\" by Paulson, Luo, and James (Journal of Marketing Research 2018; see URL below for journal text/citation and <http://www-bcf.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ELMSO@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ELT@1.6",
+        "description": "ELT:  Experience Life Tables\n\nBuild experience life tables.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ELT@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ELYP@0.7-5",
+        "description": "ELYP:  Empirical Likelihood Analysis for the Cox Model and Yang-Prentice (2005) Model\n\nEmpirical likelihood ratio tests for the Yang and Prentice (short/long term hazards ratio) models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ELYP@0.7-5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EM.Fuzzy@1.0",
+        "description": "EM.Fuzzy:  EM Algorithm for Maximum Likelihood Estimation by Non-Precise Information\n\nThe EM algorithm is a powerful tool for computing maximum likelihood estimates with incomplete data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EM.Fuzzy@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMA@1.4.7",
+        "description": "EMA:  Easy Microarray Data Analysis\n\nWe propose both a clear analysis strategy and a selection of tools to investigate microarray gene expression data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMA@1.4.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMAtools@0.1.3",
+        "description": "EMAtools:  Data Management Tools for Real-Time Monitoring/Ecological Momentary Assessment Data\n\nDo data management functions common in real-time monitoring (also called: ecological momentary assessment, experience sampling, micro-longitudinal) data, including creating power curves for multilevel data, centering on participant means and merging event-level data into momentary data sets where you need the events to correspond to the nearest data point in the momentary data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMAtools@0.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMC@1.3",
+        "description": "EMC:  Evolutionary Monte Carlo (EMC) algorithm\n\nrandom walk Metropolis, Metropolis Hasting, parallel tempering, evolutionary Monte Carlo, temperature ladder construction and placement.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMC@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMCluster@0.2-12",
+        "description": "EMCluster:  EM Algorithm for Model-Based Clustering of Finite Mixture Gaussian Distribution\n\nEM algorithms and several efficient initialization methods for model-based clustering of finite mixture Gaussian distribution with unstructured dispersion in both of unsupervised and semi-supervised learning.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMCluster@0.2-12",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMD@1.5.8",
+        "description": "EMD:  Empirical Mode Decomposition and Hilbert Spectral Analysis\n\nThis package carries out empirical mode decomposition and Hilbert spectral analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMD@1.5.8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EML@2.0.2",
+        "description": "EML:  Read and Write Ecological Metadata Language Files\n\nParse and serialize Ecological Metadata Language ('EML', see <https://en.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EML@2.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMAgeo@0.9.7",
+        "description": "EMMAgeo:  End-Member Modelling of Grain-Size Data\n\nEnd-member modelling analysis of grain-size data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMAgeo@0.9.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMIXcskew@0.9-5",
+        "description": "EMMIXcskew:  Fitting Mixtures of CFUST Distributions\n\nFunctions to fit finite mixture of multivariate canonical fundamental skew t (FM-CFUST) distributions, random sample generation, 2D and 3D contour plots.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMIXcskew@0.9-5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMIXgene@0.1.2",
+        "description": "EMMIXgene:  A Mixture Model-Based Approach to the Clustering of Microarray Expression Data\n\nProvides unsupervised selection and clustering of microarray data using mixture models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMIXgene@0.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMIXmfa@2.0.11",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMIXmfa@2.0.11",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMIXskew@1.0.3",
+        "description": "EMMIXskew:  The EM Algorithm and Skew Mixture Distribution\n\nEM algorithm for Fitting Mixture of Multivariate Skew Normal and Skew t Distributions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMIXskew@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMLi@0.0.3",
+        "description": "EMMLi:  A Maximum Likelihood Approach to the Analysis of Modularity\n\nFit models of modularity to morphological landmarks.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMLi@0.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMMREML@3.1",
+        "description": "EMMREML:  Fitting Mixed Models with Known Covariance Structures\n\nThe main functions are 'emmreml', and 'emmremlMultiKernel'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMMREML@3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMP@2.0.5",
+        "description": "EMP:  Expected Maximum Profit Classification Performance Measure\n\nFunctions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMP@2.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMSC@0.9.0",
+        "description": "EMSC:  Extended Multiplicative Signal Correction\n\nBackground correction of spectral like data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMSC@0.9.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMSNM@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMSNM@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMSaov@2.3",
+        "description": "EMSaov:  The Analysis of Variance with EMS\n\nProvides the analysis of variance table including the expected mean squares (EMS) for various types of experimental design.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMSaov@2.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMT@1.1",
+        "description": "EMT:  Exact Multinomial Test: Goodness-of-Fit Test for Discrete Multivariate data\n\nThe package provides functions to carry out a Goodness-of-fit test for discrete multivariate data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMT@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMVS@1.1",
+        "description": "EMVS:  The Expectation-Maximization Approach to Bayesian Variable Selection\n\nAn efficient expectation-maximization algorithm for fitting Bayesian spike-and-slab regularization paths for linear regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMVS@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EMbC@2.0.3",
+        "description": "EMbC:  Expectation-Maximization Binary Clustering\n\nUnsupervised, multivariate, binary clustering for meaningful annotation of data, taking into account the uncertainty in the data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EMbC@2.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ENMeval@0.3.0",
+        "description": "ENMeval:  Automated Runs and Evaluations of Ecological Niche Models\n\nAutomatically partitions data into evaluation bins, executes ecological niche models across a range of settings, and calculates a variety of evaluation statistics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ENMeval@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ENiRG@1.0.1",
+        "description": "ENiRG:  Ecological Niche in R and GRASS\n\nA set of tools for the analysis of ecological niche of species and calculation of habitat suitability maps.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ENiRG@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ENmisc@1.2-7",
+        "description": "ENmisc:  Neuwirth miscellaneous\n\nThe ENmisc package contains utility function for different purposes: mtapply and mlapply (multivariate version of tapply and lapply), wtd.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ENmisc@1.2-7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EPT@0.7.5",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EPT@0.7.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EQL@1.0-1",
+        "description": "EQL:  Extended-Quasi-Likelihood-Function (EQL)\n\nComputation of the EQL for a given family of variance functions, Saddlepoint-approximations and related auxiliary functions (e.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EQL@1.0-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EQUIVNONINF@1.0",
+        "description": "EQUIVNONINF:  Testing for Equivalence and Noninferiority\n\nMaking available in R the complete set of programs accompanying S.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EQUIVNONINF@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ERP@2.2",
+        "description": "ERP:  Significance Analysis of Event-Related Potentials Data\n\nFunctions for signal detection and identification designed for Event-Related Potentials (ERP) data in a linear model framework.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ERP@2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ERSA@0.1.1",
+        "description": "ERSA:  Exploratory Regression 'Shiny' App\n\nConstructs a 'shiny' app function with interactive displays for summary and analysis of variance regression tables, and parallel coordinate plots of data and residuals.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ERSA@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ES@1.0",
+        "description": "ES:  Edge Selection\n\nImplementation of the Edge Selection Algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ES@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ESEA@1.0",
+        "description": "ESEA:  ESEA: Discovering the Dysregulated Pathways based on Edge Set Enrichment Analysis\n\nThe package can identify the dysregulated canonical pathways by investigating the changes of biological relationships of pathways in the context of gene expression data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ESEA@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ESG@0.1",
+        "description": "ESG:  ESG - A package for asset projection\n\nThe package presents a \"Scenarios\" class containing general parameters, risk parameters and projection results.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ESG@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ESGtoolkit@0.1",
+        "description": "ESGtoolkit:  Toolkit for the simulation of financial assets and interest rates models\n\nToolkit for Monte Carlo simulations of financial assets and interest rates models, involved in an Economic Scenario Generator (ESG).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ESGtoolkit@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ESKNN@1.0",
+        "description": "ESKNN:  Ensemble of Subset of K-Nearest Neighbours Classifiers for Classification and Class Membership Probability Estimation\n\nFunctions for classification and group membership probability estimation are given.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ESKNN@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ESTER@0.2.0",
+        "description": "ESTER:  Efficient Sequential Testing with Evidence Ratios\n\nAn implementation of sequential testing that uses evidence ratios computed from the weights of a set of models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ESTER@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ETAS@0.4.6",
+        "description": "ETAS:  Modeling Earthquake Data Using ETAS Model\n\nFits the space-time Epidemic Type Aftershock Sequence (ETAS) model to earthquake catalogs using a stochastic declustering approach.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ETAS@0.4.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ETC@1.3",
+        "description": "ETC:  Equivalence to control\n\nThe package allows selecting those treatments of a one-way layout being equivalent to a control.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ETC@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ETLUtils@1.4.1",
+        "description": "ETLUtils:  Utility Functions to Execute Standard Extract/Transform/Load Operations (using Package 'ff') on Large Data\n\nProvides functions to facilitate the use of the 'ff' package in interaction with big data in 'SQL' databases (e.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ETLUtils@1.4.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EValue@2.0.0",
+        "description": "EValue:  Sensitivity Analyses for Unmeasured Confounding in Observational Studies and Meta-Analyses\n\nConducts sensitivity analyses for unmeasured confounding for either an observational study or a meta-analysis of observational studies.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EValue@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EW@1.1",
+        "description": "EW:  Edgeworth Expansion\n\nEdgeworth Expansion calculation.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EW@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EWGoF@2.2.2",
+        "description": "EWGoF:  Goodness-of-Fit Tests for the Exponential and Two-Parameter Weibull Distributions\n\nContains a large number of the goodness-of-fit tests for the Exponential and Weibull distributions classified into families: the tests based on the empirical distribution function, the tests based on the probability plot, the tests based on the normalized spacings, the tests based on the Laplace transform and the likelihood based tests.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EWGoF@2.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EWOC2@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EWOC2@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EXRQ@1.0",
+        "description": "EXRQ:  Extreme Regression of Quantiles\n\nEstimation for high conditional quantiles based on quantile regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EXRQ@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EZtune@2.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EZtune@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Eagle@2.2",
+        "description": "Eagle:  Multiple Locus Association Mapping on a Genome-Wide Scale\n\nAn implementation of multiple-locus association mapping on a genome-wide scale.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Eagle@2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EasyABC@1.5",
+        "description": "EasyABC:  Efficient Approximate Bayesian Computation Sampling Schemes\n\nEnables launching a series of simulations of a computer code from the R session, and to retrieve the simulation outputs in an appropriate format for post-processing treatments.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EasyABC@1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EasyHTMLReport@0.1.1",
+        "description": "EasyHTMLReport:  EasyHTMLReport\n\nIt is a package that can be used to send HTML reports easily.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EasyHTMLReport@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EasyMARK@1.0",
+        "description": "EasyMARK:  Utility functions for working with mark-recapture data\n\nContains a few utility functions for working with capture-history data, a function for simulating capture-history data, and a function to fit this data, using a Gibbs sampler.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EasyMARK@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EasyMx@0.2-12",
+        "description": "EasyMx:  Easy Model-Builder Functions for 'OpenMx'\n\nUtilities for building certain kinds of common matrices and models in the extended structural equation modeling package, 'OpenMx'.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EasyMx@0.2-12",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EbayesThresh@1.4-12",
+        "description": "EbayesThresh:  Empirical Bayes Thresholding and Related Methods\n\nEmpirical Bayes thresholding using the methods developed by I.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EbayesThresh@1.4-12",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Ecdat@0.3-7",
+        "description": "Ecdat:  Data Sets for Econometrics\n\nData sets for econometrics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Ecdat@0.3-7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Ecfun@0.2-2",
+        "description": "Ecfun:  Functions for Ecdat\n\nFunctions to update data sets in Ecdat and to create, manipulate, plot and analyze those and similar data sets.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Ecfun@0.2-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoDiet@1.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoDiet@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoGenetics@1.2.1-5",
+        "description": "EcoGenetics:  Management and Exploratory Analysis of Spatial Data in Landscape Genetics\n\nManagement and exploratory analysis of spatial data in landscape genetics.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoGenetics@1.2.1-5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoHydRology@0.4.12.1",
+        "description": "EcoHydRology:  A Community Modeling Foundation for Eco-Hydrology\n\nProvides a flexible foundation for scientists, engineers, and policy makers to base teaching exercises as well as for more applied use to model complex eco-hydrological interactions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoHydRology@0.4.12.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoIndR@1.6",
+        "description": "EcoIndR:  Ecological Indicators\n\nCalculates several indices, such as of diversity, fluctuation, etc.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoIndR@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoNetGen@0.2.3",
+        "description": "EcoNetGen:  Simulate and Sample from Ecological Interaction Networks\n\nRandomly generate a wide range of interaction networks with specified size, average degree, modularity, and topological structure.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoNetGen@0.2.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoSimR@0.1.0",
+        "description": "EcoSimR:  Null Model Analysis for Ecological Data\n\nGiven a site by species interaction matrix, users can make inferences about species interactions by performance hypothesis comparing test statistics against a null distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoSimR@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoTroph@1.6",
+        "description": "EcoTroph:  EcoTroph R package\n\nEcoTroph is an approach and software for modelling marine and freshwater ecosystems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoTroph@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EcoVirtual@1.1",
+        "description": "EcoVirtual:  Simulation of Ecological Models\n\nComputer simulations of classical ecological models as a learning resource.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EcoVirtual@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Ecohydmod@1.0.0",
+        "description": "Ecohydmod:  Ecohydrological Modelling\n\nSimulates the soil water balance (soil moisture, evapotranspiration, leakage and runoff), rainfall series by using the marked Poisson process and the vegetation growth through the normalized difference vegetation index (NDVI).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Ecohydmod@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EconDemand@1.0",
+        "description": "EconDemand:  General Analysis of Various Economics Demand Systems\n\nTools for general properties including price, quantity, elasticity, convexity, marginal revenue and manifold of various economics demand systems including Linear, Translog, CES, LES and CREMR.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EconDemand@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EdSurvey@2.4.0",
+        "description": "EdSurvey:  Analysis of NCES Education Survey and Assessment Data\n\nRead in and analysis functions for education survey and assessment data from the National Center for Education Statistics (NCES) <https://nces.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EdSurvey@2.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EditImputeCont@1.1.6",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EditImputeCont@1.1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EffectLiteR@0.4-4",
+        "description": "EffectLiteR:  Average and Conditional Effects\n\nUse structural equation modeling to estimate average and conditional effects of a treatment variable on an outcome variable, taking into account multiple continuous and categorical covariates.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EffectLiteR@0.4-4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EffectStars@1.9-1",
+        "description": "EffectStars:  Visualization of Categorical Response Models\n\nNotice: The package EffectStars2 provides a more up-to-date implementation of effect stars! EffectStars provides functions to visualize regression models with categorical response as proposed by Tutz and Schauberger (2013) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EffectStars@1.9-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EffectStars2@0.1-3",
+        "description": "EffectStars2:  Effect Stars\n\nProvides functions for the method of effect stars as proposed by Tutz and Schauberger (2013) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EffectStars2@0.1-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EffectTreat@1.0",
+        "description": "EffectTreat:  Prediction of Therapeutic Success\n\nIn personalized medicine, one wants to know, for a given patient and his or her outcome for a predictor (pre-treatment variable), how likely it is that a treatment will be more beneficial than an alternative treatment.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EffectTreat@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EffectsRelBaseline@0.5",
+        "description": "EffectsRelBaseline:  Test changes of a grouped response relative to baseline\n\nFunctions to test for changes of a response to a stimulus grouping relative to a background or baseline response.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EffectsRelBaseline@0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EfficientMaxEigenpair@0.1.4",
+        "description": "EfficientMaxEigenpair:  Efficient Initials for Computing the Maximal Eigenpair\n\nAn implementation for using efficient initials to compute the maximal eigenpair in R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EfficientMaxEigenpair@0.1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EleChemr@1.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EleChemr@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EloChoice@0.29.4",
+        "description": "EloChoice:  Preference Rating for Visual Stimuli Based on Elo Ratings\n\nAllows calculating global scores for characteristics of visual stimuli.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EloChoice@0.29.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EloOptimized@0.3.0",
+        "description": "EloOptimized:  Optimized Elo Rating Method for Obtaining Dominance Ranks\n\nProvides an implementation of the maximum likelihood methods for deriving Elo scores as published in Foerster, Franz et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EloOptimized@0.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EloRating@0.46.11",
+        "description": "EloRating:  Animal Dominance Hierarchies by Elo Rating\n\nCalculate Elo ratings as means to describe animal dominance hierarchies.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EloRating@0.46.11",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/ElstonStewart@1.1",
+        "description": "ElstonStewart:  Elston-Stewart Algorithm\n\nFlexible implementation of Elston-Stewart algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/ElstonStewart@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EmbedSOM@2.1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EmbedSOM@2.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EmiStatR@1.2.2.0",
+        "description": "EmiStatR:  Emissions and Statistics in R for Wastewater and Pollutants in Combined Sewer Systems\n\nProvides a fast and parallelised calculator to estimate combined wastewater emissions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EmiStatR@1.2.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EmissV@0.665.1.0",
+        "description": "EmissV:  Vehicular Emissions by Top-Down Methods\n\nCreates emissions for use in air quality models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EmissV@0.665.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EmpiricalCalibration@2.0.1",
+        "description": "EmpiricalCalibration:  Routines for Performing Empirical Calibration of Observational Study Estimates\n\nRoutines for performing empirical calibration of observational study estimates.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EmpiricalCalibration@2.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EncDNA@1.0.2",
+        "description": "EncDNA:  Encoding of Nucleotide Sequences into Numeric Feature Vectors\n\nWe describe fifteen different splice site sequence encoding schemes that have been used in earlier studies for mapping of splice site sequences into numeric feature vectors.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EncDNA@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnergyOnlineCPM@1.0",
+        "description": "EnergyOnlineCPM:  Distribution Free Multivariate Control Chart Based on Energy Test\n\nProvides a function for distribution free control chart based on the change point model, for multivariate statistical process control.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnergyOnlineCPM@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EngrExpt@0.1-8",
+        "description": "EngrExpt:  Data sets from \"Introductory Statistics for Engineering Experimentation\"\n\nDatasets from Nelson, Coffin and Copeland \"Introductory Statistics for Engineering Experimentation\" (Elsevier, 2003) with sample code.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EngrExpt@0.1-8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnsCat@1.1",
+        "description": "EnsCat:  Clustering of Categorical Data\n\nAn implementation of the clustering methods of categorical data discussed in Amiri, S.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnsCat@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnsembleBase@1.0.2",
+        "description": "EnsembleBase:  Extensible Package for Parallel, Batch Training of Base Learners for Ensemble Modeling\n\nExtensible S4 classes and methods for batch training of regression and classification algorithms such as Random Forest, Gradient Boosting Machine, Neural Network, Support Vector Machines, K-Nearest Neighbors, Penalized Regression (L1/L2), and Bayesian Additive Regression Trees.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnsembleBase@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnsembleCV@0.8",
+        "description": "EnsembleCV:  Extensible Package for Cross-Validation-Based Integration of Base Learners\n\nExtends the base classes and methods of EnsembleBase package for cross-validation-based integration of base learners.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnsembleCV@0.8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnsemblePCReg@1.1.1",
+        "description": "EnsemblePCReg:  Extensible Package for Principal-Component-Regression-Based Heterogeneous Ensemble Meta-Learning\n\nExtends the base classes and methods of 'EnsembleBase' package for Principal-Components-Regression-based (PCR) integration of base learners.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnsemblePCReg@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnsemblePenReg@0.7",
+        "description": "EnsemblePenReg:  Extensible Classes and Methods for Penalized-Regression-Based Integration of Base Learners\n\nExtending the base classes and methods of EnsembleBase package for Penalized-Regression-based (Ridge and Lasso) integration of base learners.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnsemblePenReg@0.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EntropyEstimation@1.2",
+        "description": "EntropyEstimation:  Estimation of Entropy and Related Quantities\n\nContains methods for the estimation of Shannon's entropy, variants of Renyi's entropy, mutual information, Kullback-Leibler divergence, and generalized Simpson's indices.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EntropyEstimation@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EntropyExplorer@1.1",
+        "description": "EntropyExplorer:  Tools for Exploring Differential Shannon Entropy, Differential Coefficient of Variation and Differential Expression\n\nRows of two matrices are compared for Shannon entropy, coefficient of variation, and expression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EntropyExplorer@1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EntropyMCMC@1.0.4",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EntropyMCMC@1.0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnvCpt@1.1.1",
+        "description": "EnvCpt:  Detection of Structural Changes in Climate and Environment Time Series\n\nTools for automatic model selection and diagnostics for Climate and Environmental data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnvCpt@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnvNicheR@1.4",
+        "description": "EnvNicheR:  Niche Estimation\n\nA plot overlying the niche of multiple species is obtained: 1) to determine the niche conditions which favor a higher species richness, 2) to create a box plot with the range of environmental variables of the species, 3) to obtain a list of species in an area of the niche selected by the user and, 4) to estimate niche overlap among the species.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnvNicheR@1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnvStats@2.3.1",
+        "description": "EnvStats:  Package for Environmental Statistics, Including US EPA Guidance\n\nGraphical and statistical analyses of environmental data, with focus on analyzing chemical concentrations and physical parameters, usually in the context of mandated environmental monitoring.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnvStats@2.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnviroPRA@1.0",
+        "description": "EnviroPRA:  Environmental Probabilistic Risk Assessment Tools\n\nMethods to perform a Probabilistic Environmental Risk assessment from exposure to toxic substances - i.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnviroPRA@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EnviroStat@0.4-2",
+        "description": "EnviroStat:  Statistical Analysis of Environmental Space-Time Processes\n\nFunctions and datasets to support the book by Nhu D Le and James V Zidek, Springer (2006).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EnviroStat@0.4-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Epi@2.40",
+        "description": "Epi:  A Package for Statistical Analysis in Epidemiology\n\nFunctions for demographic and epidemiological analysis in the Lexis diagram, i.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Epi@2.40",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EpiContactTrace@0.13.0",
+        "description": "EpiContactTrace:  Epidemiological Tool for Contact Tracing\n\nRoutines for epidemiological contact tracing and visualisation of network of contacts.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EpiContactTrace@0.13.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EpiCurve@2.2-1",
+        "description": "EpiCurve:  Plot an Epidemic Curve\n\nCreates simple or stacked epidemic curves for hourly, daily, weekly or monthly outcome data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EpiCurve@2.2-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EpiDynamics@0.3.1",
+        "description": "EpiDynamics:  Dynamic Models in Epidemiology\n\nMathematical models of infectious diseases in humans and animals.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EpiDynamics@0.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EpiEstim@2.2-1",
+        "description": "EpiEstim:  EpiEstim: a package to estimate time varying reproduction numbers from epidemic curves\n\nThis package provides tools to quantify transmissibility throughout an epidemic from the analysis of time series of incidence.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EpiEstim@2.2-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/EpiILM@1.5",
+        "description": "EpiILM:  Spatial and Network Based Individual Level Models for Epidemics\n\nProvides tools for simulating from discrete-time individual level models for infectious disease data analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/EpiILM@1.5",
+        "vulnerabilities": [
+
+        ]
+    }
+]

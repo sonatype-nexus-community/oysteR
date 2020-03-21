@@ -26,7 +26,7 @@ Returns a tibble of results.
 \details{
 By default, packages listed in \code{installed.packages()} are scanned by sonatype.
 However, you can pass your own data frame of packages. This data frame should have two columns,
-\code{Version} and \code{Package}.
+\code{version} and \code{package}.
 }
 \examples{
 \dontrun{

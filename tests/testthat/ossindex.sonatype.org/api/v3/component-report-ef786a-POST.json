@@ -1,0 +1,999 @@
+[
+    {
+        "coordinates": "pkg:cran/BayesNI@0.1",
+        "description": "BayesNI:  BayesNI: Bayesian Testing Procedure for Noninferiority with Binary Endpoints\n\nA Bayesian testing procedure for noninferiority trials with binary endpoints.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesNI@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesNSGP@0.1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesNSGP@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesNetBP@1.4.0",
+        "description": "BayesNetBP:  Bayesian Network Belief Propagation\n\nBelief propagation methods in Bayesian Networks to propagate evidence through the network.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesNetBP@1.4.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesPieceHazSelect@1.1.0",
+        "description": "BayesPieceHazSelect:  Variable Selection in a Hierarchical Bayesian Model for a Hazard Function\n\nFits a piecewise exponential hazard to survival data using a Hierarchical Bayesian model with an Intrinsic Conditional Autoregressive formulation for the spatial dependency in the hazard rates for each piece.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesPieceHazSelect@1.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesPiecewiseICAR@0.2.1",
+        "description": "BayesPiecewiseICAR:  Hierarchical Bayesian Model for a Hazard Function\n\nFits a piecewise exponential hazard to survival data using a Hierarchical Bayesian model with an Intrinsic Conditional Autoregressive formulation for the spatial dependency in the hazard rates for each piece.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesPiecewiseICAR@0.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesPostEst@0.2.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesPostEst@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesRS@0.1.3",
+        "description": "BayesRS:  Bayes Factors for Hierarchical Linear Models with Continuous Predictors\n\nRuns hierarchical linear Bayesian models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesRS@0.1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesReversePLLH@1.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesReversePLLH@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesS5@1.31",
+        "description": "BayesS5:  Bayesian Variable Selection Using Simplified Shotgun Stochastic Search with Screening (S5)\n\nIn p >> n settings, full posterior sampling using existing Markov chain Monte Carlo (MCMC) algorithms is highly inefficient and often not feasible from a practical perspective.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesS5@1.31",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesSAE@1.0-2",
+        "description": "BayesSAE:  Bayesian Analysis of Small Area Estimation\n\nProvides a variety of methods from Rao (2003, ISBN:0-471-41374-7) and some other research articles to deal with several specific small area area- level models in Bayesian framework.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesSAE@1.0-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesSUR@1.0-4",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesSUR@1.0-4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesSenMC@0.1.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesSenMC@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesSpec@0.5.3",
+        "description": "BayesSpec:  Bayesian Spectral Analysis Techniques\n\nAn implementation of methods for spectral analysis using the Bayesian framework.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesSpec@0.5.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesSummaryStatLM@1.0-1",
+        "description": "BayesSummaryStatLM:  MCMC Sampling of Bayesian Linear Models via Summary Statistics\n\nMethods for generating Markov Chain Monte Carlo (MCMC) posterior samples of Bayesian linear regression model parameters that require only summary statistics of data as input.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesSummaryStatLM@1.0-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesTree@0.3-1.4",
+        "description": "BayesTree:  Bayesian Additive Regression Trees\n\nThis is an implementation of BART:Bayesian Additive Regression Trees, by Chipman, George, McCulloch (2010).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesTree@0.3-1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesTreePrior@1.0.1",
+        "description": "BayesTreePrior:  Bayesian Tree Prior Simulation\n\nProvides a way to simulate from the prior distribution of Bayesian trees by Chipman et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesTreePrior@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesTwin@1.0",
+        "description": "BayesTwin:  Bayesian Analysis of Item-Level Twin Data\n\nBayesian analysis of item-level hierarchical twin data using an integrated item response theory model.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesTwin@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesValidate@0.0",
+        "description": "BayesValidate:  BayesValidate Package\n\nBayesValidate implements the software validation method described in the paper \"Validation of Software for Bayesian Models using Posterior Quantiles\" (Cook, Gelman, and Rubin, 2005).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesValidate@0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesVarSel@2.0.1",
+        "description": "BayesVarSel:  Bayes Factors, Model Choice and Variable Selection in Linear Models\n\nConceived to calculate Bayes factors in linear models and then to provide a formal Bayesian answer to testing and variable selection problems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesVarSel@2.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesX@0.3-1",
+        "description": "BayesX:  R Utilities Accompanying the Software Package BayesX\n\nFunctions for exploring and visualising estimation results obtained with BayesX, a free software for estimating structured additive regression models (<http://www.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesX@0.3-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesXsrc@3.0-1",
+        "description": "BayesXsrc:  R Package Distribution of the BayesX C++ Sources\n\nBayesX performs Bayesian inference in structured additive regression (STAR) models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesXsrc@3.0-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianAnimalTracker@1.2",
+        "description": "BayesianAnimalTracker:  Bayesian Melding of GPS and DR Path for Animal Tracking\n\nBayesian melding approach to combine the GPS observations and Dead-Reckoned path for an accurate animal's track, or equivalently, use the GPS observations to correct the Dead-Reckoned path.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianAnimalTracker@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianFROC@0.2.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianFROC@0.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianGLasso@0.2.0",
+        "description": "BayesianGLasso:  Bayesian Graphical Lasso\n\nImplements a data-augmented block Gibbs sampler for simulating the posterior distribution of concentration matrices for specifying the topology and parameterization of a Gaussian Graphical Model (GGM).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianGLasso@0.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianNetwork@0.1.5",
+        "description": "BayesianNetwork:  Bayesian Network Modeling and Analysis\n\nA 'Shiny' web application for creating interactive Bayesian Network models, learning the structure and parameters of Bayesian networks, and utilities for classic network analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianNetwork@0.1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianPower@0.1.6",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianPower@0.1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BayesianTools@0.1.7",
+        "description": "BayesianTools:  General-Purpose MCMC and SMC Samplers and Tools for Bayesian Statistics\n\nGeneral-purpose MCMC and SMC samplers, as well as plot and diagnostic functions for Bayesian statistics, with a particular focus on calibrating complex system models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BayesianTools@0.1.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bayesiangammareg@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bayesiangammareg@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bayesrel@0.6.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bayesrel@0.6.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BaylorEdPsych@0.5",
+        "description": "BaylorEdPsych:  R Package for Baylor University Educational Psychology Quantitative Courses\n\nFunctions and data used for Baylor University Educational Psychology Quantitative Courses.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BaylorEdPsych@0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BcDiag@1.0.10",
+        "description": "BcDiag:  Diagnostics Plots for Bicluster Data\n\nDiagnostic tools based on two-way anova and median-polish residual plots for Bicluster output obtained from packages; \"biclust\" by Kaiser et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BcDiag@1.0.10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bchron@4.7.0",
+        "description": "Bchron:  Radiocarbon Dating, Age-Depth Modelling, Relative Sea Level Rate Estimation, and Non-Parametric Phase Modelling\n\nEnables quick calibration of radiocarbon dates under various calibration curves (including user generated ones); age-depth modelling as per the algorithm of Haslett and Parnell (2008) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bchron@4.7.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bclim@3.1.2",
+        "description": "Bclim:  Bayesian Palaeoclimate Reconstruction from Pollen Data\n\nTakes pollen and chronology data from lake cores and produces a Bayesian posterior distribution of palaeoclimate from that location after fitting a non-linear non-Gaussian state-space model.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bclim@3.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BeSS@1.0.6",
+        "description": "BeSS:  Best Subset Selection in Linear, Logistic and CoxPH Models\n\nAn implementation of best subset selection in generalized linear model and Cox proportional hazard model via the primal dual active set algorithm proposed by Wen, C.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BeSS@1.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Benchmarking@0.28",
+        "description": "Benchmarking:  Benchmark and Frontier Analysis Using DEA and SFA\n\nMethods for frontier analysis, Data Envelopment Analysis (DEA), under different technology assumptions (fdh, vrs, drs, crs, irs, add/frh, and fdh+), and using different efficiency measures (input based, output based, hyperbolic graph, additive, super, and directional efficiency).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Benchmarking@0.28",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BenfordTests@1.2.0",
+        "description": "BenfordTests:  Statistical Tests for Evaluating Conformity to Benford's Law\n\nSeveral specialized statistical tests and support functions for determining if numerical data could conform to Benford's law.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BenfordTests@1.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bergm@5.0.1",
+        "description": "Bergm:  Bayesian Exponential Random Graph Models\n\nSet of tools to analyse Bayesian exponential random graph models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bergm@5.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bessel@0.6-0",
+        "description": "Bessel:  Bessel – Bessel Functions Computations and Approximations\n\nBessel Function Computations for complex and real numbers; notably interfacing TOMS 644; approximations for large arguments, experiments, etc.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bessel@0.6-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BetaBit@1.3",
+        "description": "BetaBit:  Mini Games from Adventures of Beta and Bit\n\nThree games: proton, frequon and regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BetaBit@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BetaPASS@1.1-1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BetaPASS@1.1-1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BeviMed@5.3",
+        "description": "BeviMed:  Bayesian Evaluation of Variant Involvement in Mendelian Disease\n\nA fast integrative genetic association test for rare diseases based on a model for disease status given allele counts at rare variant sites.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BeviMed@5.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BeyondBenford@1.2",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BeyondBenford@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bhat@0.9-10",
+        "description": "Bhat:  General likelihood exploration\n\nFunctions for MLE, MCMC, CIs (originally in Fortran).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bhat@0.9-10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiBitR@0.3.1",
+        "description": "BiBitR:  R Wrapper for Java Implementation of BiBit\n\nA simple R wrapper for the Java BiBit algorithm from \"A biclustering algorithm for extracting bit-patterns from binary datasets\" from Domingo et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiBitR@0.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiDAG@1.3.0",
+        "description": "BiDAG:  Bayesian Inference for Directed Acyclic Graphs (BiDAG)\n\nImplementation of a collection of MCMC methods for Bayesian structure learning of directed acyclic graphs (DAGs), both from continuous and discrete data.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiDAG@1.3.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiDimRegression@2.0.0",
+        "description": "BiDimRegression:  Calculates the Bidimensional Regression Between Two 2D Configurations\n\nCalculates the bidimensional regression between two 2D configurations following the approach by Tobler (1965).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiDimRegression@2.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiProbitPartial@1.0.3",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiProbitPartial@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiSEp@2.2",
+        "description": "BiSEp:  Toolkit to Identify Candidate Synthetic Lethality\n\nEnables the user to infer potential synthetic lethal relationships by analysing relationships between bimodally distributed gene pairs in big gene expression datasets.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiSEp@2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiTrinA@1.3",
+        "description": "BiTrinA:  Binarization and Trinarization of One-Dimensional Data\n\nProvides methods for the binarization and trinarization of one-dimensional data and some visualization functions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiTrinA@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiasedUrn@1.07",
+        "description": "BiasedUrn:  Biased Urn Model Distributions\n\nStatistical models of biased sampling in the form of univariate and multivariate noncentral hypergeometric distributions, including Wallenius' noncentral hypergeometric distribution and Fisher's noncentral hypergeometric distribution (also called extended hypergeometric distribution).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiasedUrn@1.07",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BibPlots@0.0.6",
+        "description": "BibPlots:  Plot Functions for Use in Bibliometrics\n\nCurrently, the package provides two functions for plotting and analyzing bibliometric data (JIF, Journal Impact Factor, and paper percentile values) and a plot function to visualize the result of a reference publication year spectroscopy (RPYS) analysis performed in the free software 'CRExplorer' (see <http://crexplorer.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BibPlots@0.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BifactorIndicesCalculator@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BifactorIndicesCalculator@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BigQuic@1.1-8",
+        "description": "BigQuic:  Big Quadratic Inverse Covariance Estimation\n\nUse Newton's method, coordinate descent, and METIS clustering to solve the L1 regularized Gaussian MLE inverse covariance matrix estimation problem.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BigQuic@1.1-8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BigSEM@0.2",
+        "description": "BigSEM:  Constructing Large Systems of Structural Equations\n\nConstruct large systems of structural equations using the two-stage penalized least squares (2SPLS) method proposed by Chen, Zhang and Zhang (2016).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BigSEM@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BigTSP@1.0",
+        "description": "BigTSP:  Top Scoring Pair based methods for classification\n\nThis package is trying to implement Top Scoring Pair based methods for classification including LDCA, TSP-tree, TSP-random forest and TSP gradient boosting algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BigTSP@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BigVAR@1.0.6",
+        "description": "BigVAR:  Dimension Reduction Methods for Multivariate Time Series\n\nEstimates VAR and VARX models with structured Lasso Penalties.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BigVAR@1.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BimodalIndex@1.1.9",
+        "description": "BimodalIndex:  The Bimodality Index\n\nDefines the functions used to compute the bimodal index as defined by Wang et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BimodalIndex@1.1.9",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinGSD@0.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinGSD@0.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinMat@0.1.2",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinMat@0.1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinNonNor@1.5.1",
+        "description": "BinNonNor:  Data Generation with Binary and Continuous Non-Normal Components\n\nGeneration of multiple binary and continuous non-normal variables simultaneously given the marginal characteristics and association structure based on the methodology proposed by Demirtas et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinNonNor@1.5.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinNor@2.3.1",
+        "description": "BinNor:  Simultaneous Generation of Multivariate Binary and Normal Variates\n\nGenerating multiple binary and normal variables simultaneously given marginal characteristics and association structure based on the methodology proposed by Demirtas and Doganay (2012).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinNor@2.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinOrdNonNor@1.5",
+        "description": "BinOrdNonNor:  Concurrent Generation of Binary, Ordinal and Continuous Data\n\nGeneration of samples from a mix of binary, ordinal and continuous random variables with a pre-specified correlation matrix and marginal distributions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinOrdNonNor@1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinQuasi@0.1-6",
+        "description": "BinQuasi:  Analyzing Replicated ChIP Sequencing Data Using Quasi-Likelihood\n\nIdentify peaks in ChIP-seq data with biological replicates using a one-sided quasi-likelihood ratio test in quasi-Poisson or quasi-negative binomial models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinQuasi@0.1-6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinSegBstrap@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinSegBstrap@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Binarize@1.3",
+        "description": "Binarize:  Binarization of One-Dimensional Data\n\nProvides methods for the binarization of one-dimensional data and some visualization functions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Binarize@1.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinaryDosage@1.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinaryDosage@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinaryEMVS@0.1",
+        "description": "BinaryEMVS:  Variable Selection for Binary Data Using the EM Algorithm\n\nImplements variable selection for high dimensional datasets with a binary response variable using the EM algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinaryEMVS@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinaryEPPM@2.3",
+        "description": "BinaryEPPM:  Mean and Variance Modeling of Binary Data\n\nModeling under- and over-dispersed binary data using extended Poisson process models (EPPM) as in the article Faddy and Smith (2012) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinaryEPPM@2.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BinarybalancedCut@0.2",
+        "description": "BinarybalancedCut:  Threshold Cut Point of Probability for a Binary Classifier Model\n\nAllows to view the optimal probability cut-off point at which the Sensitivity and Specificity meets and its a best way to minimize both Type-1 and Type-2 error for a binary Classifier in determining the Probability threshold.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BinarybalancedCut@0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioCircos@0.3.4",
+        "description": "BioCircos:  Interactive Circular Visualization of Genomic Data using 'htmlwidgets' and 'BioCircos.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioCircos@0.3.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioFTF@1.2-0",
+        "description": "BioFTF:  Biodiversity Assessment Using Functional Tools\n\nThe main drawback of the most common biodiversity indices is that different measures may lead to different rankings among communities.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioFTF@1.2-0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioInstaller@0.3.7",
+        "description": "BioInstaller:  Integrator of Bioinformatics Resources\n\n Can be used to integrate massive bioinformatics resources, such as tool/script and database.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioInstaller@0.3.7",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioMark@0.4.5",
+        "description": "BioMark:  Find Biomarkers in Two-Class Discrimination Problems\n\nVariable selection methods are provided for several classification methods: the lasso/elastic net, PCLDA, PLSDA, and several t-tests.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioMark@0.4.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioMedR@1.2.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioMedR@1.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioPET@0.2.2",
+        "description": "BioPET:  Biomarker Prognostic Enrichment Tool\n\nPrognostic Enrichment is a clinical trial strategy of evaluating an intervention in a patient population with a higher rate of the unwanted event than the broader patient population (R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioPET@0.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioPETsurv@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioPETsurv@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioProbability@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioProbability@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BioStatR@3.0.0",
+        "description": "BioStatR:  Initiation Ã  la Statistique avec R\n\nThis packages provides datasets and functions for the book \"Initiation Ã  la Statistique avec R\", Dunod, 2ed, 2014.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BioStatR@3.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiocManager@1.30.10",
+        "description": "BiocManager:  Access the Bioconductor Project Package Repository\n\nA convenient tool to install and update Bioconductor packages.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiocManager@1.30.10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Biocomb@0.4",
+        "description": "Biocomb:  Feature Selection and Classification with the Embedded Validation Procedures for Biomedical Data Analysis\n\nContains functions for the data analysis with the emphasis on biological data, including several algorithms for feature ranking, feature selection, classification algorithms with the embedded validation procedures.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Biocomb@0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Biodem@0.4",
+        "description": "Biodem:  Biodemography Functions\n\nThe Biodem package provides a number of functions for Biodemographic analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Biodem@0.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BiodiversityR@2.11-3",
+        "description": "BiodiversityR:  Package for Community Ecology and Suitability Analysis\n\nGraphical User Interface (via the R-Commander) and utility functions (often based on the vegan package) for statistical analysis of biodiversity and ecological communities, including species accumulation curves, diversity indices, Renyi profiles, GLMs for analysis of species abundance and presence-absence, distance matrices, Mantel tests, and cluster, constrained and unconstrained ordination analysis.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BiodiversityR@2.11-3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Biograph@2.0.6",
+        "description": "Biograph:  Explore Life Histories\n\nTransition rates are computed from transitions and exposures.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Biograph@2.0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bioi@0.2.10",
+        "description": "Bioi:  Biological Image Analysis\n\nSingle linkage clustering and connected component analyses are often performed on biological images.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bioi@0.2.10",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Biolinv@0.1-2",
+        "description": "Biolinv:  Modelling and Forecasting Biological Invasions\n\nAnalysing and forecasting biological invasions time series with a stochastic, non-mechanistic approach that gives proper weight to the anthropic component, accounts for habitat suitability and provides measures of precision for its estimates.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Biolinv@0.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Biopeak@1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Biopeak@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bios2cor@2.1",
+        "description": "Bios2cor:  From Biological Sequences and Simulations to Correlation Analysis\n\nUtilities for computation and analysis of correlation/co-variation in multiple sequence alignments and in side chain motions during molecular dynamics simulations.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bios2cor@2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BisRNA@0.2.2",
+        "description": "BisRNA:  Analysis of RNA Cytosine-5 Methylation\n\nBisulfite-treated RNA non-conversion in a set of samples is analysed as follows : each sample's non-conversion distribution is identified to a Poisson distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BisRNA@0.2.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BisqueRNA@1.0.1",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BisqueRNA@1.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BivGeo@2.0.1",
+        "description": "BivGeo:  Basu-Dhar Bivariate Geometric Distribution\n\nComputes the joint probability mass function, the joint cumulative distribution, the correlation coefficient and generate random deviates from the Basu-Dhar bivariate geometric distribution.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BivGeo@2.0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BivRec@1.2.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BivRec@1.2.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BivRegBLS@1.1.1",
+        "description": "BivRegBLS:  Tolerance Intervals and Errors-in-Variables Regressions in Method Comparison Studies\n\nAssess the agreement in method comparison studies by tolerance intervals and errors-in-variables regressions.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BivRegBLS@1.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BivUnifBin@1.3.1",
+        "description": "BivUnifBin:  Generation of Bivariate Uniform Data and Its Relation to Bivariate Binary Data\n\nSimulation of bivariate uniform data with a full range of correlations based on two beta densities and computation of the tetrachoric correlation (correlation of bivariate uniform data) from the phi coefficient (correlation of bivariate binary data) and vice versa.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BivUnifBin@1.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BivarP@1.0",
+        "description": "BivarP:  Estimating the Parameters of Some Bivariate Distributions\n\nParameter estimation of bivariate distribution functions modeled as a Archimedean copula function.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BivarP@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bivariate.Pareto@1.0.3",
+        "description": "Bivariate.Pareto:  Bivariate Pareto Models\n\nPerform competing risks analysis under bivariate Pareto models.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bivariate.Pareto@1.0.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlakerCI@1.0-6",
+        "description": "BlakerCI:  Blaker's Binomial Confidence Limits\n\nFast and accurate calculation of Blaker's binomial confidence limits (and some related stuff).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlakerCI@1.0-6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlandAltmanLeh@0.3.1",
+        "description": "BlandAltmanLeh:  Plots (Slightly Extended) Bland-Altman Plots\n\nBland-Altman Plots using either base graphics or ggplot2, augmented with confidence intervals, with detailed return values and a sunflowerplot option for data with ties.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlandAltmanLeh@0.3.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Blaunet@2.0.8",
+        "description": "Blaunet:  Calculate and Analyze Blau Status for (Covert) Organizations\n\nAn integrated set of tools to calculate and analyze Blau statuses quantifying social distance between individuals belonging to (covert) organizations.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Blaunet@2.0.8",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Blendstat@1.0.2",
+        "description": "Blendstat:  Joint Analysis of Experiments with Mixtures and Random Effects\n\nPerforms a joint analysis of experiments with mixtures and random effects, taking on a process variable represented by a covariable.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Blendstat@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlockCov@0.1.1",
+        "description": "BlockCov:  Estimation of Large Block Covariance Matrices\n\nComputation of large covariance matrices having a block structure up to a permutation of their columns and rows from a small number of samples with respect to the dimension of the matrix.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlockCov@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlockFeST@1.6",
+        "description": "BlockFeST:  Bayesian Calculation of Region-Specific Fixation Index to Detect Local Adaptation\n\nAn R implementation of an extension of the 'BayeScan' software (Foll, 2008) <doi:10.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlockFeST@1.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlockMessage@1.0",
+        "description": "BlockMessage:  Creates strings that show a text message in 8 by 8 block letters\n\nCreates strings that show a text message in 8 by 8 block letters.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlockMessage@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BlythStillCasellaCI@1.0.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BlythStillCasellaCI@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bmix@0.6",
+        "description": "Bmix:  Bayesian Sampling for Stick-Breaking Mixtures\n\nThis is a bare-bones implementation of sampling algorithms for a variety of Bayesian stick-breaking (marginally DP) mixture models, including particle learning and Gibbs sampling for static DP mixtures, particle learning for dynamic BAR stick-breaking, and DP mixture regression.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bmix@0.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoSSA@3.6",
+        "description": "BoSSA:  A Bunch of Structure and Sequence Analysis\n\nReads and plots phylogenetic placements.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoSSA@3.6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoardGames@1.0.0",
+        "description": "BoardGames:  Board Games and Tools for Building Board Games\n\nTools for constructing board/grid based games, as well as readily available game(s) for your entertainment.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoardGames@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bolstad@0.2-40",
+        "description": "Bolstad:  Functions for Elementary Bayesian Inference\n\nA set of R functions and data sets for the book Introduction to Bayesian Statistics, Bolstad, W.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bolstad@0.2-40",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Bolstad2@1.0-28",
+        "description": "Bolstad2:  Bolstad functions\n\nA set of R functions and data sets for the book Understanding Computational Bayesian Statistics, Bolstad, W.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Bolstad2@1.0-28",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoltzMM@0.1.4",
+        "description": "BoltzMM:  Boltzmann Machines with MM Algorithms\n\nProvides probability computation, data generation, and model estimation for fully-visible Boltzmann machines.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoltzMM@0.1.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BonEV@1.0",
+        "description": "BonEV:  An Improved Multiple Testing Procedure for Controlling False Discovery Rates\n\nAn improved multiple testing procedure for controlling false discovery rates which is developed based on the Bonferroni procedure with integrated estimates from the Benjamini-Hochberg procedure and the Storey's q-value procedure.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BonEV@1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BondValuation@0.1.0",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BondValuation@0.1.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoolFilter@1.0.0",
+        "description": "BoolFilter:  Optimal Estimation of Partially Observed Boolean Dynamical Systems\n\nTools for optimal and approximate state estimation as well as network inference of Partially-Observed Boolean Dynamical Systems.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoolFilter@1.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoolNet@2.1.5",
+        "description": "BoolNet:  Construction, Simulation and Analysis of Boolean Networks\n\nProvides methods to reconstruct and generate synchronous, asynchronous, probabilistic and temporal Boolean networks, and to analyze and visualize attractors in Boolean networks.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoolNet@2.1.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Boom@0.9.3",
+        "description": "Boom:  Bayesian Object Oriented Modeling\n\nA C++ library for Bayesian modeling, with an emphasis on Markov chain Monte Carlo.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Boom@0.9.3",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoomSpikeSlab@1.2.1",
+        "description": "BoomSpikeSlab:  MCMC for Spike and Slab Regression\n\nSpike and slab regression a la McCulloch and George (1997).",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoomSpikeSlab@1.2.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BoostMLR@1.0.2",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BoostMLR@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BootMRMR@0.1",
+        "description": "BootMRMR:  Bootstrap-MRMR Technique for Informative Gene Selection\n\nSelection of informative features like genes, transcripts, RNA seq, etc.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BootMRMR@0.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BootPR@0.60",
+        "description": "BootPR:  Bootstrap Prediction Intervals and Bias-Corrected Forecasting\n\nBias-Corrected Forecasting and Bootstrap Prediction Intervals for Autoregressive Time Series.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BootPR@0.60",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BootWPTOS@1.2",
+        "description": "BootWPTOS:  Test Stationarity using Bootstrap Wavelet Packet Tests\n\nProvides significance tests for second-order stationarity for time series using bootstrap wavelet packet tests.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BootWPTOS@1.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BootstrapQTL@1.0.2",
+        "description": "BootstrapQTL:  Bootstrap cis-QTL Method that Corrects for the Winner's Curse\n\nIdentifies genome-related molecular traits with significant evidence of genetic regulation and performs a bootstrap procedure to correct estimated effect sizes for over-estimation present in cis-QTL mapping studies (The \"Winner's Curse\"), described in Huang QQ *et al.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BootstrapQTL@1.0.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Boptbd@1.0.5",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Boptbd@1.0.5",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Boruta@6.0.0",
+        "description": "Boruta:  Wrapper Algorithm for All Relevant Feature Selection\n\nAn all relevant feature selection wrapper algorithm.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Boruta@6.0.0",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BosonSampling@0.1.1",
+        "description": "BosonSampling:  Classical Boson Sampling\n\nClassical Boson Sampling using the algorithm of Clifford and Clifford (2017) <arXiv:1706.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BosonSampling@0.1.1",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BradleyTerry2@1.1-2",
+        "description": "BradleyTerry2:  Bradley-Terry Models\n\nSpecify and fit the Bradley-Terry model, including structured versions in which the parameters are related to explanatory variables through a linear predictor and versions with contest-specific effects, such as a home advantage.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BradleyTerry2@1.1-2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BrailleR@0.30.2",
+        "description": "BrailleR:  Improved Access for Blind Users\n\nBlind users do not have access to the graphical output from R without printing the content of graphics windows to an embosser of some kind.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BrailleR@0.30.2",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Branching@0.9.4",
+        "description": "Branching:  Simulation and Estimation for Branching Processes\n\nSimulation and parameter estimation of multitype Bienayme - Galton - Watson processes.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Branching@0.9.4",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/Brobdingnag@1.2-6",
+        "description": "Brobdingnag:  Very Large Numbers in R\n\nHandles very large numbers in R.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/Brobdingnag@1.2-6",
+        "vulnerabilities": [
+
+        ]
+    },
+    {
+        "coordinates": "pkg:cran/BrownDog@0.2.1",
+        "description": "BrownDog:  Brown Dog R Interface\n\nAn R interface for the Brown Dog which allows researchers to leverage Brown Dog Services that provides modules to identify the conversion options for a file, to convert file to appropriate format, or to extract data from a file.",
+        "reference": "https://ossindex.sonatype.org/component/pkg:cran/BrownDog@0.2.1",
+        "vulnerabilities": [
+
+        ]
+    }
+]

@@ -53,18 +53,50 @@ no_purls_case = function(verbose) {
   return(results)
 }
 
+clean_response = function(entry) {
+  if (is.null(entry$coordinates)) entry$coordinates = ""
+  if (is.null(entry$description)) entry$description = ""
+  if (is.null(entry$reference)) entry$reference = ""
+  no_of_vulnerabilities = length(entry$vulnerabilities)
+  entry$vulnerabilities = list(entry$vulnerabilities)
+  tibble::tibble(oss_package = entry$coordinates,
+                 description = entry$description,
+                 reference = entry$reference,
+                 vulnerabilities = entry$vulnerabilities,
+                 no_of_vulnerabilities = no_of_vulnerabilities)
+}
+
+get_version = function() {
+  .version <- "development"
+  tryCatch({
+    .version <- utils::packageVersion('oysteR')
+  }, warning = function(w) {
+    # NO OP
+  }, error = function(e) {
+    # NO OP
+  }, finally = {
+    return(.version)
+  })
+}
+
+get_user_agent = function() {
+  version <- get_version()
+  return(sprintf("oysteR/%s", version))
+}
+
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
 call_oss_index = function(purls, verbose) {
   if (length(purls) == 0L) return(no_purls_case(verbose))
-  if (isTRUE(verbose)) cli_h2("Calling sonatype API")
+  if (isTRUE(verbose)) cli_h2("Calling sonatype API: https://www.sonatype.com/")
 
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
 
   authenticate = get_post_authenticate(verbose)
+  agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
   for (i in seq_len(no_of_batches)) {
@@ -74,20 +106,14 @@ call_oss_index = function(purls, verbose) {
       cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
     body = list(coordinates = purls[start:end])
-    r = httr::POST(os_index_url, body = body, encode = "json", authenticate)
+    r = httr::POST(os_index_url, httr::user_agent(agent), body = body, encode = "json", authenticate)
     check_status_code(r)
     batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
     results = c(results, batchResult)
   }
 
-  # Return as a tibble for easier manipulation
-  results = purrr::map(results, ~tibble::tibble(package = .x[[1]],
-                                                description = .x[[2]],
-                                                reference = .x[[3]],
-                                                vulnerabilities = .x[4])) %>%
-    dplyr::bind_rows() %>%
-    mutate(no_of_vulnerabilities = purrr::map_dbl(vulnerabilities, length))
-
+  results = purrr::map(results, clean_response) %>%
+    dplyr::bind_rows()
   class(results) = c("oysteR_deps", class(results))
   return(results)
 }
