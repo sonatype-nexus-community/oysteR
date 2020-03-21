@@ -7,7 +7,7 @@ editor_options:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=svg)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
+[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
