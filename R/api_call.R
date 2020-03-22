@@ -70,7 +70,7 @@ clean_response = function(entry) {
 #' @importFrom utils packageVersion
 get_user_agent = function() {
   version = utils::packageVersion("oysteR")
-  ua = paste0("oysteR/%s", version)
+  ua = paste0("oysteR/", version)
   return(httr::user_agent(ua))
 }
 
