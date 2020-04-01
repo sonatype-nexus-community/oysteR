@@ -40,3 +40,4 @@ vignettes/*.pdf
 
 README.html
 .Rproj.user
+.DS_Store
