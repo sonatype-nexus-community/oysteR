@@ -79,6 +79,12 @@ audit_deps = function(pkgs = NULL, verbose = TRUE) {
 #' @importFrom purrr map_dfr map
 #' @importFrom tidyr unnest
 #' @export
+#' @examples
+#' \dontrun{
+#' # Use installed.packages()
+#' deps = audit_deps()
+#' get_vulnerabilities(deps)
+#' }
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {
     return(tibble(cvss_id = character(0), cvss_title = character(0),
