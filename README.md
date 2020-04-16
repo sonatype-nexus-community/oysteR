@@ -11,7 +11,7 @@ status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)
 [![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Create purls from the filtered sands of your dependencies, powered by
-OSS Index
+[OSS Index](https://ossindex.sonatype.org/)
 
 ## Usage
 
@@ -35,13 +35,15 @@ get_vulnerabilities(audit)
 Heavy use against OSS Index will likely run you into rate limiting
 (yikes\!), but you can:
 
-  - Register an account on OSS Index
-  - Get your username and API Token after registering
+  - Register for an account on [OSS
+    Index](https://ossindex.sonatype.org/)
+  - Retrieve your API token after registering (on the User Settings
+    page)
 
 Set the following environment variables in your `.Renviron` file:
 
-  - `OSSINDEX_USER`
-  - `OSSINDEX_TOKEN`
+  - `OSSINDEX_USER` (this is set to your email address)
+  - `OSSINDEX_TOKEN` (this is set to your API token)
 
 These will be used by `oysteR` to authenticate with OSS Index, bumping
 up the amount of requests you can make.
@@ -74,6 +76,15 @@ you as well want to speed up the pace of software development by working
 on this project, jump on in\! Before you start work, create a new issue,
 or comment on an existing issue, to let others know you are\!
 
+## Reporting Missing Vulnerabilities
+
+OSS Index contains data from public advisories. We do our best to keep
+it up to date, but from time to time things may slip through the cracks.
+If you notice some missing or incorrect data, please let us know\! To
+report missing or incorrect vulnerabilities in OSS Index data, create an
+issue in the [vulnerability reporting
+project](https://github.com/OSSIndex/vulns).
+
 ## The Fine Print
 
 It is worth noting that this is **NOT SUPPORTED** by Sonatype, and is a
@@ -87,7 +98,7 @@ Remember:
 
 Phew, that was easier than I thought. Last but not least of all:
 
-Have fun creating and using this extension and the [Sonatype OSS
+Have fun creating and using this extension and [Sonatype OSS
 Index](https://ossindex.sonatype.org/), we are glad to have you here\!
 
 ## Getting help
