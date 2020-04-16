@@ -9,6 +9,7 @@ editor_options:
 [![CRAN status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
 [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 [![Travis build status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
+[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -89,6 +90,4 @@ Have fun creating and using this extension and the [Sonatype OSS Index](https://
 
 ## Getting help
 
-Looking to contribute to our code but need some help? There's a few ways to get information:
-
-- Chat with us on the [oysteR Gitter](https://gitter.im/sonatype-nexus-community/oysteR)
+The best way to get in touch is to join us on the [oysteR Gitter](https://gitter.im/sonatype-nexus-community/oysteR) - see you there!

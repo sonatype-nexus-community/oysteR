@@ -8,6 +8,7 @@ status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org
 [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 [![Travis build
 status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
+[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Create purls from the filtered sands of your dependencies, powered by
 OSS Index
@@ -91,8 +92,6 @@ Index](https://ossindex.sonatype.org/), we are glad to have you here\!
 
 ## Getting help
 
-Looking to contribute to our code but need some help? There’s a few ways
-to get information:
-
-  - Chat with us on the [oysteR
-    Gitter](https://gitter.im/sonatype-nexus-community/oysteR)
+The best way to get in touch is to join us on the [oysteR
+Gitter](https://gitter.im/sonatype-nexus-community/oysteR) - see you
+there\!
