@@ -10,3 +10,18 @@ There was 1 NOTE:
 Maintainer: ‘Jeffry Hesse <jhesse@sonatype.com>’
 
 New submission
+
+## Win-buildr results
+
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Jeffry Hesse <jhesse@sonatype.com>'
+
+New submission
+
+Possibly mis-spelled words in DESCRIPTION:
+
+  OSS (3:20, 20:16)
+  Sonatype's (3:9, 20:5)
+
+These are not typos, OSS is open source software (and the name of OSS Index), and Sonatype's
+is who built the application with the community.
