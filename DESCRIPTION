@@ -1,7 +1,7 @@
 Package: oysteR
 Title: Scans R Projects for Vulnerable Third Party Dependencies,
     using Sonatype's OSS Index
-Version: 0.0.1.9010
+Version: 0.0.1
 Authors@R: 
     c(person(given = "Jeffry",
              family = "Hesse",
@@ -15,6 +15,7 @@ Authors@R:
              family = "Gillespie",
              role = "aut",
              email = "csgillespie@gmail.com"))
+Maintainer: Jeffry Hesse <jhesse@sonatype.com>
 Description: Collects your R dependencies, and scans them with
     Sonatype's OSS Index, reporting back on any vulnerabilities that are
     found.
