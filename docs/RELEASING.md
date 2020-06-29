@@ -13,7 +13,7 @@ The following steps were required to releash to CRAN using a Mac. (Currently usi
     
 2. Install [RStudio](https://rstudio.com/products/rstudio/download/#download).
 
-3. Open [oysteR.proj](../oysterR.proj) in RStudio.
+3. Open [oysteR.Rproj](../oysterR.Rproj) in RStudio.
 
 4. Setup devtools.
 
