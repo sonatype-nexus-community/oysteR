@@ -44,3 +44,6 @@ README.html
 
 # IntelliJ IDEA project files
 .idea
+
+# ci config for local ci build
+.circleci/local-config.yml
