@@ -19,7 +19,7 @@ Parse the audit data frame (obtained via \code{audit_deps}), and extract
 the vulnerabilities.
 }
 \examples{
-\dontrun{
+{
 # Use installed.packages()
 deps = audit_deps()
 get_vulnerabilities(deps)

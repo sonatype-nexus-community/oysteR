@@ -29,7 +29,7 @@ However, you can pass your own data frame of packages. This data frame should ha
 \code{version} and \code{package}.
 }
 \examples{
-\dontrun{
+{
 # Use installed.packages()
 audit_deps()
 

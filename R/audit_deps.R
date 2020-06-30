@@ -50,7 +50,7 @@ get_purls = function(pkgs) {
 #' @return A tibble/data.frame.
 #' @export
 #' @examples
-#' \dontrun{
+#' {
 #' # Use installed.packages()
 #' audit_deps()
 #'
@@ -80,7 +80,7 @@ audit_deps = function(pkgs = NULL, verbose = TRUE) {
 #' @importFrom tidyr unnest
 #' @export
 #' @examples
-#' \dontrun{
+#' {
 #' # Use installed.packages()
 #' deps = audit_deps()
 #' get_vulnerabilities(deps)
