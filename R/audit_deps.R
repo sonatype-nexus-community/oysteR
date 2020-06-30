@@ -50,15 +50,14 @@ get_purls = function(pkgs) {
 #' @return A tibble/data.frame.
 #' @export
 #' @examples
-#' {
+#' \dontrun{
 #' # Use installed.packages()
-#' audit_deps()
-#'
-#' # Pass your own packages
-#' pkgs = data.frame(Package = c("abind", "acepack"),
-#'                   Version = c("1.4-5", "1.4.1"))
-#' audit_deps(pkgs)
+#' pkgs = audit_deps()
 #' }
+#' # Or pass your own packages
+#' pkgs = data.frame(package = c("abind", "acepack"),
+#'                   version = c("1.4-5", "1.4.1"))
+#' audit_deps(pkgs)
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
   pkgs = get_pkgs(pkgs = pkgs)
   purls = get_purls(pkgs = pkgs)
@@ -80,11 +79,15 @@ audit_deps = function(pkgs = NULL, verbose = TRUE) {
 #' @importFrom tidyr unnest
 #' @export
 #' @examples
-#' {
+#' \dontrun{
 #' # Use installed.packages()
-#' deps = audit_deps()
-#' get_vulnerabilities(deps)
+#' pkgs = audit_deps()
 #' }
+#' # Or pass your own packages
+#' pkgs = data.frame(package = c("abind", "acepack"),
+#'                   version = c("1.4-5", "1.4.1"))
+#' deps = audit_deps(pkgs)
+#' get_vulnerabilities(deps)
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {
     return(tibble(cvss_id = character(0), cvss_title = character(0),
