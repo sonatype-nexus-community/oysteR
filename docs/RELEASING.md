@@ -1,6 +1,12 @@
 Releasing
 =========
 
+The following steps were required to release using R Studio.
+
+1. From the R Studio `Build` menu, select `Install and Restart`.
+
+2. From the R Studio `Build` menu, select `
+
 The following steps were required to releash to CRAN using a Mac. (Currently using branch: `CRANTryTwo`)
 
 1. Install R.
