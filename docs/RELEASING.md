@@ -5,7 +5,8 @@ The following steps were required to release using R Studio.
 
 1. From the R Studio `Build` menu, select `Install and Restart`.
 
-2. From the R Studio `Build` menu, select `
+2. From the R Studio `Build` menu, select `Check Package`.
+
 
 The following steps were required to releash to CRAN using a Mac. (Currently using branch: `CRANTryTwo`)
 
@@ -17,23 +18,23 @@ The following steps were required to releash to CRAN using a Mac. (Currently usi
 
        brew cask install mactex
        
-2. Install pandoc to check .md files.
+3. Install pandoc to check .md files.
 
        brew install pandoc
     
-2. Install [RStudio](https://rstudio.com/products/rstudio/download/#download).
+4. Install [RStudio](https://rstudio.com/products/rstudio/download/#download).
 
-3. Open [oysteR.Rproj](../oysterR.Rproj) in RStudio.
+5. Open [oysteR.Rproj](../oysterR.Rproj) in RStudio.
 
-4. Setup devtools.
+6. Setup devtools.
 
    In R Console tab, run: `install.packages("devtools")`
 
-5. Run R Command to build.
+7. Run R Command to build.
 
        R CMD build .
     
-6. Run R Command to check.
+8. Run R Command to check.
 
        R CMD check *tar.gz --as-cran
     
