@@ -38,3 +38,6 @@ The following steps were required to releash to CRAN using a Mac. (Currently usi
 
        R CMD check *tar.gz --as-cran
     
+
+After a successful build/check, submit the `oysteR_x.y.z.tar.gz` file to the [win-builder](https://win-builder.r-project.org/) project to verify it works on Windows. The [upload](https://win-builder.r-project.org/upload.aspx) page worked well for me. Submit the tar.gz to all three R versions: R-release, R-devel, R-oldrelease. (Give the Maintainer a heads up to watch for  results emails from these submissions.)
+
