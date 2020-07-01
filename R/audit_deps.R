@@ -15,6 +15,7 @@
 #' @importFrom tibble as_tibble tibble
 get_pkgs = function(pkgs = NULL) {
   if (is.null(pkgs)) {
+    cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
     pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
     pkgs = pkgs[is.na(pkgs$Priority), c("Package", "Version")]
     colnames(pkgs) = c("package", "version")
@@ -50,14 +51,16 @@ get_purls = function(pkgs) {
 #' @return A tibble/data.frame.
 #' @export
 #' @examples
-#' \dontrun{
-#' # Use installed.packages()
-#' pkgs = audit_deps()
-#' }
+#' \donttest{
+#' # Audit installed packages
+#' # This calls installed.packages()
+#' # pkgs = audit_deps()
+#'
 #' # Or pass your own packages
 #' pkgs = data.frame(package = c("abind", "acepack"),
 #'                   version = c("1.4-5", "1.4.1"))
 #' audit_deps(pkgs)
+#' }
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
   pkgs = get_pkgs(pkgs = pkgs)
   purls = get_purls(pkgs = pkgs)
@@ -79,15 +82,17 @@ audit_deps = function(pkgs = NULL, verbose = TRUE) {
 #' @importFrom tidyr unnest
 #' @export
 #' @examples
-#' \dontrun{
-#' # Use installed.packages()
-#' pkgs = audit_deps()
-#' }
+#' \donttest{
+#' # Audit installed packages
+#' # This calls installed.packages()
+#' # pkgs = audit_deps()
+#'
 #' # Or pass your own packages
 #' pkgs = data.frame(package = c("abind", "acepack"),
 #'                   version = c("1.4-5", "1.4.1"))
 #' deps = audit_deps(pkgs)
 #' get_vulnerabilities(deps)
+#' }
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {
     return(tibble(cvss_id = character(0), cvss_title = character(0),
