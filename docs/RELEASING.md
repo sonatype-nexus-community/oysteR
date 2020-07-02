@@ -4,12 +4,12 @@ Releasing
 Prepare the release
 -------------------
 
-  The following steps were required to prepare a release using R Studio.
+  The following steps prepare a release using [R Studio](https://rstudio.com/products/rstudio/download/#download).
   1. From the R Studio `Build` menu, select `Install and Restart`.
   2. From the R Studio `Build` menu, select `Check Package`.
 
 
-  The following steps were required to prepare a releash to CRAN using a Mac. (Currently using branch: `CRANTryTwo`)
+  The following steps prepare a release via CLI on a Mac.
 
   1. Install R.
 
@@ -37,6 +37,7 @@ Prepare the release
   8. Run R Command to check. (Substitute the correct versioned x.y.x filename.)
 
          R CMD check oysteR_x.y.z.tar.gz --as-cran
+
     
   After a successful build/check, submit the `oysteR_x.y.z.tar.gz` file to the [win-builder](https://win-builder.r-project.org/) project to verify it works on Windows. The [upload](https://win-builder.r-project.org/upload.aspx) page worked well for me. Submit the tar.gz to all three R versions: R-release, R-devel, R-oldrelease. (Give the Maintainer a heads up to watch for  results emails from these submissions.)
 
