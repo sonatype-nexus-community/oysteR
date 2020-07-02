@@ -41,3 +41,9 @@ vignettes/*.pdf
 README.html
 .Rproj.user
 .DS_Store
+
+# IntelliJ IDEA project files
+.idea
+
+# ci config for local ci build
+.circleci/local-config.yml

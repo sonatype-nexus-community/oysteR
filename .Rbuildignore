@@ -10,3 +10,5 @@
 ^\.lintr$
 ^\.travis\.yml$
 ^CONTRIBUTORS\.md$
+^docs/
+^\.idea

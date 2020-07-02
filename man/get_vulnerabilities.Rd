@@ -19,9 +19,15 @@ Parse the audit data frame (obtained via \code{audit_deps}), and extract
 the vulnerabilities.
 }
 \examples{
-\dontrun{
-# Use installed.packages()
-deps = audit_deps()
+\donttest{
+# Audit installed packages
+# This calls installed.packages()
+# pkgs = audit_deps()
+
+# Or pass your own packages
+pkgs = data.frame(package = c("abind", "acepack"),
+                  version = c("1.4-5", "1.4.1"))
+deps = audit_deps(pkgs)
 get_vulnerabilities(deps)
 }
 }

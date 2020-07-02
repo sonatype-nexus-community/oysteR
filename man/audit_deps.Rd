@@ -29,13 +29,14 @@ However, you can pass your own data frame of packages. This data frame should ha
 \code{version} and \code{package}.
 }
 \examples{
-\dontrun{
-# Use installed.packages()
-audit_deps()
+\donttest{
+# Audit installed packages
+# This calls installed.packages()
+# pkgs = audit_deps()
 
-# Pass your own packages
-pkgs = data.frame(Package = c("abind", "acepack"),
-                  Version = c("1.4-5", "1.4.1"))
+# Or pass your own packages
+pkgs = data.frame(package = c("abind", "acepack"),
+                  version = c("1.4-5", "1.4.1"))
 audit_deps(pkgs)
 }
 }

@@ -1,27 +1,41 @@
+## New Submission
+  * Previous submission v0.0.3 was rejected with comments (addressed below)
+  * Previous CRAN handler: Swetlana Herbrandt <herbrandt@statistik.tu-dortmund.de>
+  
 ## Test environments
-* local OS X install, R version 3.6.1
-* CircleCI, linux, R version 3.6.1 (rocker/verse:3.6.1 image)
+  * local Ubuntu install, R version 4.0.0
+  * CircleCI, linux, R version 3.6.1 (rocker/verse:3.6.1 image)
+  * Travis & win-builder: R old, release, dev
 
 ## R CMD check results
+
 There were no ERRORs or WARNINGs. 
+There was 1 NOTE on checking CRAN incoming feasibility
 
-There was 1 NOTE:
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Jeffry Hesse <jhesse@sonatype.com>’
+## Comments from previous submission
 
-New submission
+> Thanks, please replace \dontrun{} by \donttest{} in your Rd-files.
 
-## Win-buildr results
+Done
 
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Jeffry Hesse <jhesse@sonatype.com>'
+> You are using installed.packages():
+> "This needs to read several files per installed package, which will be
+> slow on Windows and on some network-mounted file systems.
+> It will be slow when thousands of packages are installed, so do not use
+> it to find out if a named package is installed (use find.package or
+> system.file) nor to find out if a package is usable (call
+> requireNamespace or require and check the return value) nor to find
+> details of a small number of packages (use packageDescription)."
+> [installed.packages() help page]
 
-New submission
+> Please fix and resubmit.
 
-Possibly mis-spelled words in DESCRIPTION:
+`installed.packages()` is core to this package's functionality - check the users 
+installed packages for vulnerabilities. We do __not__ use this to
+ * find out if a named package is installed, or
+ * find out if a package is usable, or
+ * find details of a small number of packages
 
-  OSS (3:20, 20:16)
-  Sonatype's (3:9, 20:5)
-
-These are not typos, OSS is open source software (and the name of OSS Index), and Sonatype's
-is who built the application with the community.
+We use this function to obtain a list of all packages currently installed in order to check
+them for known vulnerabilities. When the function is called, we provide a message to the user
+stating this may take a while
