@@ -49,6 +49,6 @@ Post release
 ------------  
   Create an annotated tag and push it to github.
   
-    git tag -a v0.0.3 -m "version 0.0.3 released to CRAN"
+    git tag -a vx.y.z -m "version x.y.z released to CRAN"
     git push --follow-tags
 
