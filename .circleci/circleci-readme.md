@@ -3,7 +3,7 @@ CI Debug Notes
 To validate some circleci stuff, I was able to run a “build locally” using the steps below.
 The local build runs in a docker container.
 
-  * (Once) Install circleci client (`brew install circleci`)
+  * (Once) Install [CircleCI Local CLI](https://circleci.com/docs/2.0/local-cli/) (`brew install circleci`)
 
   * Convert the “real” config.yml into a self contained (non-workspace) config via:
 
