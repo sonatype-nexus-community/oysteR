@@ -25,7 +25,7 @@ Prepare the release
     
   4. Install [RStudio](https://rstudio.com/products/rstudio/download/#download).
 
-  5. Open [oysteR.Rproj](../oysterR.Rproj) in RStudio.
+  5. Open [oysteR.Rproj](../oysteR.Rproj) in RStudio.
 
   6. Setup devtools.
    In R Console tab, run: `install.packages("devtools")`
