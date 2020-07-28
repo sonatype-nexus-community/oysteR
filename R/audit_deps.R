@@ -16,7 +16,10 @@
 get_pkgs = function(pkgs = NULL) {
   if (is.null(pkgs)) {
     cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
+    # excluding base and recommended packages
+    # I assume this is due to the trustworthieness of CRAN?
     pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
+
     pkgs = pkgs[is.na(pkgs$Priority), c("Package", "Version")]
     colnames(pkgs) = c("package", "version")
   }
@@ -43,7 +46,7 @@ get_purls = function(pkgs) {
 #' Collects R dependencies and checks them against OSS Index.
 #' Returns a tibble of results.
 #'
-#' @details By default, packages listed in \code{installed.packages()} are scanned by sonatype.
+#' @details By default, packages listed in \code{installed.packages()} (exluding packages with the priority of "recommended" and "base") are scanned by sonatype.
 #' However, you can pass your own data frame of packages. This data frame should have two columns,
 #' \code{version} and \code{package}.
 #' @param pkgs Default \code{NULL}. See details for further information.
@@ -71,6 +74,22 @@ audit_deps = function(pkgs = NULL, verbose = TRUE) {
   }
   results = dplyr::bind_cols(pkgs, results)
   return(results)
+}
+
+
+#' Check PyPi package dependencies
+#'
+#' Search the OSS Index for known PyPi software dependency vulnerabilities.
+#'
+#' @param pkg Name of package as listed on PyPi.
+#' @param version The version of the package. Optional.
+#' @param verbose Default \code{TRUE}
+#'
+#' @details By default `audit_pypi_deps()` will return audits for all known versions of a package on PyPi. To search for a single package version, supply the version as a character to `version` argument.
+
+audit_pypi_deps <- function(pkg, version = "*", verbose = TRUE) {
+  purl <- paste0("pkg:pypi/", pkg, "@", version)
+  call_oss_index(list(purl), verbose)
 }
 
 #' @title Extract vulnerabilities
