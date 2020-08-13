@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://github.com/sonatype-nexus-community/oysteR/blob/master/docs/images/OysteR_LabeledInHex.png" width="350"/>
+</p>
+
 oysteR
 ================
 
