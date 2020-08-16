@@ -2,7 +2,7 @@
 #'
 #' Generates purls from a vector of package names, version, and schema. `version` and `schema` must be the same length as `pkg` or else be of length one.
 #'
-#' @internal
+#' @keywords internal
 gen_purls <- function(pkg, version = "*", schema = "cran") {
 
   # Institute checks for both version and schema.
@@ -26,6 +26,7 @@ gen_purls <- function(pkg, version = "*", schema = "cran") {
 #' Get data frame of installed packages
 #'
 #' @importFrom tibble as_tibble tibble
+#' @keywords internal
 get_pkgs = function(pkgs = NULL) {
   if (is.null(pkgs)) {
     cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
@@ -41,7 +42,7 @@ get_pkgs = function(pkgs = NULL) {
 #' Create a list of purls based on installed pacakges
 #'
 #' @importFrom utils installed.packages
-#' @internal
+#' @keywords internal
 get_purls = function(pkgs) {
 
   # Extract Package and Version columns
