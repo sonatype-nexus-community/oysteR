@@ -12,41 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License."
 
-#' @importFrom tibble as_tibble tibble
-get_pkgs = function(pkgs = NULL) {
-  if (is.null(pkgs)) {
-    cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
-    # excluding base and recommended packages
-    # I assume this is due to the trustworthieness of CRAN?
-    pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
-
-    pkgs = pkgs[is.na(pkgs$Priority), c("Package", "Version")]
-    colnames(pkgs) = c("package", "version")
-  }
-  return(pkgs)
-}
-
-# Scans R packages and creates a list of purls.
-# List format required for httr call
-
-#' @importFrom utils installed.packages
-get_purls = function(pkgs) {
-
-  # Extract Package and Version columns
-  purls = c()
-  if (nrow(pkgs) > 0) {
-    purls = paste0("pkg:cran/", pkgs$package, "@", pkgs$version)
-  }
-  purls = as.list(purls)
-  return(purls)
-}
-
 #' @title Check Package Dependencies
 #'
 #' Collects R dependencies and checks them against OSS Index.
 #' Returns a tibble of results.
 #'
-#' @details By default, packages listed in \code{installed.packages()} (excluding packages with the priority of "recommended" or "base") are scanned by sonatype.
+#' @details By default, packages listed in \code{installed.packages()} are scanned by sonatype.
 #' However, you can pass your own data frame of packages. This data frame should have two columns,
 #' \code{version} and \code{package}.
 #' @param pkgs Default \code{NULL}. See details for further information.
@@ -65,31 +36,16 @@ get_purls = function(pkgs) {
 #' audit_deps(pkgs)
 #' }
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
-  pkgs = get_pkgs(pkgs = pkgs)
-  purls = get_purls(pkgs = pkgs)
-  results = call_oss_index(purls, verbose = verbose)
+  pkgs <- get_pkgs(pkgs = pkgs)
+  purls <- get_purls(pkgs = pkgs)
+  results <- call_oss_index(purls, verbose = verbose)
 
   if (isTRUE(verbose)) {
     audit_deps_verbose(results)
   }
-  results = dplyr::bind_cols(pkgs, results)
-  return(results)
-}
 
+  dplyr::bind_cols(pkgs, results)
 
-#' Check PyPi package dependencies
-#'
-#' Search the OSS Index for known PyPi software dependency vulnerabilities.
-#'
-#' @param pkg Name of package as listed on PyPi.
-#' @param version The version of the package. Optional.
-#' @param verbose Default \code{TRUE}
-#'
-#' @details By default `audit_pypi_deps()` will return audits for all known versions of a package on PyPi. To search for a single package version, supply the version as a character to the `version` argument.
-
-audit_pypi_deps <- function(pkg, version = "*", verbose = TRUE) {
-  purl <- paste0("pkg:pypi/", pkg, "@", version)
-  call_oss_index(list(purl), verbose)
 }
 
 #' @title Extract vulnerabilities
@@ -130,3 +86,24 @@ get_vulnerabilities = function(audit) {
                               cvss_reference = .x[[7]])))
   tidyr::unnest(audit, vulnerabilities)
 }
+
+
+#' Search for package vulnerabilities
+#'
+#' Search the OSS Index for known package vulnerabilities in any of the supported ecosystems—e.g. CRAN, PyPI, Conda, NPM, Maven, etc. see https://ossindex.sonatype.org/ecosystems for full list.
+#'
+#' @param pkg A vector of package names to search in the OSS Index.
+#' @param version The specific package version to search for. By default it will search all known versions. If not `*`, must be the same length as pkg.
+#' @param schema The package management environment. This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.
+#' @param verbose Default \code{TRUE}.
+#'
+#' @export
+audit_pkgs <- function(pkg, version = "*", schema = "cran", verbose = TRUE) {
+
+  # create the purls. Checks will be inherited
+  purls <- gen_purls(pkg, version, schema)
+
+  call_oss_index(purls, verbose = verbose)
+
+}
+

@@ -24,7 +24,7 @@ Collects R dependencies and checks them against OSS Index.
 Returns a tibble of results.
 }
 \details{
-By default, packages listed in \code{installed.packages()} (exluding packages with the priority of "recommended" and "base") are scanned by sonatype.
+By default, packages listed in \code{installed.packages()} are scanned by sonatype.
 However, you can pass your own data frame of packages. This data frame should have two columns,
 \code{version} and \code{package}.
 }
