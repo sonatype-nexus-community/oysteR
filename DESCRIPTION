@@ -41,7 +41,8 @@ Imports:
     rjson,
     tibble,
     tidyr,
-    utils
+    utils,
+    jsonlite
 Suggests:
     httptest,
     knitr,
