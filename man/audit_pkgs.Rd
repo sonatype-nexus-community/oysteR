@@ -4,14 +4,14 @@
 \alias{audit_pkgs}
 \title{Search for package vulnerabilities}
 \usage{
-audit_pkgs(pkg, version = "*", schema = "cran", verbose = TRUE)
+audit_pkgs(pkg, version = "*", type = "cran", verbose = TRUE)
 }
 \arguments{
 \item{pkg}{A vector of package names to search in the OSS Index.}
 
 \item{version}{The specific package version to search for. By default it will search all known versions. If not \code{*}, must be the same length as pkg.}
 
-\item{schema}{The package management environment. This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.}
+\item{type}{The package management environment. This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.}
 
 \item{verbose}{Default \code{TRUE}.}
 }

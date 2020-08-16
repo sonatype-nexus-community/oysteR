@@ -4,9 +4,9 @@
 \alias{gen_purls}
 \title{Function to generate purls}
 \usage{
-gen_purls(pkg, version = "*", schema = "cran")
+gen_purls(pkg, version = "*", type = "cran")
 }
 \description{
-Generates purls from a vector of package names, version, and schema. \code{version} and \code{schema} must be the same length as \code{pkg} or else be of length one.
+Generates purls from a vector of package names, version, and type. \code{version} and \code{type} must be the same length as \code{pkg} or else be of length one.
 }
 \keyword{internal}

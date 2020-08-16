@@ -1,16 +1,16 @@
 #' Function to generate purls
 #'
-#' Generates purls from a vector of package names, version, and schema. `version` and `schema` must be the same length as `pkg` or else be of length one.
+#' Generates purls from a vector of package names, version, and type. `version` and `type` must be the same length as `pkg` or else be of length one.
 #'
 #' @keywords internal
-gen_purls <- function(pkg, version = "*", schema = "cran") {
+gen_purls <- function(pkg, version = "*", type = "cran") {
 
-  # Institute checks for both version and schema.
-  # Schema and version must be the same length as pkg or
+  # Institute checks for both version and type.
+  # type and version must be the same length as pkg or
   # of length 1.
-  if ((length(schema) > length(pkg)) & (length(schema) != 1)) {
+  if ((length(type) > length(pkg)) & (length(type) != 1)) {
 
-    stop("`schema` must be length 1 or same length as `pkg`.")
+    stop("`type` must be length 1 or same length as `pkg`.")
 
   } else if ((length(version) > length(pkg)) & (length(version) != 1)) {
 
@@ -18,7 +18,7 @@ gen_purls <- function(pkg, version = "*", schema = "cran") {
   }
 
   # generate the purls
-  as.list(paste0("pkg:", schema, "/", pkg, "@", version))
+  as.list(paste0("pkg:", type, "/", pkg, "@", version))
 
 }
 

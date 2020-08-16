@@ -45,7 +45,7 @@ audit_req_txt <- function(requirements, verbose = TRUE) {
   readLines(requirements) %>%
     strsplit(">=|==|>") %>%
     map_dfr(~data.frame(package = .x[1], version = .x[2])) %>%
-    mutate(audit_pkgs(package, version, schema = "pypi", verbose = verbose)) %>%
+    mutate(audit_pkgs(package, version, type = "pypi", verbose = verbose)) %>%
     as_tibble()
 
 }

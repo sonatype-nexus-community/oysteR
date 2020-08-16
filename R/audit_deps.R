@@ -94,14 +94,14 @@ get_vulnerabilities = function(audit) {
 #'
 #' @param pkg A vector of package names to search in the OSS Index.
 #' @param version The specific package version to search for. By default it will search all known versions. If not `*`, must be the same length as pkg.
-#' @param schema The package management environment. This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.
+#' @param type The package management environment. This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.
 #' @param verbose Default \code{TRUE}.
 #'
 #' @export
-audit_pkgs <- function(pkg, version = "*", schema = "cran", verbose = TRUE) {
+audit_pkgs <- function(pkg, version = "*", type = "cran", verbose = TRUE) {
 
   # create the purls. Checks will be inherited
-  purls <- gen_purls(pkg, version, schema)
+  purls <- gen_purls(pkg, version, type)
 
   call_oss_index(purls, verbose = verbose)
 
