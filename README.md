@@ -3,6 +3,12 @@ oysteR
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<p align="center">
+
+<img src="https://github.com/sonatype-nexus-community/oysteR/blob/master/docs/images/OysteR_LabeledInHex.png" width="350"/>
+
+</p>
+
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
 [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
