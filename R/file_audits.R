@@ -1,53 +1,57 @@
 #' Audit an renv.lock file.
 #'
-#' This function searches the OSS index for vulnerabilities recorded for packages listed in an renv.lock file.
+#' This function searches the OSS index for vulnerabilities recorded for packages listed in
+#' an renv.lock file.
 #'
-#' An renv.lock file is created by the renv package (https://rstudio.github.io/renv/) which is used for project level package management in R.
+#' An renv.lock file is created by the renv package (https://rstudio.github.io/renv/)
+#' which is used for project level package management in R.
 #'
-#' @param lockfile The file path of an renv.lock file.
+#' @param dir The file path of an renv.lock file.
 #' @param verbose Default \code{TRUE}.
 #'
 #' @importFrom jsonlite read_json
 #' @importFrom dplyr %>% mutate
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_chr pluck
+#' @importFrom rlang .data
 #' @export
-audit_renv_lock <- function(lockfile, verbose = TRUE) {
+audit_renv_lock = function(dir = ".", verbose = TRUE) {
 
-  renv_lock <- jsonlite::read_json("renv.lock")
+  path = file.path(dir, "renv.lock")
+  renv_lock = jsonlite::read_json(path)
 
-  renv_pkgs <- map_chr(renv_lock$Packages, pluck, "Version")
+  renv_pkgs = map_chr(renv_lock$Packages, pluck, "Version")
 
-  data.frame(package = names(renv_pkgs),
-             version = renv_pkgs,
-             row.names = NULL) %>%
-    mutate(audit_pkgs(package, version, verbose = verbose)) %>%
+  tibble::tibble(package = names(renv_pkgs), version = renv_pkgs) %>%
+    mutate(audit_pkgs(.data$package, .data$version, verbose = verbose)) %>%
     as_tibble()
 
 }
 
 #' Audit a requirements.txt file.
 #'
-#' This function searches the OSS index for vulnerabilities recorded for packages listed in a requirements.txt file based on PyPi.
+#' This function searches the OSS index for vulnerabilities recorded for packages listed
+#' in a requirements.txt file based on PyPi.
 #'
-#' pip is a standard of python package management based on the Python Package Index (PyPI). pip uses a requirements.txt file to manage of Python libraries. The requirements.txt file contains package names and versions (often used to manage a virtual environment).
+#' pip is a standard of python package management based on the Python Package Index (PyPI).
+#' pip uses a requirements.txt file to manage of Python libraries.
+#' The requirements.txt file contains package names and versions
+#' (often used to manage a virtual environment).
 #'
-#' @param requirements The file path of a requirements.txt file.
+#' @param dir The file path of a requirements.txt file.
 #' @param verbose Default \code{TRUE}.
 #'
 #' @importFrom dplyr %>% mutate
 #' @importFrom purrr map_dfr
 #' @importFrom tibble as_tibble
 #' @export
-
-audit_req_txt <- function(requirements, verbose = TRUE) {
-
-  readLines(requirements) %>%
+audit_req_txt = function(dir = ".", verbose = TRUE) {
+  path = file.path(dir, "requirements.txt")
+  readLines(path) %>%
     strsplit(">=|==|>") %>%
-    map_dfr(~data.frame(package = .x[1], version = .x[2])) %>%
-    mutate(audit_pkgs(package, version, type = "pypi", verbose = verbose)) %>%
+    map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
+    mutate(audit_pkgs(.data$package, .data$version, type = "pypi", verbose = verbose)) %>%
     as_tibble()
-
 }
 
 

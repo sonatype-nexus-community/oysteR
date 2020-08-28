@@ -2,11 +2,11 @@
 % Please edit documentation in R/utils.R
 \name{get_purls}
 \alias{get_purls}
-\title{Create a list of purls based on installed pacakges}
+\title{Create a list of purls based on installed packages}
 \usage{
 get_purls(pkgs)
 }
 \description{
-Create a list of purls based on installed pacakges
+Create a list of purls based on installed packages
 }
 \keyword{internal}

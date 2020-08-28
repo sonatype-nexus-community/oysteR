@@ -4,16 +4,18 @@
 \alias{audit_renv_lock}
 \title{Audit an renv.lock file.}
 \usage{
-audit_renv_lock(lockfile, verbose = TRUE)
+audit_renv_lock(dir = ".", verbose = TRUE)
 }
 \arguments{
-\item{lockfile}{The file path of an renv.lock file.}
+\item{dir}{The file path of an renv.lock file.}
 
 \item{verbose}{Default \code{TRUE}.}
 }
 \description{
-This function searches the OSS index for vulnerabilities recorded for packages listed in an renv.lock file.
+This function searches the OSS index for vulnerabilities recorded for packages listed in
+an renv.lock file.
 }
 \details{
-An renv.lock file is created by the renv package (https://rstudio.github.io/renv/) which is used for project level package management in R.
+An renv.lock file is created by the renv package (https://rstudio.github.io/renv/)
+which is used for project level package management in R.
 }

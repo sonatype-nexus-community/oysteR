@@ -1,27 +1,26 @@
 #' Function to generate purls
 #'
-#' Generates purls from a vector of package names, version, and type. `version` and `type` must be the same length as `pkg` or else be of length one.
+#' Generates purls from a vector of package names, version, and type. `version` and `type`
+#' must be the same length as `pkg` or else be of length one.
 #'
 #' @keywords internal
-gen_purls <- function(pkg, version = "*", type = "cran") {
+gen_purls = function(pkg, version = "*", type = "cran") {
 
   # Institute checks for both version and type.
   # type and version must be the same length as pkg or
   # of length 1.
-  if ((length(type) > length(pkg)) & (length(type) != 1)) {
-
-    stop("`type` must be length 1 or same length as `pkg`.")
-
-  } else if ((length(version) > length(pkg)) & (length(version) != 1)) {
-
-    stop("`version` must be length 1 or same length as `pkg`.")
+  if ((length(type) > length(pkg)) && (length(type) != 1L)) {
+    stop("`type` must be length 1 or same length as `pkg`.", call. = FALSE)
   }
-
-  # generate the purls
-  as.list(paste0("pkg:", type, "/", pkg, "@", version))
-
+  if ((length(version) > length(pkg)) && (length(version) != 1L)) {
+    stop("`version` must be length 1 or same length as `pkg`.", call. =  FALSE)
+  }
+  # List format required for httr call
+  # The list translates to the body of the curl call
+  # Each purl must be it's own list element hence the use of as.list over list
+  purls = as.list(paste0("pkg:", type, "/", pkg, "@", version))
+  return(purls)
 }
-
 
 #' Get data frame of installed packages
 #'
@@ -39,20 +38,14 @@ get_pkgs = function(pkgs = NULL) {
   return(pkgs)
 }
 
-#' Create a list of purls based on installed pacakges
+#' Create a list of purls based on installed packages
 #'
 #' @importFrom utils installed.packages
 #' @keywords internal
 get_purls = function(pkgs) {
+  if (nrow(pkgs) == 0) return(list())
 
   # Extract Package and Version columns
-  purls = c()
-  if (nrow(pkgs) > 0) {
-    purls = paste0("pkg:cran/", pkgs$package, "@", pkgs$version)
-  }
-  # List format required for httr call
-  # The list translates to the body of the curl call
-  # Each purl must be it's own list element hence the use of as.list over list
-  purls = as.list(purls)
+  purls = gen_purls(pkg = pkgs$package, version = pkgs$version, type = "cran")
   return(purls)
 }

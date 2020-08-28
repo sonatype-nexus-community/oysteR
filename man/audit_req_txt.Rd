@@ -4,16 +4,20 @@
 \alias{audit_req_txt}
 \title{Audit a requirements.txt file.}
 \usage{
-audit_req_txt(requirements, verbose = TRUE)
+audit_req_txt(dir = ".", verbose = TRUE)
 }
 \arguments{
-\item{requirements}{The file path of a requirements.txt file.}
+\item{dir}{The file path of a requirements.txt file.}
 
 \item{verbose}{Default \code{TRUE}.}
 }
 \description{
-This function searches the OSS index for vulnerabilities recorded for packages listed in a requirements.txt file based on PyPi.
+This function searches the OSS index for vulnerabilities recorded for packages listed
+in a requirements.txt file based on PyPi.
 }
 \details{
-pip is a standard of python package management based on the Python Package Index (PyPI). pip uses a requirements.txt file to manage of Python libraries. The requirements.txt file contains package names and versions (often used to manage a virtual environment).
+pip is a standard of python package management based on the Python Package Index (PyPI).
+pip uses a requirements.txt file to manage of Python libraries.
+The requirements.txt file contains package names and versions
+(often used to manage a virtual environment).
 }
