@@ -36,6 +36,8 @@ To extract the vulnerabilities into a nice data frame, use
 get_vulnerabilities(audit)
 ```
 
+For a more in-depth discussion about how to use this package, check out [this detailed walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/) by Colin Gillespie, one of the co-authors of oysteR.
+
 ### Authentication
 
 Heavy use against OSS Index will likely run you into rate limiting
