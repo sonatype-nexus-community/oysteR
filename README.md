@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# oysteR <a href='https://tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# oysteR <a href="https://github.com/sonatype-nexus-community/oysteR"><img src="man/figures/logo.png" align="right" height="138.5" /></a>
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
