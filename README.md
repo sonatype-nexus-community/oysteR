@@ -1,13 +1,7 @@
-oysteR
-================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<p align="center">
-
-<img src="https://github.com/sonatype-nexus-community/oysteR/blob/master/docs/images/OysteR_LabeledInHex.png" width="350"/>
-
-</p>
+# oysteR <a href="https://github.com/sonatype-nexus-community/oysteR"><img src="man/figures/logo.png" align="right" height="138.5" /></a>
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
@@ -36,6 +30,11 @@ To extract the vulnerabilities into a nice data frame, use
 get_vulnerabilities(audit)
 ```
 
+For a more in-depth discussion about how to use this package, check out
+[this detailed
+walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/)
+by Colin Gillespie, one of the co-authors of `{oysteR}`.
+
 ### Authentication
 
 Heavy use against OSS Index will likely run you into rate limiting
@@ -51,7 +50,7 @@ Set the following environment variables in your `.Renviron` file:
   - `OSSINDEX_USER` (this is set to your email address)
   - `OSSINDEX_TOKEN` (this is set to your API token)
 
-These will be used by `oysteR` to authenticate with OSS Index, bumping
+These will be used by `{oysteR}` to authenticate with OSS Index, bumping
 up the amount of requests you can make.
 
 ### Tests
@@ -99,7 +98,7 @@ contribution of ours to the open source community (read: you\!)
 Remember:
 
   - Use this contribution at the risk tolerance that you have
-  - Do NOT file Sonatype support tickets related to `oysteR`
+  - Do NOT file Sonatype support tickets related to `{oysteR}`
   - DO file issues here on GitHub, so that the community can pitch in
 
 Phew, that was easier than I thought. Last but not least of all:
