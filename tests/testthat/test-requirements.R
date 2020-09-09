@@ -7,5 +7,3 @@ test_that("Test requirements file", {
   expect_equal(ncol(audit), 7)
   expect_equal(nrow(audit), 31)
 })
-
-

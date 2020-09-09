@@ -7,5 +7,3 @@ test_that("Test Renvlock file", {
   expect_equal(ncol(audit), 7)
   expect_equal(nrow(audit), 57)
 })
-
-
