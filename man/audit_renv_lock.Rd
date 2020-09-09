@@ -13,9 +13,9 @@ audit_renv_lock(dir = ".", verbose = TRUE)
 }
 \description{
 This function searches the OSS index for vulnerabilities recorded for packages listed in
-an renv.lock file.
+an \code{renv.lock} file.
 }
 \details{
-An renv.lock file is created by the renv package (https://rstudio.github.io/renv/)
+An \code{renv.lock} file is created by the \code{{renv}} package (https://rstudio.github.io/renv/)
 which is used for project level package management in R.
 }
