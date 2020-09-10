@@ -81,8 +81,10 @@ clean_response = function(entry) {
                  no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
+
 #' @importFrom httr user_agent
 #' @importFrom utils packageVersion
+#' @keywords internal
 get_user_agent = function() {
   version = utils::packageVersion("oysteR")
   ua = paste0("oysteR/", version)
@@ -94,6 +96,7 @@ globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
+#' @keywords internal
 call_oss_index = function(purls, verbose) {
   if (length(purls) == 0L) return(no_purls_case(verbose))
   if (isTRUE(verbose)) cli_h2("Calling sonatype API: https://www.sonatype.com/")

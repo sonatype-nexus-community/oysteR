@@ -2,10 +2,7 @@
 % Please edit documentation in R/audit_deps.R
 \name{audit_deps}
 \alias{audit_deps}
-\title{Check Package Dependencies
-
-Collects R dependencies and checks them against OSS Index.
-Returns a tibble of results.}
+\title{Check Package Dependencies}
 \usage{
 audit_deps(pkgs = NULL, verbose = TRUE)
 }
@@ -18,8 +15,6 @@ audit_deps(pkgs = NULL, verbose = TRUE)
 A tibble/data.frame.
 }
 \description{
-Check Package Dependencies
-
 Collects R dependencies and checks them against OSS Index.
 Returns a tibble of results.
 }
