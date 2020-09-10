@@ -36,7 +36,7 @@
 #' audit_deps(pkgs)
 #' }
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
-  pkgs = get_pkgs(pkgs = pkgs)
+  pkgs = get_pkgs(pkgs = pkgs, verbose = verbose)
   purls = get_purls(pkgs = pkgs)
   results = call_oss_index(purls, verbose = verbose)
 

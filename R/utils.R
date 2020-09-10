@@ -26,15 +26,17 @@ gen_purls = function(pkg, version = "*", type = "cran") {
 #'
 #' @importFrom tibble as_tibble tibble
 #' @keywords internal
-get_pkgs = function(pkgs = NULL) {
-  if (is.null(pkgs)) {
-    cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
-    pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
+get_pkgs = function(pkgs = NULL, verbose = TRUE) {
+  if (!is.null(pkgs)) return(pkgs)
 
-    # ensuring all packages are included including base and recommended
-    pkgs = pkgs[, c("Package", "Version")]
-    colnames(pkgs) = c("package", "version")
+  if (isTRUE(verbose)) {
+    cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
   }
+  pkgs = tibble::as_tibble(installed.packages()[, c(1, 3:4)])
+
+  # ensuring all packages are included including base and recommended
+  pkgs = pkgs[, c("Package", "Version")]
+  colnames(pkgs) = c("package", "version")
   return(pkgs)
 }
 

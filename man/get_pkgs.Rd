@@ -4,7 +4,7 @@
 \alias{get_pkgs}
 \title{Get data frame of installed packages}
 \usage{
-get_pkgs(pkgs = NULL)
+get_pkgs(pkgs = NULL, verbose = TRUE)
 }
 \description{
 Get data frame of installed packages
