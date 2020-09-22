@@ -10,5 +10,6 @@ Sonatype internal people:
 External contributors:
 
 * [@csgillespie](https://github.com/csgillespie) (Colin Gillespie)
+* [@JosiahParry](https://github.com/JosiahParry) (Josiah Parry)
 
 Possibly You!
