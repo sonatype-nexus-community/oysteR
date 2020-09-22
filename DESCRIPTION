@@ -1,6 +1,6 @@
 Package: oysteR
 Title: Scans R Projects for Vulnerable Third Party Dependencies
-Version: 0.0.3.9003
+Version: 0.0.3.9004
 Authors@R: 
     c(person(given = "Jeffry",
              family = "Hesse",
@@ -19,6 +19,10 @@ Authors@R:
              family = "Rollo",
              role = "aut",
              email = "drollo@sonatype.com"),
+      person(given = "Josiah",
+             family = "Parry",
+             role = "ctb",
+             email = "josiah@rstudio.com"),
       person(given = "Sonatype",
              role = "cph"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
