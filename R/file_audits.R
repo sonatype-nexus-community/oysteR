@@ -1,9 +1,8 @@
-#' Audit an renv.lock file.
+#' Audit an renv.lock File
 #'
 #' This function searches the OSS index for vulnerabilities recorded for packages listed in
 #' an `renv.lock` file.
-#'
-#' An `renv.lock` file is created by the `{renv}` package (https://rstudio.github.io/renv/)
+#' An `renv.lock` file is created by the `{renv}` package
 #' which is used for project level package management in R.
 #'
 #' @param dir The file path of an renv.lock file.
@@ -15,15 +14,24 @@
 #' @importFrom purrr map_chr pluck
 #' @importFrom rlang .data
 #' @export
+#' @examples
+#' \donttest{
+#' # Looks for renv.lock file in dir
+#' audit_renv_lock(dir = ".")
+#' }
 audit_renv_lock = function(dir = ".", verbose = TRUE) {
   renv_file = file.path(dir, "renv.lock")
-  renv_lock = jsonlite::read_json(renv_file)
-  renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
-  pkgs = tibble::tibble(package = names(renv_pkgs), version = renv_pkgs)
-  audit_deps(pkgs, verbose = verbose)
+  if (!file.exists(renv_file)) {
+    cli::cli_alert_info("No renv.lock found")
+    renv_pkgs = NULL
+  } else {
+    renv_lock = jsonlite::read_json(renv_file)
+    renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
+  }
+  audit(pkg = names(renv_pkgs), version = renv_pkgs, type = "cran", verbose = verbose)
 }
 
-#' Audit a requirements.txt file.
+#' Audit a requirements.txt File
 #'
 #' This function searches the OSS index for vulnerabilities recorded for packages listed
 #' in a requirements.txt file based on PyPi.
@@ -45,9 +53,10 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
   audit = readLines(req_file) %>%
     strsplit(">=|==|>") %>%
     map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
-    mutate(audit_pkgs(.data$package, .data$version, type = "pypi", verbose = verbose))
+    mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose))
   return(audit)
 }
+
 
 
 # TO DO: environment.yml for Conda

@@ -9,6 +9,8 @@ status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org
 [![Travis build
 status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
 [![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Codecov test
+coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
 
 Create purls from the filtered sands of your dependencies, powered by
 [OSS Index](https://ossindex.sonatype.org/)
@@ -21,7 +23,7 @@ vulnerabilities
 
 ``` r
 library("oysteR")
-audit = audit_deps()
+audit = audit_installed_r_pkgs()
 ```
 
 To extract the vulnerabilities into a nice data frame, use

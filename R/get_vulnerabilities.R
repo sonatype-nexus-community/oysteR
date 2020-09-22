@@ -29,8 +29,8 @@
 #' # Or pass your own packages
 #' pkgs = data.frame(package = c("abind", "acepack"),
 #'                   version = c("1.4-5", "1.4.1"))
-#' deps = audit_deps(pkgs)
-#' get_vulnerabilities(deps)
+#' #deps = audit_deps(pkgs)
+#' #get_vulnerabilities(deps)
 #' }
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {

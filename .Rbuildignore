@@ -12,3 +12,4 @@
 ^CONTRIBUTORS\.md$
 ^docs/
 ^\.idea
+^codecov\.yml$
