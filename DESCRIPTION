@@ -22,7 +22,7 @@ Authors@R:
       person(given = "Josiah",
              family = "Parry",
              role = "ctb",
-             email = "josiah@rstudio.com"),
+             email = "josiah.parry@gmail.com"),
       person(given = "Sonatype",
              role = "cph"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
