@@ -2,7 +2,7 @@
 % Please edit documentation in R/file_audits.R
 \name{audit_req_txt}
 \alias{audit_req_txt}
-\title{Audit a requirements.txt file.}
+\title{Audit a requirements.txt File}
 \usage{
 audit_req_txt(dir = ".", verbose = TRUE)
 }
