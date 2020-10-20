@@ -12,7 +12,7 @@
 #' @return A tibble/data.frame.
 #' @export
 audit_deps = function(pkgs = NULL, verbose = TRUE) {
-  .Deprecated("audit_install_pkgs")
+  .Deprecated("audit_installed_r_pkgs")
   if (is.null(pkgs))
     audit_installed_r_pkgs(verbose = verbose)
   else

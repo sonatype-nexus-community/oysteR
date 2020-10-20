@@ -1,6 +1,6 @@
 Package: oysteR
 Title: Scans R Projects for Vulnerable Third Party Dependencies
-Version: 0.0.3.9005
+Version: 0.0.3.9006
 Authors@R: 
     c(person(given = "Jeffry",
              family = "Hesse",
@@ -41,19 +41,20 @@ Imports:
     dplyr,
     glue,
     httr,
+    jsonlite,
     purrr,
     rjson,
     rlang,
+    stringr,
     tibble,
     tidyr,
-    utils,
-    jsonlite
+    utils
 Suggests:
+    covr,
     httptest,
     knitr,
     rmarkdown,
-    testthat (>= 2.1.0),
-    covr
+    testthat (>= 2.1.0)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
