@@ -47,10 +47,10 @@ audit = function(pkg, version, type, verbose = TRUE) {
   return(audit)
 }
 
-#' Check Package Dependencies
+#' Audit Installed Packages
 #'
-#' Collects R dependencies by calling \code{installed.packages}
-#' and checks them against OSS Index.
+#' Audits all installed packages by calling \code{installed.packages()}
+#' and checking them against the OSS Index.
 #' @param verbose Default \code{TRUE}.
 #' @return A tibble/data.frame.
 #' @importFrom utils installed.packages

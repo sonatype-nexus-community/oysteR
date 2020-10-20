@@ -2,7 +2,7 @@
 % Please edit documentation in R/file_audits.R
 \name{audit_renv_lock}
 \alias{audit_renv_lock}
-\title{Audit an renv.lock file.}
+\title{Audit an renv.lock File}
 \usage{
 audit_renv_lock(dir = ".", verbose = TRUE)
 }
@@ -14,8 +14,12 @@ audit_renv_lock(dir = ".", verbose = TRUE)
 \description{
 This function searches the OSS index for vulnerabilities recorded for packages listed in
 an \code{renv.lock} file.
-}
-\details{
-An \code{renv.lock} file is created by the \code{{renv}} package (https://rstudio.github.io/renv/)
+An \code{renv.lock} file is created by the \code{{renv}} package
 which is used for project level package management in R.
+}
+\examples{
+\donttest{
+# Looks for renv.lock file in dir
+audit_renv_lock(dir = ".")
+}
 }

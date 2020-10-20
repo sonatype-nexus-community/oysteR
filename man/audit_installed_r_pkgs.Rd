@@ -2,7 +2,7 @@
 % Please edit documentation in R/audit.R
 \name{audit_installed_r_pkgs}
 \alias{audit_installed_r_pkgs}
-\title{Check Package Dependencies}
+\title{Audit Installed Packages}
 \usage{
 audit_installed_r_pkgs(verbose = TRUE)
 }
@@ -13,8 +13,8 @@ audit_installed_r_pkgs(verbose = TRUE)
 A tibble/data.frame.
 }
 \description{
-Collects R dependencies by calling \code{installed.packages}
-and checks them against OSS Index.
+Audits all installed packages by calling \code{installed.packages()}
+and checking them against the OSS Index.
 }
 \examples{
 \donttest{
