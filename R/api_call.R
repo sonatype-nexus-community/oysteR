@@ -61,7 +61,7 @@ get_post_authenticate = function(verbose) {
 }
 
 no_purls_case = function(verbose) {
-  results = tibble::tibble(package = character(0), description = character(0),
+  results = tibble::tibble(oss_package = character(0), description = character(0),
                            reference = character(0), vulnerabilities = list(),
                            no_of_vulnerabilities = integer(0))
   class(results) = c("oysteR_deps", class(results))

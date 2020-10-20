@@ -5,3 +5,8 @@ r:
   - oldrel
   - release
   - devel
+
+after_success: >
+   test $TRAVIS_PULL_REQUEST == "false" &&
+   test $TRAVIS_BRANCH == "master" &&
+   Rscript -e 'covr::codecov()'
