@@ -5,21 +5,41 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
-[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 [![Travis build
 status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
-[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 [![Codecov test
 coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
+[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Create purls from the filtered sands of your dependencies, powered by
-[OSS Index](https://ossindex.sonatype.org/)
+**Note**, this README is based on the development version, which is
+significantly different to the CRAN (v0.0.3) version.
+
+## Overview
+
+This package aims to secure your R package against insecure dependencies
+using the [OSS Index](https://ossindex.sonatype.org/). Essentially, we
+check R packages for any *known* security vulnerabilities. For a more
+in-depth discussion check out [this detailed
+walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/)
+by Colin Gillespie, one of the co-authors of `{oysteR}`.
+
+The package has a few key functions for determining vulnerabilities:
+
+  - `audit_installed_r_pkgs()` for scanning all currently installed R
+    packages
+  - `audit_description()` for scanning all packages (and their
+    dependencies) in a DESCRIPTION file
+  - Similarly, `audit_renv_lock()` and `audit_req_txt()`
+  - `expect_secure()` for use within `{testthat}`
+
+All of these functions ultimately parse relevant files and call the
+`audit()` function.
 
 ## Usage
 
-The package has two main functions. The first, function extracts your
-installed R packages and uses the Sonatype OSS Index API to scan for
-vulnerabilities
+To get started, install the package and simply scan your installed
+packages
 
 ``` r
 library("oysteR")
@@ -32,10 +52,19 @@ To extract the vulnerabilities into a nice data frame, use
 get_vulnerabilities(audit)
 ```
 
-For a more in-depth discussion about how to use this package, check out
-[this detailed
-walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/)
-by Colin Gillespie, one of the co-authors of `{oysteR}`.
+### Within testthat
+
+You can include this as part of your Unit testing framework, via
+{testthat}. Simply create a file in tests/testthat and add
+
+    test_that("Test expect_secure", {
+      skip_on_cran()
+      ## Tests function and this package
+      expect_secure("PKG_NAME")
+    })
+
+This test will pass if there are no known vulnerabilities. Remember to
+add {oysteR} as a Suggested package in your DESCRIPTION file.
 
 ### Authentication
 
@@ -54,26 +83,6 @@ Set the following environment variables in your `.Renviron` file:
 
 These will be used by `{oysteR}` to authenticate with OSS Index, bumping
 up the amount of requests you can make.
-
-### Tests
-
-Our tests are in:
-
-  - `tests/testthat`
-
-You can run tests in R like so:
-
-`devtools::test()`
-
-### CircleCI
-
-Any commit should be run in CircleCI, which will check that:
-
-  - Project builds
-  - CRAN Check (`R CMD check`) runs
-
-Successful builds on CircleCI are generally good, make sure to check for
-WARNINGS or NOTES from `R CMD check`, however\!
 
 ## Contributing
 
@@ -107,9 +116,3 @@ Phew, that was easier than I thought. Last but not least of all:
 
 Have fun creating and using this extension and [Sonatype OSS
 Index](https://ossindex.sonatype.org/), we are glad to have you here\!
-
-## Getting help
-
-The best way to get in touch is to join us on the [oysteR
-Gitter](https://gitter.im/sonatype-nexus-community/oysteR) - see you
-there\!
