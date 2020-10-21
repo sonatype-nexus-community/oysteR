@@ -40,5 +40,3 @@ get_r_pkgs = function(verbose = TRUE) {
   colnames(pkgs) = c("package", "version")
   return(pkgs)
 }
-
-
