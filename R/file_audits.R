@@ -11,8 +11,8 @@ get_deps = function(pkgs) {
   dep = tools::package_dependencies(pkgs,
                                     which = c("Depends", "Imports", "LinkingTo"),
                                     recursive = TRUE)
-  dep = unique(unlist(dep))
-  dep
+  dep = unlist(dep)
+  unique(c(pkgs, dep))
 }
 
 #' Audits Packages Listed in a DESCRIPTION file

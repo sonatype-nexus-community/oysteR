@@ -1,0 +1,26 @@
+Package: testyMcTestFace
+Title: Dummy File
+Version: 0.0.1
+Authors@R: 
+    c(person(given = "Colin",
+             family = "Gillespie",
+             role = c("aut", "cre"),
+             email = "csgillespie@gmail.com",
+             comment = c(ORCID = "0000-0003-1787-0275")))
+Maintainer: Colin Gillespie <csgillespie@gmail.com>
+Description: Test.
+License: Apache License 2.0 | file LICENSE
+URL: https://github.com/sonatype-nexus-community/oysteR
+BugReports: 
+    https://github.com/sonatype-nexus-community/oysteR/issues
+Depends:
+    R (>= 3.5.0)
+Imports:
+    stats (>= 0.0.1),
+    graphics
+Suggests:
+    utils
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
