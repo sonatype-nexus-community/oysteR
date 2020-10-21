@@ -24,5 +24,5 @@ value you have in \code{getOption("repos")} is not used.
 An important proviso is that we are only testing packages for specific versions.
 By default, this will be the latest version on CRAN.
 This may differ for users or if you are using a CRAN snapshot.
-For the latter, simple change the \code{repo} parameter.
+For the latter, simply change the \code{repo} parameter.
 }

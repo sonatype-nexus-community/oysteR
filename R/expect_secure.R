@@ -9,7 +9,7 @@
 #' @details An important proviso is that we are only testing packages for specific versions.
 #' By default, this will be the latest version on CRAN.
 #' This may differ for users or if you are using a CRAN snapshot.
-#' For the latter, simple change the `repo` parameter.
+#' For the latter, simply change the `repo` parameter.
 #' @param pkg The pkg to check
 #' @param repo The CRAN repository, used to get version numbers
 #' @inheritParams audit_renv_lock
