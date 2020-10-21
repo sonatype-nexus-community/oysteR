@@ -4,7 +4,12 @@
 #' This function is used within the \code{testthat} framework.
 #' As testthat strips out the repositories from options,
 #' we have to set the value locally in the function, i.e. the
-#' value you have in \code{getOption("repos")} is not used
+#' value you have in \code{getOption("repos")} is not used.
+#'
+#' @details An important proviso is that we are only testing packages for specific versions.
+#' By default, this will be the latest version on CRAN.
+#' This may differ for users or if you are using a CRAN snapshot.
+#' For the latter, simple change the `repo` parameter.
 #' @param pkg The pkg to check
 #' @param repo The CRAN repository, used to get version numbers
 #' @inheritParams audit_renv_lock
