@@ -1,8 +1,8 @@
 # Cleans and converts field to vector
 clean_field = function(field) {
-  field = str_split(field, ",")[[1]]
-  field = str_squish(field)
-  pkgs = str_remove(field, " .*")
+  field = stringr::str_split(field, ",")[[1]]
+  field = stringr::str_squish(field)
+  pkgs = stringr::str_remove(field, " .*")
   pkgs
 }
 
@@ -41,7 +41,7 @@ audit_description = function(dir = ".",
   pkgs = inst_pkgs[rownames(inst_pkgs) %in% all_dep, "Version"]
   versions = as.vector(pkgs)
   pkgs = names(pkgs)
-  audit(pkgs, versions, type = "CRAN", verbose = TRUE)
+  audit(pkgs, versions, type = "CRAN", verbose = verbose)
 }
 
 #' Audit an renv.lock File
