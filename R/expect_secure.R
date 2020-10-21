@@ -32,4 +32,3 @@ expect_secure = function(pkg,
 
   return(invisible(aud))
 }
-
