@@ -1,5 +1,5 @@
 # Cleans and converts field to vector
-clean_field = function(field) {
+clean_description_field = function(field) {
   field = stringr::str_split(field, ",")[[1]]
   field = stringr::str_squish(field)
   pkgs = stringr::str_remove(field, " .*")
@@ -7,7 +7,7 @@ clean_field = function(field) {
 }
 
 ## Gets deps,
-get_deps = function(pkgs) {
+get_pkg_deps = function(pkgs) {
   dep = tools::package_dependencies(pkgs,
                                     which = c("Depends", "Imports", "LinkingTo"),
                                     recursive = TRUE)
@@ -17,12 +17,17 @@ get_deps = function(pkgs) {
 
 #' Audits Packages Listed in a DESCRIPTION file
 #'
-#' Looks for a DESCRIPTION file in \code{dir}, then extract
+#' Looks for a DESCRIPTION file in `dir`, then extract
 #' the packages in the fields & calculates the dependency tree.
 #' @inheritParams audit_renv_lock
 #' @param fields The DESCRIPTION field to parse. Default is Depends, Import, & Suggests.
 #' @importFrom stringr str_split str_squish str_remove
 #' @export
+#' @examples
+#' \dontrun{
+#' # Looks for a DESCRIPTION file in dir
+#' audit_description(dir = ".")
+#' }
 audit_description = function(dir = ".",
                              fields = c("Depends", "Imports", "Suggests"),
                              verbose = TRUE) {
@@ -34,8 +39,8 @@ audit_description = function(dir = ".",
   names(out) = NULL
 
   ## Clean fields and get deps
-  pkgs = purrr::map(out, clean_field)
-  all_dep = unlist(purrr::map(pkgs, get_deps))
+  pkgs = purrr::map(out, clean_description_field)
+  all_dep = unlist(purrr::map(pkgs, get_pkg_deps))
   all_dep = sort(unique(all_dep))
   inst_pkgs = installed.packages()
   pkgs = inst_pkgs[rownames(inst_pkgs) %in% all_dep, "Version"]

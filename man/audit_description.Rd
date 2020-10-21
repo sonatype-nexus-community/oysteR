@@ -21,3 +21,9 @@ audit_description(
 Looks for a DESCRIPTION file in \code{dir}, then extract
 the packages in the fields & calculates the dependency tree.
 }
+\examples{
+\dontrun{
+# Looks for a DESCRIPTION file in dir
+audit_description(dir = ".")
+}
+}
