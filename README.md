@@ -17,10 +17,10 @@ significantly different to the CRAN (v0.0.3) version.
 
 ## Overview
 
-This package aims to secure your R package against insecure dependencies
-using the [OSS Index](https://ossindex.sonatype.org/). Essentially, we
-check R packages for any *known* security vulnerabilities. For a more
-in-depth discussion check out [this detailed
+This package aims to secure your R projects against insecure
+dependencies using [OSS Index](https://ossindex.sonatype.org/).
+Essentially, we check R packages for any *known* security
+vulnerabilities. For a more in-depth discussion check out [this detailed
 walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/)
 by Colin Gillespie, one of the co-authors of `{oysteR}`.
 
@@ -64,7 +64,7 @@ You can include this as part of your Unit testing framework, via
     })
 
 This test will pass if there are no known vulnerabilities. Remember to
-add {oysteR} as a Suggested package in your DESCRIPTION file.
+add {oysteR} under Suggests in your DESCRIPTION file.
 
 ### Authentication
 
@@ -89,8 +89,9 @@ up the amount of requests you can make.
 We care a lot about making the world a safer place, and that’s why we
 continue to work on this and other plugins for Sonatype OSS Index. If
 you as well want to speed up the pace of software development by working
-on this project, jump on in\! Before you start work, create a new issue,
-or comment on an existing issue, to let others know you are\!
+on this project, jump on in\! Before you start work, create a [new
+issue](https://github.com/sonatype-nexus-community/oysteR/issues), or
+comment on an existing issue, to let others know you are\!
 
 ## Reporting Missing Vulnerabilities
 
@@ -100,6 +101,12 @@ If you notice some missing or incorrect data, please let us know\! To
 report missing or incorrect vulnerabilities in OSS Index data, create an
 issue in the [vulnerability reporting
 project](https://github.com/OSSIndex/vulns).
+
+## Getting help
+
+If you need help, then feel free to join us on the [oysteR
+Gitter](https://gitter.im/sonatype-nexus-community/oysteR) or raise an
+an [issue](https://github.com/sonatype-nexus-community/oysteR/issues)
 
 ## The Fine Print
 
