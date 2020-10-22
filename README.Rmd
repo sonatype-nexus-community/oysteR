@@ -28,7 +28,7 @@ different to the CRAN (v0.0.3) version.
 
 ## Overview
 
-This package aims to secure your R package against insecure dependencies using the [OSS Index](https://ossindex.sonatype.org/). Essentially, we check R packages for
+This package aims to secure your R package against insecure dependencies using [OSS Index](https://ossindex.sonatype.org/). Essentially, we check R packages for
 any _known_ security vulnerabilities. For a more in-depth discussion check out [this detailed walkthrough](https://www.jumpingrivers.com/blog/r-package-vulnerabilities-security/) by Colin Gillespie, one of the co-authors of `{oysteR}`.
 
 The package has a few key functions for determining vulnerabilities:
