@@ -7,5 +7,5 @@ test_that("Test Renvlock file", {
   expect_equal(ncol(audit), 8)
   expect_equal(nrow(audit), 57)
   ## Run when no renv lock available
-  oysteR::audit_renv_lock("../")
+  expect_error(oysteR::audit_renv_lock("../"))
 })

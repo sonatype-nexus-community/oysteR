@@ -38,12 +38,29 @@ audit = function(pkg, version, type, verbose = TRUE) {
   if (is.null(version)) version = character(0)
   # Create the purls. Checks will be inherited
   purls = generate_purls(pkg, version, type)
-  results = call_oss_index(purls, verbose = verbose)
-  if (isTRUE(verbose)) {
-    audit_verbose(results)
+  ## Get cache & remove cached purls
+  cache = get_cache()
+  cache = cache[cache$oss_package %in% unlist(purls), ]
+  is_cached = unlist(purls) %in% cache$oss_package
+
+  if (as.numeric(R.version$major) > 3 && isTRUE(verbose)) {
+    cli::cli_alert_info("Using cached results for {sum(is_cached)} package{?s}")
   }
-  audit = dplyr::bind_cols(tibble::tibble(package = pkg, version = version, type = type),
-                   results)
+
+  purls = purls[!is_cached]
+  pkgs = tibble::tibble(package = pkg, version = version, type = type)[!is_cached, ]
+
+  ## Call OSS index on remaining
+  results = call_oss_index(purls, verbose = verbose)
+  audit = dplyr::bind_cols(pkgs, results)
+
+  # Update cache and combine
+  update_cache(audit)
+
+  audit = dplyr::bind_rows(audit, cache)
+  if (isTRUE(verbose)) {
+    audit_verbose(audit)
+  }
   return(audit)
 }
 
