@@ -1,13 +1,16 @@
 get_cache_file = function() {
   dir = tools::R_user_dir("oysteR", which = "cache")
+  if (!file.exists(dir))
+    dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+
   path = file.path(dir, "cached-deps.rds")
   return(path)
 }
+
 ensure_cache = function() {
   path = get_cache_file()
   if (file.exists(path)) return(path)
 
-  dir.create(dir, recursive = TRUE, showWarnings = FALSE)
   audits = no_purls_case()
   audits$time = integer(0)
   class(audits$time) = c("POSIXct", "POSIXt")
@@ -53,5 +56,8 @@ update_cache = function(audits) {
 #' @export
 remove_cache = function() {
   path = get_cache_file()
-  if (file.exists(path)) file.remove(path)
+  if (file.exists(path)) {
+    file.remove(path)
+  }
+  return(invisible(NULL))
 }

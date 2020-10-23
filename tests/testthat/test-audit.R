@@ -27,4 +27,3 @@ test_that("Test audit_deps", {
   expect_error(audit(pkg = c("abind", "acepack"), version = "1.4-5", type = "cran"))
   expect_error(audit(pkg = "abind", version = "1.4-5", type = c("cran", "python")))
 })
-
