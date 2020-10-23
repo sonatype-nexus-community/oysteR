@@ -1,6 +1,10 @@
-ensure_cache = function() {
+get_cache_file = function() {
   dir = tools::R_user_dir("oysteR", which = "cache")
   path = file.path(dir, "cached-deps.rds")
+  return(path)
+}
+ensure_cache = function() {
+  path = get_cache_file()
   if (file.exists(path)) return(path)
 
   dir.create(dir, recursive = TRUE, showWarnings = FALSE)
@@ -45,10 +49,9 @@ update_cache = function(audits) {
 #'
 #' The OSS cache is located at `tools::R_user_dir("oysteR", which = "cache")`.
 #' The function `R_user_dir()` is only available for R >= 4.0.0.
-#' Packages are cached for 24 hours, then refreshed at the next audit
+#' Packages are cached for 12 hours, then refreshed at the next audit
 #' @export
 remove_cache = function() {
-  dir = tools::R_user_dir("oysteR", which = "cache")
-  path = file.path(dir, "cached-deps.rds")
+  path = get_cache_file()
   if (file.exists(path)) file.remove(path)
 }
