@@ -60,7 +60,7 @@ You can include this as part of your Unit testing framework, via
     test_that("Test expect_secure", {
       skip_on_cran()
       ## Tests function and this package
-      expect_secure("PKG_NAME")
+      oysteR::expect_secure("PKG_NAME")
     })
 
 This test will pass if there are no known vulnerabilities. Remember to
