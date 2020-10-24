@@ -60,7 +60,7 @@ get_post_authenticate = function(verbose) {
   return(authenticate)
 }
 
-no_purls_case = function(verbose) {
+no_purls_case = function() {
   results = tibble::tibble(oss_package = character(0), description = character(0),
                            reference = character(0), vulnerabilities = list(),
                            no_of_vulnerabilities = integer(0))
@@ -98,7 +98,7 @@ globalVariables("vulnerabilities")
 #' @importFrom dplyr %>%
 #' @keywords internal
 call_oss_index = function(purls, verbose) {
-  if (length(purls) == 0L) return(no_purls_case(verbose))
+  if (length(purls) == 0L) return(no_purls_case())
   if (isTRUE(verbose)) cli_h2("Calling sonatype API: https://www.sonatype.com/")
 
   max_size = 128

@@ -1,6 +1,8 @@
 language: r
-cache: packages
-
+cache:
+   directories:
+      - $HOME/.R/oysteR/cache/
+   packages: true
 r:
   - oldrel
   - release

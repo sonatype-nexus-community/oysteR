@@ -18,7 +18,8 @@ generate_purls = function(pkg, version, type) {
   if ((length(type) != 1L) && (length(pkg) != length(type))) {
     stop("type must be 1 or the same length as pkgs", call. =  FALSE)
   }
-
+  # Make lower case to make caching better
+  type = tolower(type)
   # List format required for httr call
   # The list translates to the body of the curl call
   # Each purl must be it's own list element hence the use of as.list over list

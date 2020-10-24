@@ -21,3 +21,9 @@ pip uses a requirements.txt file to manage of Python libraries.
 The requirements.txt file contains package names and versions
 (often used to manage a virtual environment).
 }
+\examples{
+\dontrun{
+# Looks for a requirements.txt file in dir
+audit_description(dir = ".")
+}
+}

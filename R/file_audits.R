@@ -1,3 +1,11 @@
+check_file_exists = function(dir, fname) {
+  fpath = file.path(dir, fname)
+  if (!file.exists(fpath)) {
+    stop(fpath, " not found", call. = FALSE)
+  }
+  return(fpath)
+}
+
 # Cleans and converts field to vector
 clean_description_field = function(field) {
   field = stringr::str_split(field, ",")[[1]]
@@ -33,7 +41,8 @@ audit_description = function(dir = ".",
                              verbose = TRUE) {
 
   ## Read DESCRIPTION and extract fields
-  des = read.dcf(file.path(dir, "DESCRIPTION"))
+  fname = check_file_exists(dir, "DESCRIPTION")
+  des = read.dcf(fname)
   out = des[, intersect(colnames(des), fields)]
   out = as.list(out)
   names(out) = NULL
@@ -66,19 +75,14 @@ audit_description = function(dir = ".",
 #' @importFrom rlang .data
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Looks for renv.lock file in dir
 #' audit_renv_lock(dir = ".")
 #' }
 audit_renv_lock = function(dir = ".", verbose = TRUE) {
-  renv_file = file.path(dir, "renv.lock")
-  if (!file.exists(renv_file)) {
-    cli::cli_alert_info("No renv.lock found")
-    renv_pkgs = NULL
-  } else {
-    renv_lock = jsonlite::read_json(renv_file)
-    renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
-  }
+  fname = check_file_exists(dir, "renv.lock")
+  renv_lock = jsonlite::read_json(fname)
+  renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
   audit(pkg = names(renv_pkgs), version = renv_pkgs, type = "cran", verbose = verbose)
 }
 
@@ -99,15 +103,18 @@ audit_renv_lock = function(dir = ".", verbose = TRUE) {
 #' @importFrom purrr map_dfr
 #' @importFrom tibble as_tibble
 #' @export
+#' @examples
+#' \dontrun{
+#' # Looks for a requirements.txt file in dir
+#' audit_description(dir = ".")
+#' }
 audit_req_txt = function(dir = ".", verbose = TRUE) {
-  req_file = file.path(dir, "requirements.txt")
-  audit = readLines(req_file) %>%
+  fname = check_file_exists(dir, "requirements.txt")
+  audit = readLines(fname) %>%
     strsplit(">=|==|>") %>%
     map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
     mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose))
   return(audit)
 }
-
-
 
 # TO DO: environment.yml for Conda

@@ -18,7 +18,7 @@ An \code{renv.lock} file is created by the \code{{renv}} package
 which is used for project level package management in R.
 }
 \examples{
-\donttest{
+\dontrun{
 # Looks for renv.lock file in dir
 audit_renv_lock(dir = ".")
 }
