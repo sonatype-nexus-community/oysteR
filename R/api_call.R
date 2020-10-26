@@ -40,11 +40,22 @@ check_status_code = function(r) {
   return(invisible(NULL))
 }
 
+get_config_value = function(config, value) {
+  entry = config[stringr::str_detect(config, value)]
+  entry = stringr::str_split(entry, ":")[[1]]
+  entry = stringr::str_squish(entry[2])
+  return(entry)
+}
 # Just pass NULL to POST if no authentication
 get_post_authenticate = function(verbose) {
   user = Sys.getenv("OSSINDEX_USER", NA)
   token = Sys.getenv("OSSINDEX_TOKEN", NA)
   if (!is.na(user) && !is.na(token)) {
+    authenticate = httr::authenticate(user, token, type = "basic")
+  } else if (file.exists("~/.ossindex/.oss-index-config")) {
+    config = readLines("~/.ossindex/.oss-index-config")
+    user = get_config_value(config, "Username")
+    token = get_config_value(config, "Token")
     authenticate = httr::authenticate(user, token, type = "basic")
   } else {
     authenticate = NULL
