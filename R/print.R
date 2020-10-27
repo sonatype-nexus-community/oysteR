@@ -21,9 +21,9 @@ audit_verbose = function(results) {
   pkgs_in_sona = sum(!is.na(results$description))
 
   cli_h2("Vulnerability overview")
-  cli_alert_info("{no_of_pkgs} package{?s} were scanned")
-  cli_alert_info("{pkgs_in_sona} package{?s} were in the Sonatype database")
-  cli_alert_info("{no_of_vul_comps} package{?s} contains known vulnerabilit{?y/ies}")
+  cli_alert_info("{no_of_pkgs} package{?s} w{?as/ere} scanned")
+  cli_alert_info("{pkgs_in_sona} package{?s} w{?as/ere} found in the Sonatype database")
+  cli_alert_info("{no_of_vul_comps} package{?s} had known vulnerabilit{?y/ies}")
   cli_alert_info("A total of {no_of_vul} known vulnerabilit{?y/ies} w{?as/ere} identified")
   return(invisible(NULL))
 }
