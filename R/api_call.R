@@ -46,6 +46,7 @@ get_config_value = function(config, value) {
   entry = stringr::str_squish(entry[2])
   return(entry)
 }
+
 # Just pass NULL to POST if no authentication
 get_post_authenticate = function(verbose) {
   user = Sys.getenv("OSSINDEX_USER", NA)
@@ -92,7 +93,6 @@ clean_response = function(entry) {
                  no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
-
 #' @importFrom httr user_agent
 #' @importFrom utils packageVersion
 #' @keywords internal
@@ -101,7 +101,6 @@ get_user_agent = function() {
   ua = paste0("oysteR/", version)
   return(httr::user_agent(ua))
 }
-
 
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate
