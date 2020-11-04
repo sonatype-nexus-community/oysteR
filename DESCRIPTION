@@ -48,7 +48,8 @@ Imports:
     stringr,
     tibble,
     tidyr,
-    utils
+    utils,
+    yaml
 Suggests:
     covr,
     httptest,

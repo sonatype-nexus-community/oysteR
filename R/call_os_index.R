@@ -40,24 +40,29 @@ check_status_code = function(r) {
   return(invisible(NULL))
 }
 
-get_config_value = function(config, value) {
-  entry = config[stringr::str_detect(config, value)]
-  entry = stringr::str_split(entry, ":")[[1]]
-  entry = stringr::str_squish(entry[2])
-  return(entry)
+# This just seems ugly
+get_config = function() {
+  config = yaml::read_yaml("~/.ossindex/.oss-index-config")
+  if (is.null(config$ossi$Username) ||
+      is.null(config$ossi$Token)) {
+    return(NULL)
+  }
+
+  httr::authenticate(config$ossi$Username,
+                     config$ossi$Token,
+                     type = "basic")
 }
 
+
 # Just pass NULL to POST if no authentication
+# 1. Check .Renviron, the oss config file
 get_post_authenticate = function(verbose) {
   user = Sys.getenv("OSSINDEX_USER", NA)
   token = Sys.getenv("OSSINDEX_TOKEN", NA)
   if (!is.na(user) && !is.na(token)) {
     authenticate = httr::authenticate(user, token, type = "basic")
   } else if (file.exists("~/.ossindex/.oss-index-config")) {
-    config = readLines("~/.ossindex/.oss-index-config")
-    user = get_config_value(config, "Username")
-    token = get_config_value(config, "Token")
-    authenticate = httr::authenticate(user, token, type = "basic")
+    authenticate = get_config()
   } else {
     authenticate = NULL
   }

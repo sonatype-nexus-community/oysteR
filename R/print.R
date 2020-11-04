@@ -25,5 +25,6 @@ audit_verbose = function(results) {
   cli_alert_info("{pkgs_in_sona} package{?s} w{?as/ere} found in the Sonatype database")
   cli_alert_info("{no_of_vul_comps} package{?s} had known vulnerabilit{?y/ies}")
   cli_alert_info("A total of {no_of_vul} known vulnerabilit{?y/ies} w{?as/ere} identified")
+  cli_alert_info("See https://github.com/sonatype-nexus-community/oysteR/ for further details.")
   return(invisible(NULL))
 }
