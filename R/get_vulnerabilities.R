@@ -34,10 +34,14 @@
 #' }
 get_vulnerabilities = function(audit) {
   if (sum(audit$no_of_vulnerabilities) == 0) {
-    return(tibble(cvss_id = character(0), cvss_title = character(0),
+    return(tibble(package = character(0), version = character(0), type = character(0),
+                  oss_package = character(0), description = character(0),
+                  reference = character(0),
+                  cvss_id = character(0), cvss_title = character(0),
                   cvss_description = character(0), cvss_score = character(0),
-                  cvss_vector = character(0), cvss_cwe = character(0),
-                  cvss_reference = character(0)))
+                  cvss_vector = double(0), cvss_cwe = character(0),
+                  cvss_reference = character(0),
+                  no_of_vulnerabilites = integer(0)))
   }
 
   audit$vulnerabilities = audit$vulnerabilities %>%

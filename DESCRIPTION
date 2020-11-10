@@ -1,6 +1,6 @@
 Package: oysteR
 Title: Scans R Projects for Vulnerable Third Party Dependencies
-Version: 0.0.3.9007
+Version: 0.0.3.9008
 Authors@R: 
     c(person(given = "Jeffry",
              family = "Hesse",
@@ -48,7 +48,8 @@ Imports:
     stringr,
     tibble,
     tidyr,
-    utils
+    utils,
+    yaml
 Suggests:
     covr,
     httptest,

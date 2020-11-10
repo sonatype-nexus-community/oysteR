@@ -78,6 +78,14 @@ Set the following environment variables in your `.Renviron` file:
 
   - `OSSINDEX_USER` (this is set to your email address)
   - `OSSINDEX_TOKEN` (this is set to your API token)
+  
+Or create a config file at `~/.ossindex/.oss-index-config` and add
+```
+# This config file is picked up by other Sonatype apps
+ossi:
+   Username: XXXX
+   Token: YYY
+```
 
 These will be used by `{oysteR}` to authenticate with OSS Index, bumping up the amount of requests you can make.
 

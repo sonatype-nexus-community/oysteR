@@ -40,12 +40,29 @@ check_status_code = function(r) {
   return(invisible(NULL))
 }
 
+# This just seems ugly
+get_config = function() {
+  config = yaml::read_yaml("~/.ossindex/.oss-index-config")
+  if (is.null(config$ossi$Username) ||
+      is.null(config$ossi$Token)) {
+    return(NULL)
+  }
+
+  httr::authenticate(config$ossi$Username,
+                     config$ossi$Token,
+                     type = "basic")
+}
+
+
 # Just pass NULL to POST if no authentication
+# 1. Check .Renviron, the oss config file
 get_post_authenticate = function(verbose) {
   user = Sys.getenv("OSSINDEX_USER", NA)
   token = Sys.getenv("OSSINDEX_TOKEN", NA)
   if (!is.na(user) && !is.na(token)) {
     authenticate = httr::authenticate(user, token, type = "basic")
+  } else if (file.exists("~/.ossindex/.oss-index-config")) {
+    authenticate = get_config()
   } else {
     authenticate = NULL
   }
@@ -81,7 +98,6 @@ clean_response = function(entry) {
                  no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
-
 #' @importFrom httr user_agent
 #' @importFrom utils packageVersion
 #' @keywords internal
@@ -90,7 +106,6 @@ get_user_agent = function() {
   ua = paste0("oysteR/", version)
   return(httr::user_agent(ua))
 }
-
 
 globalVariables("vulnerabilities")
 #' @importFrom dplyr bind_rows mutate

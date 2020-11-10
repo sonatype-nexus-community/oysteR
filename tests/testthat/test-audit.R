@@ -21,7 +21,7 @@ test_that("Test audit_deps", {
 
   vul = get_vulnerabilities(deps)
   expect_equal(nrow(vul), 0)
-  expect_equal(ncol(vul), 7)
+  expect_equal(ncol(vul), 14)
 
   # Basic checks on argument passing
   expect_error(audit(pkg = c("abind", "acepack"), version = "1.4-5", type = "cran"))
