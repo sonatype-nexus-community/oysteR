@@ -27,8 +27,9 @@ get_cache = function() {
   ## Only available for R4+
   if (as.numeric(R.version$major) < 4) return(no_purls_case())
   path = ensure_cache()
-  audits = readRDS(path)
-  audits = dplyr::select(audits, -.data$time)
+  audits = readRDS(path) %>%
+    dplyr::filter(.data$time > Sys.time() - 60 * 60 * 12) %>%
+    dplyr::select(-.data$time)
   audits
 }
 
