@@ -20,21 +20,21 @@ check_status_code = function(r) {
   status_code = httr::status_code(r)
   if (status_code == 401) {
     stop("Invalid credentials for OSS Index.
-         Please check your username and API token and try again.", call. = FALSE)
+         Please check your username and API token and try again.", call. = FALSE) # nocov
   } else if (status_code == 429) {
     stop("You've made too many requests.
          Please wait and try again later,
-         or use your OSS Index credentials to bypass the rate limits.", call. = FALSE)
+         or use your OSS Index credentials to bypass the rate limits.", call. = FALSE) # nocov
   } else if (status_code == 400) {
     stop("The OSS Index API returned a status code of 400: Bad Request.
          Check the format of the purls in your request.
-         See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE)
+         See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE) # nocov
   } else if (status_code != 200) {
     content = httr::content(r, "text", encoding = "UTF-8")
     msg = glue::glue("There was some problem connecting to the OSS Index API.\\
                 The server responded with:
                   Status Code: {status_code}
-                  Response Body:{content}")
+                  Response Body: {content}")
     stop(msg, call. = FALSE)
   }
   return(invisible(NULL))

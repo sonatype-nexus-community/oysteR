@@ -11,10 +11,11 @@
 #' @param verbose Default \code{TRUE}.
 #' @return A tibble/data.frame.
 #' @export
-audit_deps = function(pkgs = NULL, verbose = TRUE) {
-  .Deprecated("audit_installed_r_pkgs")
+audit_deps = function(pkgs = NULL, verbose = TRUE) {  # nocov start
+  .Deprecated("audit_installed_r_pkgs or just audit")
   if (is.null(pkgs))
     audit_installed_r_pkgs(verbose = verbose)
   else
     audit(pkgs$package, version = pkgs$version, type = "cran", verbose = verbose)
 }
+# nocov end
