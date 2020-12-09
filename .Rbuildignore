@@ -13,3 +13,6 @@
 ^docs/
 ^\.idea
 ^codecov\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
