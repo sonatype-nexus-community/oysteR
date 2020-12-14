@@ -3,10 +3,25 @@ cache:
    directories:
       - $HOME/.R/oysteR/cache/
    packages: true
-r:
-  - oldrel
-  - release
-  - devel
+
+jobs:
+  include:
+  - r: devel
+  - r: release
+    apt_packages:
+      - libharfbuzz-dev
+      - libfribidi-dev
+    r_packages:
+      - pkgdown
+      - covr
+    env: R_CURRENT=true
+    deploy:
+      if: branch = master
+      provider: script
+      script:
+        R CMD build . && Rscript -e 'pkgdown::deploy_site_github(verbose = TRUE, tarball = ".")'
+      cleanup: true
+  - r: oldrel
 
 after_success: >
    test $TRAVIS_PULL_REQUEST == "false" &&
