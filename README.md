@@ -5,8 +5,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
-[![Travis build
-status](https://travis-ci.org/sonatype-nexus-community/oysteR.svg?branch=master)](https://travis-ci.org/sonatype-nexus-community/oysteR)
+[![R-CMD-check](https://github.com/sonatype-nexus-community/oysteR/workflows/check-standard/badge.svg)](https://github.com/sonatype-nexus-community/oysteR/actions)
 [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
 [![Codecov test
 coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
