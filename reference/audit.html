@@ -92,7 +92,7 @@ see https://ossindex.sonatype.org/ecosystems for full list." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -109,7 +109,7 @@ see https://ossindex.sonatype.org/ecosystems for full list." />
 </li>
 <li>
   <a href="https://github.com/sonatype-nexus-community/oysteR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -168,12 +168,12 @@ This defaults to <code>"cran"</code>. See https://ossindex.sonatype.org/ecosyste
 <span class='va'>pkg</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"abind"</span>, <span class='st'>"acepack"</span><span class='op'>)</span>
 <span class='va'>version</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1.4-5"</span>, <span class='st'>"1.4.1"</span><span class='op'>)</span>
 <span class='fu'>audit</span><span class='op'>(</span><span class='va'>pkg</span>, <span class='va'>version</span>, type <span class='op'>=</span> <span class='st'>"cran"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span><span> Using cached results for 2 packages</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── </span><span style='font-weight: bold;'>Vulnerability overview</span><span> ──</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 2 packages were scanned</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 2 packages were found in the Sonatype database</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 0 packages had known vulnerabilities</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> A total of 0 known vulnerabilities were identified</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> See https://github.com/sonatype-nexus-community/oysteR/ for further details.</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 2 x 8</span><span>
+</div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span><span> Using cached results for 0 packages</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── </span><span style='font-weight: bold;'>Calling sonatype API: https://www.sonatype.com/</span><span> ──</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>→ No Sonatype tokens found</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> Calling API: batch 1 of 1</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── </span><span style='font-weight: bold;'>Vulnerability overview</span><span> ──</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 2 packages were scanned</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 2 packages were found in the Sonatype database</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> 0 packages had known vulnerabilities</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> A total of 0 known vulnerabilities were identified</span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> See https://github.com/sonatype-nexus-community/oysteR/ for further details.</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 8</span><span>
 #&gt;   package version type  oss_package description reference vulnerabilities
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>         
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span> abind   1.4-5   cran  pkg:cran/a… </span><span style='color: #949494;'>"</span><span>abind:  C… https://… </span><span style='color: #949494;'>&lt;list [0]&gt;</span><span>     
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span> acepack 1.4.1   cran  pkg:cran/a… </span><span style='color: #949494;'>"</span><span>acepack: … https://… </span><span style='color: #949494;'>&lt;list [0]&gt;</span><span>     
-#&gt; </span><span style='color: #949494;'># … with 1 more variable: no_of_vulnerabilities </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'><span class='co'># }</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span>         
+#&gt; </span><span style='color: #555555;'>1</span><span> abind   1.4-5   cran  pkg:cran/a… </span><span style='color: #555555;'>"</span><span>abind:  C… https://… </span><span style='color: #555555;'>&lt;list [0]&gt;</span><span>     
+#&gt; </span><span style='color: #555555;'>2</span><span> acepack 1.4.1   cran  pkg:cran/a… </span><span style='color: #555555;'>"</span><span>acepack: … https://… </span><span style='color: #555555;'>&lt;list [0]&gt;</span><span>     
+#&gt; </span><span style='color: #555555;'># … with 1 more variable: no_of_vulnerabilities </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'><span class='co'># }</span>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

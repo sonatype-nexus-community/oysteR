@@ -50,7 +50,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -67,7 +67,7 @@
 </li>
 <li>
   <a href="https://github.com/sonatype-nexus-community/oysteR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -102,7 +102,7 @@
 <li>Similarly, <code><a href="reference/audit_renv_lock.html">audit_renv_lock()</a></code> and <code><a href="reference/audit_req_txt.html">audit_req_txt()</a></code>
 </li>
 <li>
-<code><a href="reference/expect_secure.html">expect_secure()</a></code> for use within <a href="http://testthat.r-lib.org">testthat</a>
+<code><a href="reference/expect_secure.html">expect_secure()</a></code> for use within <a href="https://testthat.r-lib.org">testthat</a>
 </li>
 </ul>
 <p>All of these functions ultimately parse relevant files and call the <code><a href="reference/audit.html">audit()</a></code> function.</p>
@@ -111,12 +111,12 @@
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
 <p>To get started, install the package and simply scan your installed packages</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/sonatype-nexus-community/oysteR">"oysteR"</a></span><span class="op">)</span>
-<span class="va">audit</span> <span class="op">=</span> <span class="fu"><a href="reference/audit_installed_r_pkgs.html">audit_installed_r_pkgs</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/sonatype-nexus-community/oysteR">"oysteR"</a></span><span class="op">)</span>
+<span class="va">audit</span> <span class="op">=</span> <span class="fu"><a href="reference/audit_installed_r_pkgs.html">audit_installed_r_pkgs</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>To extract the vulnerabilities into a nice data frame, use</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="reference/get_vulnerabilities.html">get_vulnerabilities</a></span><span class="op">(</span><span class="va">audit</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/get_vulnerabilities.html">get_vulnerabilities</a></span><span class="op">(</span><span class="va">audit</span><span class="op">)</span></code></pre></div>
 <div id="within-testthat" class="section level3">
 <h3 class="hasAnchor">
 <a href="#within-testthat" class="anchor"></a>Within testthat</h3>
