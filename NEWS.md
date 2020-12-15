@@ -5,7 +5,8 @@
   * Feature: Add `audit_description()` function
   * Feature: Add `expect_secure()` for the {testthat} package
   * Feature: Use `~/.ossindex/.oss-index-config`, if it exists
-  * Add Josiah Perry as contributor
+  * Feature: Add a pkgdown website. Thanks to @josiahParry for the nice CSS.
+  * Add Josiah Parry as contributor
   * Minor: Link to [jumpingrivers.com](https://www.jumpingrivers.com) blog post
   * Minor: Make `verbose = FALSE` completely silent
 
