@@ -11,9 +11,6 @@ status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org
 coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
 [![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-**Note**, this README is based on the development version, which is
-significantly different to the CRAN (v0.0.3) version.
-
 ## Overview
 
 This package aims to secure your R projects against insecure

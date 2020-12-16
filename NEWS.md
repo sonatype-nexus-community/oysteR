@@ -1,4 +1,4 @@
-# oysteR (development branch)
+# oysteR 0.1.0 _2020-12-16_ 
   * Feature: Add API caching. Calls are now cached for 12 hours (on R4+ only)
   * Feature: Extract packages from `requirements.txt` and `renv.lock` files
   * Feature: Handle more general vulnerabilities

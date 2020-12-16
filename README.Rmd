@@ -23,9 +23,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-__Note__, this README is based on the development version, which is significantly 
-different to the CRAN (v0.0.3) version.
-
 ## Overview
 
 This package aims to secure your R projects against insecure dependencies using [OSS Index](https://ossindex.sonatype.org/). Essentially, we check R packages for
