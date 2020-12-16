@@ -23,6 +23,7 @@ reference:
   - audit_description
   - audit_renv_lock
   - audit_req_txt
+  - get_vulnerabilities
 
 - title: Testing
   desc: >
