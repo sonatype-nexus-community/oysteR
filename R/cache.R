@@ -1,4 +1,8 @@
-get_cache_dir = function() tools::R_user_dir("oysteR", which = "cache")
+get_cache_dir = function() {
+  R_user_dir = utils::getFromNamespace("R_user_dir", "tools")
+  R_user_dir("oysteR", which = "cache")
+}
+
 get_cache_file = function() {
   dir = get_cache_dir()
   path = file.path(dir, "cached-deps.rds")
@@ -25,7 +29,7 @@ ensure_cache = function() {
 #' @importFrom rlang .data
 get_cache = function() {
   ## Only available for R4+
-  if (as.numeric(R.version$major) < 4) return(no_purls_case())
+  if (getRversion() < "4.0.0") return(no_purls_case())
   path = ensure_cache()
   audits = readRDS(path) %>%
     dplyr::filter(.data$time > Sys.time() - 60 * 60 * 12) %>%
@@ -34,7 +38,7 @@ get_cache = function() {
 }
 
 update_cache = function(audits) {
-  if (as.numeric(R.version$major) < 4) return(audits)
+  if (getRversion() < "4.0.0") return(audits)
   audits$time = Sys.time()
   path = ensure_cache()
 

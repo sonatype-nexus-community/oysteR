@@ -1,6 +1,6 @@
 #' Vulnerability Detection via Testthat
 #'
-#' A \code{testthat} version for detecting vulnerabilites.
+#' A \code{testthat} version for detecting vulnerabilities.
 #' This function is used within the \code{testthat} framework.
 #' As testthat strips out the repositories from options,
 #' we have to set the value locally in the function, i.e. the
@@ -14,6 +14,11 @@
 #' @param repo The CRAN repository, used to get version numbers
 #' @inheritParams audit_renv_lock
 #' @export
+#' @examples
+#' \donttest{
+#'  # Typically used inside testthat
+#'  oysteR::expect_secure("oysteR")
+#' }
 expect_secure = function(pkg,
                          repo = "https://cran.rstudio.com",
                          verbose = FALSE) {
