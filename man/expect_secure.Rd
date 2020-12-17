@@ -14,7 +14,7 @@ expect_secure(pkg, repo = "https://cran.rstudio.com", verbose = FALSE)
 \item{verbose}{Default \code{TRUE}.}
 }
 \description{
-A \code{testthat} version for detecting vulnerabilites.
+A \code{testthat} version for detecting vulnerabilities.
 This function is used within the \code{testthat} framework.
 As testthat strips out the repositories from options,
 we have to set the value locally in the function, i.e. the
@@ -25,4 +25,10 @@ An important proviso is that we are only testing packages for specific versions.
 By default, this will be the latest version on CRAN.
 This may differ for users or if you are using a CRAN snapshot.
 For the latter, simply change the \code{repo} parameter.
+}
+\examples{
+\donttest{
+ # Typically used inside testthat
+ oysteR::expect_secure("oysteR")
+}
 }
