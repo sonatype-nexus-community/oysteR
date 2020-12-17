@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/oysteR
@@ -23,3 +23,10 @@ jobs:
       - store_artifacts:
           path: ~/oysteR/built/
 
+workflows:
+  workflow-build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
