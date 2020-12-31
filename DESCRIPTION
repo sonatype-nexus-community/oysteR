@@ -21,8 +21,9 @@ Authors@R:
              email = "drollo@sonatype.com"),
       person(given = "Josiah",
              family = "Parry",
-             role = "ctb",
-             email = "josiah.parry@gmail.com"),
+             role = "aut",
+             email = "josiah.parry@gmail.com",
+             comment = c(ORCID = "0000-0001-9910-865X")),
       person(given = "Sonatype",
              role = "cph"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
