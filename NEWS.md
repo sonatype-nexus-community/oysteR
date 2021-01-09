@@ -1,3 +1,6 @@
+# oysteR 0.1.1 _2021-01-08_
+  * Use `dontrun{}` in examples that may hit rate limits.
+
 # oysteR 0.1.0 _2020-12-17_ 
   * Feature: Add API caching. Calls are now cached for 12 hours (on R4+ only)
   * Feature: Extract packages from `requirements.txt` and `renv.lock` files

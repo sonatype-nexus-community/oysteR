@@ -27,7 +27,7 @@ This may differ for users or if you are using a CRAN snapshot.
 For the latter, simply change the \code{repo} parameter.
 }
 \examples{
-\donttest{
+\dontrun{
  # Typically used inside testthat
  oysteR::expect_secure("oysteR")
 }
