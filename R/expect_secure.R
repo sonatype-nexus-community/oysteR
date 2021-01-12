@@ -15,7 +15,7 @@
 #' @inheritParams audit_renv_lock
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'  # Typically used inside testthat
 #'  oysteR::expect_secure("oysteR")
 #' }
