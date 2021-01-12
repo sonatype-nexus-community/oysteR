@@ -17,7 +17,7 @@ Audits all installed packages by calling \code{installed.packages()}
 and checking them against the OSS Index.
 }
 \examples{
-\donttest{
+\dontrun{
 # Audit installed packages
 # This calls installed.packages()
 pkgs = audit_installed_r_pkgs()

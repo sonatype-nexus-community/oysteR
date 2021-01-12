@@ -14,7 +14,7 @@ Parse the audit data frame (obtained via \code{audit_deps}), and extract
 the vulnerabilities.
 }
 \examples{
-\donttest{
+\dontrun{
 # Audit installed packages
 # This calls installed.packages()
 # pkgs = audit_deps()

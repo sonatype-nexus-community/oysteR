@@ -69,9 +69,9 @@ get_post_authenticate = function(verbose) {
 
   if (isTRUE(verbose)) {
     if (!is.null(authenticate)) {
-      cli_alert("Using Sonatype tokens")
+      cli::cli_alert("Using Sonatype tokens")
     } else {
-      cli_alert("No Sonatype tokens found")
+      cli::cli_alert("No Sonatype tokens found")
     }
   }
   return(authenticate)
@@ -114,7 +114,7 @@ globalVariables("vulnerabilities")
 #' @keywords internal
 call_oss_index = function(purls, verbose) {
   if (length(purls) == 0L) return(no_purls_case())
-  if (isTRUE(verbose)) cli_h2("Calling sonatype API: https://www.sonatype.com/")
+  if (isTRUE(verbose)) cli::cli_h2("Calling sonatype API: https://www.sonatype.com/")
 
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
@@ -127,7 +127,7 @@ call_oss_index = function(purls, verbose) {
     start = ((i - 1) * max_size + 1)
     end = min(i * max_size, length(purls))
     if (isTRUE(verbose)) {
-      cli_alert_info("Calling API: batch {i} of {no_of_batches}")
+      cli::cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
     body = list(coordinates = purls[start:end])
     r = httr::POST(os_index_url, user_agent, body = body,

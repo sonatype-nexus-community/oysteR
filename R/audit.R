@@ -73,7 +73,7 @@ audit = function(pkg, version, type, verbose = TRUE) {
 #' @importFrom utils installed.packages
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Audit installed packages
 #' # This calls installed.packages()
 #' pkgs = audit_installed_r_pkgs()

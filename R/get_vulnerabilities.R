@@ -21,7 +21,7 @@
 #' @importFrom tidyr unnest
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Audit installed packages
 #' # This calls installed.packages()
 #' # pkgs = audit_deps()
