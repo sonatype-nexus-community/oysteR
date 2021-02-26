@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Check Package Dependencies — audit_deps • oysteR</title>
+<title>Audit a conda environment file — audit_conda • oysteR</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,9 +48,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Check Package Dependencies — audit_deps" />
-<meta property="og:description" content="Collects R dependencies and checks them against OSS Index.
-Returns a tibble of results." />
+<meta property="og:title" content="Audit a conda environment file — audit_conda" />
+<meta property="og:description" content="This function searches the OSS index for vulnerabilities recorded for packages listed
+in a Conda environment file typically called environment.yml but are subject to varied names.
+Conda environment can contain packages from both Conda and PyPI. All packages will be audited." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -137,24 +138,29 @@ Returns a tibble of results." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Check Package Dependencies</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sonatype-nexus-community/oysteR/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a></small>
-    <div class="hidden name"><code>audit_deps.Rd</code></div>
+    <h1>Audit a conda environment file</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sonatype-nexus-community/oysteR/blob/master/R/file_audits.R'><code>R/file_audits.R</code></a></small>
+    <div class="hidden name"><code>audit_conda.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Collects R dependencies and checks them against OSS Index.
-Returns a tibble of results.</p>
+    <p>This function searches the OSS index for vulnerabilities recorded for packages listed
+in a Conda environment file typically called <code>environment.yml</code> but are subject to varied names.
+Conda environment can contain packages from both Conda and PyPI. All packages will be audited.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>audit_deps</span><span class='op'>(</span>pkgs <span class='op'>=</span> <span class='cn'>NULL</span>, verbose <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>audit_conda</span><span class='op'>(</span>dir <span class='op'>=</span> <span class='st'>"."</span>, fname <span class='op'>=</span> <span class='st'>"environment.yml"</span>, verbose <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>pkgs</th>
-      <td><p>Default <code>NULL</code>. See details for further information.</p></td>
+      <th>dir</th>
+      <td><p>The directory containing a Conda environment yaml file.</p></td>
+    </tr>
+    <tr>
+      <th>fname</th>
+      <td><p>The file name of conda environment yaml file.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
@@ -162,16 +168,13 @@ Returns a tibble of results.</p>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble/data.frame.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function is deprecated. See</p>
-<p>By default, packages listed in <code><a href='https://rdrr.io/r/utils/installed.packages.html'>installed.packages()</a></code> are scanned by sonatype.
-However, you can pass your own data frame of packages. This data frame should have two columns,
-<code>version</code> and <code>package</code>.</p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='co'># Looks for a environment.yml file in dir</span>
+<span class='fu'>audit_conda</span><span class='op'>(</span>dir <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">oysteR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -98,6 +98,18 @@
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/reporting-security-vulnerabilities.html">Reporting Security Vulnerabilities</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -127,6 +139,16 @@
       <small>Source: <a href='https://github.com/sonatype-nexus-community/oysteR/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="oyster-012-2021-26-02" class="section level1">
+<h1 class="page-header" data-toc-text="0.1.2">
+<a href="#oyster-012-2021-26-02" class="anchor"></a><small> Unreleased </small>oysteR 0.1.2 <em>2021-26-02</em>
+</h1>
+<ul>
+<li>Feature: Add <code><a href="../reference/audit_conda.html">audit_conda()</a></code> functions</li>
+<li>Feature: Add Josiah Parry as an author</li>
+<li>Feature: Handle missing versions in a nice way</li>
+</ul>
+</div>
     <div id="oyster-011-2021-01-08" class="section level1">
 <h1 class="page-header" data-toc-text="0.1.1">
 <a href="#oyster-011-2021-01-08" class="anchor"></a><small> 2021-01-10 </small>oysteR 0.1.1 <em>2021-01-08</em>
@@ -141,13 +163,13 @@
 </h1>
 <ul>
 <li>Feature: Add API caching. Calls are now cached for 12 hours (on R4+ only)</li>
-<li>Feature: Extract packages from <code>requirements.txt</code> and <code>renv.lock</code> files</li>
+<li>Feature: Extract packages from <code>requirements.txt</code>, <code>renv.lock</code>, and <code>environment.yml</code> files</li>
 <li>Feature: Handle more general vulnerabilities</li>
 <li>Feature: Add <code><a href="../reference/audit_description.html">audit_description()</a></code> function</li>
 <li>Feature: Add <code><a href="../reference/expect_secure.html">expect_secure()</a></code> for the {testthat} package</li>
 <li>Feature: Use <code>~/.ossindex/.oss-index-config</code>, if it exists</li>
 <li>Feature: Add a pkgdown website. Thanks to <a href='https://github.com/josiahParry'>@josiahParry</a> for the nice CSS.</li>
-<li>Add Josiah Parry as contributor</li>
+<li>Add Josiah Parry as an contributor</li>
 <li>Minor: Link to <a href="https://www.jumpingrivers.com">jumpingrivers.com</a> blog post</li>
 <li>Minor: Make <code>verbose = FALSE</code> completely silent</li>
 </ul>
@@ -184,7 +206,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Jeffry Hesse, Brittany Belle, Colin Gillespie, Dan Rollo.</p>
+  <p>Developed by Jeffry Hesse, Brittany Belle, Colin Gillespie, Dan Rollo, Josiah Parry.</p>
 </div>
 
 <div class="pkgdown">

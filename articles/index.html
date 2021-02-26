@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Check Package Dependencies — audit_deps • oysteR</title>
+<title>Articles • oysteR</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,9 +48,7 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Check Package Dependencies — audit_deps" />
-<meta property="og:description" content="Collects R dependencies and checks them against OSS Index.
-Returns a tibble of results." />
+<meta property="og:title" content="Articles" />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -70,7 +68,7 @@ Returns a tibble of results." />
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-topic">
+    <div class="container template-article-index">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -137,46 +135,18 @@ Returns a tibble of results." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Check Package Dependencies</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sonatype-nexus-community/oysteR/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a></small>
-    <div class="hidden name"><code>audit_deps.Rd</code></div>
+      <h1>Articles</h1>
     </div>
 
-    <div class="ref-description">
-    <p>Collects R dependencies and checks them against OSS Index.
-Returns a tibble of results.</p>
+    <div class="section ">
+      <h3>All vignettes</h3>
+      <p class="section-desc"></p>
+
+      <dl>
+        <dt><a href="reporting-security-vulnerabilities.html">Reporting Security Vulnerabilities</a></dt>
+        <dd></dt>
+      </dl>
     </div>
-
-    <pre class="usage"><span class='fu'>audit_deps</span><span class='op'>(</span>pkgs <span class='op'>=</span> <span class='cn'>NULL</span>, verbose <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>pkgs</th>
-      <td><p>Default <code>NULL</code>. See details for further information.</p></td>
-    </tr>
-    <tr>
-      <th>verbose</th>
-      <td><p>Default <code>TRUE</code>.</p></td>
-    </tr>
-    </table>
-
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A tibble/data.frame.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function is deprecated. See</p>
-<p>By default, packages listed in <code><a href='https://rdrr.io/r/utils/installed.packages.html'>installed.packages()</a></code> are scanned by sonatype.
-However, you can pass your own data frame of packages. This data frame should have two columns,
-<code>version</code> and <code>package</code>.</p>
-
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <nav id="toc" data-toggle="toc" class="sticky-top">
-      <h2 data-toc-skip>Contents</h2>
-    </nav>
   </div>
 </div>
 
