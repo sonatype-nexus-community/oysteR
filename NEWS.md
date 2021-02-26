@@ -1,6 +1,7 @@
-# oysteR 0.1.2 _2020-12-31_ 
-  * Adds `audit_req_txt()`, `audit_renv_lock()`, and `audit_conda()` functions 
-  * Add Josiah Parry as an author
+# oysteR 0.1.2 _2021-26-02_ 
+  * Feature: Add `audit_conda()` functions 
+  * Feature: Add Josiah Parry as an author
+  * Feature: Handle missing versions in a nice way
 
 # oysteR 0.1.1 _2021-01-08_
   * Use `dontrun{}` in examples that may hit rate limits.

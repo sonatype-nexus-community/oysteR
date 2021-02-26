@@ -20,33 +20,31 @@ generate_purls = function(pkg, version, type) {
   }
   # Make lower case to make caching better
   type = tolower(type)
+  version = as.character(version)
   # List format required for httr call
   # The list translates to the body of the curl call
   # Each purl must be it's own list element hence the use of as.list over list
-  # if version is missing, creates "@NA" this searches all. Alternatively could use @*
-  # it will check for all versions of packages in this case
-  no_missing_versions <- sum(is.na(version))
-  missing_pkgs <- pkg[is.na(version)]
-
+  # must have version for Sonatype
+  no_missing_versions = sum(is.na(version) | nchar(version) == 0L)
   # create alert if missing versions
   if (no_missing_versions > 0) {
-    missing_msg <- sprintf("%i packages missing versions: %s",
-                           no_missing_versions, paste0(missing_pkgs, collapse = ", "))
+    cli::cli_h3("Missing pkg versions")
+    missing_pkgs = paste(pkg[is.na(version) | nchar(version) == 0L], collapse = ', ')
+    cli::cli_alert_warning("{no_missing_versions} package{?s} with missing versions: \\
+                           {missing_pkgs}")
 
-    cli_alert_warning(missing_msg)
-    cli_alert_warning(glue::glue("oysteR will check {style_italic('all')} package verions."))
-    cli_alert_warning("This may result in false positives.")
+    cli::cli_alert_warning("oysteR will check all package versions.")
+    cli::cli_alert_warning("This may result in false positives.")
+    cli::cat_line()
 
+    version[is.na(version) | nchar(version) == 0L] = "*"
   }
-
-
   # generate purls
-  purls <- as.list(paste0("pkg:", type, "/", pkg, "@", version))
+  purls = as.list(paste0("pkg:", type, "/", pkg, "@", version))
 
   # return purls
   return(purls)
 }
-
 
 #' Get data frame of installed packages
 #'
