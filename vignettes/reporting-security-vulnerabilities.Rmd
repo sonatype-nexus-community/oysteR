@@ -1,17 +1,18 @@
-<!--
-
-    Copyright (c) 2011-present Sonatype, Inc. All rights reserved.
-    Includes the third-party code listed at http://links.sonatype.com/products/clm/attributions.
-    "Sonatype" is a trademark of Sonatype, Inc.
-
--->
-
-# Reporting Security Vulnerabilities
+---
+title: "Reporting Security Vulnerabilities"
+author: "Sonatype"
+output:
+  html_document:
+vignette: >
+  %\VignetteIndexEntry{Reporting Security Vulnerabilities}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
 
 ## When to report
 
 First check
-[Important advisories of known security vulnerabilities in Sonatype products](https://support.sonatype.com/hc/en-us/sections/203012668-Security-Advisories)
+[Important advisories](https://support.sonatype.com/hc/en-us/sections/203012668-Security-Advisories) of known security vulnerabilities in Sonatype products
 to see if this has been previously reported.
 
 ## How to report
@@ -24,12 +25,12 @@ Use our public key below to keep your message safe.
 
 Please use a descriptive subject line in your email report.
 
-Your name and/or affiliation.
+ * Your name and/or affiliation.
 
-A detailed technical description of the vulnerability, attack scenario and where
+ * A detailed technical description of the vulnerability, attack scenario and where
 possible, how we can reproduce your findings.
 
-Provide us with a secure way to respond.
+ * Provide us with a secure way to respond.
 
 ## What to expect
 
@@ -41,9 +42,8 @@ time for us to release a fix prior to public release.
 
 Once an issue is reported, Sonatype uses the following disclosure process:
 
-When a report is received, we confirm the issue and determine its severity.
-
-If third-party services or software require mitigation before publication, those
+> When a report is received, we confirm the issue and determine its severity.
+> If third-party services or software require mitigation before publication, those
 projects will be notified.
 
 ## Our public key
