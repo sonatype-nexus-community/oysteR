@@ -117,4 +117,68 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
   return(audit)
 }
 
-# TO DO: environment.yml for Conda
+#' Audit a conda environment file
+#'
+#' This function searches the OSS index for vulnerabilities recorded for packages listed
+#' in a Conda environment file typically called environment.yml but are subject to varied names.
+#' Conda environment can contain packages from both Conda and PyPI. All packages will be audited.
+#'
+#' @param dir The directory containing a conda environment yaml file.
+#' @param fname The file name of conda environment yaml file.
+#' @param verbose Default \code{TRUE}.
+#'
+#' @importFrom purrr keep map map_dfr pluck discard
+#' @importFrom dplyr mutate bind_rows
+#' @importFrom magrittr %>%
+#' @importFrom tibble tibble
+#' @importFrom yaml read_yaml
+#' @export
+#' @examples \dontrun{
+#' # Looks for a requirements.txt file in dir
+#' audit_env_yml(dir = ".")
+#' }
+audit_env_yml = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
+
+  # check if file exists if it does create file path
+  # allow for fname because conda envs are not always title `environment.yml`
+  env_fname = check_file_exists(dir, fname)
+
+  # read in the yaml
+  env_yml = yaml::read_yaml(env_fname)
+
+  # parse all dependencies
+  env_deps = env_yml[["dependencies"]]
+
+  # conda dependencies
+  conda_deps_raw = unlist(purrr::keep(env_deps, is.character))
+
+  conda_deps = strsplit(conda_deps_raw, ">=|==|>|=") %>%
+    map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
+    mutate(type = "conda")
+
+  # pip dependencies
+  pip_deps_raw = purrr::map(env_deps, purrr::pluck, "pip") %>%
+    unlist(purrr::discard(., is.null))
+
+  # if there are no pip packages create empty tibble
+  if (is.null(pip_deps_raw)) {
+    pip_deps = tibble::tibble(package = character(0),
+                               version = character(0),
+                               type = character(0))
+  } else {
+    pip_deps = strsplit(pip_deps_raw, ">=|==|>") %>%
+      purrr::map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
+      dplyr::mutate(type = "pip")
+  }
+
+
+  all_deps = dplyr::bind_rows(conda_deps, pip_deps)
+
+  aud = audit(all_deps$package, all_deps$version, all_deps$type, verbose = verbose)
+
+  return(aud)
+}
+
+
+
+
