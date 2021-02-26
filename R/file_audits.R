@@ -129,7 +129,6 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
 #'
 #' @importFrom purrr keep map map_dfr pluck discard
 #' @importFrom rlang .data
-#' @importFrom magrittr %>%
 #' @importFrom tibble tibble
 #' @importFrom yaml read_yaml
 #' @export
