@@ -1,6 +1,6 @@
 Package: oysteR
 Title: Scans R Projects for Vulnerable Third Party Dependencies
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     c(person(given = "Jeffry",
              family = "Hesse",
@@ -43,6 +43,7 @@ Imports:
     glue,
     httr,
     jsonlite,
+    magrittr,
     purrr,
     rjson,
     rlang,

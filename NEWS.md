@@ -1,5 +1,5 @@
 # oysteR 0.1.2 _2020-12-31_ 
-  * Adds `audit_req_txt()`, `audit_renv_lock()`, and `audit_env_yml()` functions 
+  * Adds `audit_req_txt()`, `audit_renv_lock()`, and `audit_conda()` functions 
   * Add Josiah Parry as an author
 
 # oysteR 0.1.1 _2021-01-08_
