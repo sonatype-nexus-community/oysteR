@@ -23,7 +23,27 @@ generate_purls = function(pkg, version, type) {
   # List format required for httr call
   # The list translates to the body of the curl call
   # Each purl must be it's own list element hence the use of as.list over list
-  purls = as.list(paste0("pkg:", type, "/", pkg, "@", version))
+  # if version is missing, creates "@NA" this searches all. Alternatively could use @*
+  # it will check for all versions of packages in this case
+  no_missing_versions <- sum(is.na(version))
+  missing_pkgs <- pkg[is.na(version)]
+
+  # create alert if missing versions
+  if (no_missing_versions > 0) {
+    missing_msg <- sprintf("%i packages missing versions: %s",
+                           no_missing_versions, paste0(missing_pkgs, collapse = ", "))
+
+    cli_alert_warning(missing_msg)
+    cli_alert_warning(glue::glue("oysteR will check {style_italic('all')} package verions."))
+    cli_alert_warning("This may result in false positives.")
+
+  }
+
+
+  # generate purls
+  purls <- as.list(paste0("pkg:", type, "/", pkg, "@", version))
+
+  # return purls
   return(purls)
 }
 
