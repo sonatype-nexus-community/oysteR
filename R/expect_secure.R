@@ -28,8 +28,8 @@ expect_secure = function(pkg,
   options(repos = c(CRAN = repo))
 
   ## Look up vulnerabilities
-  pkg_loc = system.file(package = pkg)
-  aud = audit_description(pkg_loc, verbose = verbose)
+  pkg_loc = system.file("DESCRIPTION", package = pkg)
+  aud = audit_description(dirname(pkg_loc), verbose = verbose)
   no_of_vul = sum(aud$no_of_vulnerabilities)
 
   ## Report results

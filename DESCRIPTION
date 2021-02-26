@@ -43,7 +43,6 @@ Imports:
     glue,
     httr,
     jsonlite,
-    magrittr,
     purrr,
     rjson,
     rlang,
