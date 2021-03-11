@@ -1,3 +1,5 @@
+# oysteR 0.1.3 _2021-11-03_ 
+  * Interal: Return missing values as `NA`'s (see #59)
 # oysteR 0.1.2 _2021-26-02_ 
   * Feature: Add `audit_conda()` functions 
   * Feature: Add Josiah Parry as an author
