@@ -33,7 +33,7 @@
 #' #get_vulnerabilities(deps)
 #' }
 get_vulnerabilities = function(audit) {
-  if (sum(audit$no_of_vulnerabilities) == 0) {
+  if (sum(audit$no_of_vulnerabilities, na.rm = TRUE) == 0L) {
     return(tibble(package = character(0), version = character(0), type = character(0),
                   oss_package = character(0), description = character(0),
                   reference = character(0),

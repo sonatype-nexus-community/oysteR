@@ -56,8 +56,12 @@ audit = function(pkg, version, type, verbose = TRUE) {
 
   # Update cache and combine
   update_cache(audit)
-
-  audit = dplyr::bind_rows(audit, cache)
+  # Replace NA versions
+  audit = dplyr::bind_rows(audit, cache) %>%
+    mutate(description = dplyr::if_else(is.na(version), NA_character_, .data$description),
+           no_of_vulnerabilities = dplyr::if_else(is.na(version), NA_integer_,
+                                                  .data$no_of_vulnerabilities),
+    )
   if (isTRUE(verbose)) {
     audit_verbose(audit)
   }

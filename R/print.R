@@ -15,8 +15,8 @@
 globalVariables(c("no_of_pkgs", "no_of_vul", "no_of_vul_comps", "pkgs_in_sona"))
 audit_verbose = function(results) {
   no_of_pkgs = nrow(results)
-  no_of_vul_comps = sum(results$no_of_vulnerabilities != 0)
-  no_of_vul = sum(results$no_of_vulnerabilities)
+  no_of_vul_comps = sum(results$no_of_vulnerabilities != 0, na.rm = TRUE)
+  no_of_vul = sum(results$no_of_vulnerabilities, na.rm = TRUE)
   pkgs_in_sona = sum(!is.na(results$description))
 
   cli::cli_h2("Vulnerability overview")
