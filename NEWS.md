@@ -1,6 +1,10 @@
-# oysteR 0.1.3 _2021-11-03_ 
-  * Interal: Return missing values as `NA`'s (see #59)
-# oysteR 0.1.2 _2021-26-02_ 
+# oysteR 0.1.4 _2021-05-18_ 
+  * Bug: Incorrectly states how many packages were found in the database (see #62)
+
+# oysteR 0.1.3 _2021-03-11-_ 
+  * Internal: Return missing values as `NA`'s (see #59)
+
+# oysteR 0.1.2 _2021-02-26_ 
   * Feature: Add `audit_conda()` functions 
   * Feature: Add Josiah Parry as an author
   * Feature: Handle missing versions in a nice way
