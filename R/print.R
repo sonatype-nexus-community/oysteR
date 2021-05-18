@@ -12,16 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License."
 
-globalVariables(c("no_of_pkgs", "no_of_vul", "no_of_vul_comps", "pkgs_in_sona"))
+globalVariables(c("no_of_pkgs", "no_of_vul", "no_of_vul_comps"))
 audit_verbose = function(results) {
   no_of_pkgs = nrow(results)
   no_of_vul_comps = sum(results$no_of_vulnerabilities != 0, na.rm = TRUE)
   no_of_vul = sum(results$no_of_vulnerabilities, na.rm = TRUE)
-  pkgs_in_sona = sum(!is.na(results$description))
 
   cli::cli_h2("Vulnerability overview")
   cli::cli_alert_info("{no_of_pkgs} package{?s} w{?as/ere} scanned")
-  cli::cli_alert_info("{pkgs_in_sona} package{?s} w{?as/ere} found in the Sonatype database")
   cli::cli_alert_info("{no_of_vul_comps} package{?s} had known vulnerabilit{?y/ies}")
   cli::cli_alert_info("A total of {no_of_vul} known vulnerabilit{?y/ies} w{?as/ere} identified")
   cli::cli_alert_info("See https://github.com/sonatype-nexus-community/oysteR/ for details.")
