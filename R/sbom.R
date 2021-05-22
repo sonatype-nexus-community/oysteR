@@ -24,10 +24,10 @@ get_root_node = function() {
   root = xml2::xml_new_root("bom", xmlns = "http://cyclonedx.org/schema/bom/1.3")
   metadata = add_child_node(root, "metadata")
   tools = add_child_node(metadata, "tools")
-  add_child_node(tools, "tool")
-  add_child_node(tools, "vendor", node_text = "sonatype-nexus-community")
-  add_child_node(tools, "name", node_text = "oysteR")
-  add_child_node(tools, "version", node_text = as.character(packageVersion("oysteR")))
+  tool = add_child_node(tools, "tool")
+  add_child_node(tool, "vendor", node_text = "sonatype-nexus-community")
+  add_child_node(tool, "name", node_text = "oysteR")
+  add_child_node(tool, "version", node_text = as.character(packageVersion("oysteR")))
   root
 }
 
