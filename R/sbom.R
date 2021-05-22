@@ -33,9 +33,9 @@ get_root_node = function() {
 
 # Creates a purl XML component
 get_component = function(purl) {
-  purl_split = stringr::str_match(purl, pattern = "pkg:(.+)@(.+)")
-  purl_name = purl_split[1, 2]
-  purl_version = purl_split[1, 3]
+  purl_split = stringr::str_match(purl, pattern = "pkg:(.+)/(.+)@(.+)")
+  purl_name = purl_split[1, 3]
+  purl_version = purl_split[1, 4]
   component = xml2::xml_new_root("component", type = "library", "bom-ref" = purl)
   add_child_node(component, "name", purl_name)
   add_child_node(component, "version", purl_version)
