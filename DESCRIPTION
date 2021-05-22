@@ -50,6 +50,7 @@ Imports:
     tibble,
     tidyr,
     utils,
+    xml2,
     yaml
 Suggests:
     covr,
