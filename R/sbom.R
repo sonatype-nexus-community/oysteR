@@ -43,6 +43,11 @@ get_component = function(purl) {
   component
 }
 
+
+# To test:
+# purls = oysteR:::generate_purls(c("widgetframe", "drat"), c("0.3.1", "0.1"), "cran")
+# xml = create_sbom(purls)
+# cat(as.character(xml))
 create_sbom = function(purls, verbose = TRUE) {
   if (isTRUE(verbose)) {
     cli::cli_alert("Beginning to create CycloneDX SBOM")
