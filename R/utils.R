@@ -31,7 +31,7 @@ generate_purls = function(pkg, version, type) {
   # https://github.com/sonatype-nexus-community/oysteR/issues/59
   if (no_missing_versions > 0) {
     cli::cli_h3("Missing pkg versions")
-    missing_pkgs = paste(pkg[is_missing_pkgs], collapse = ', ')
+    missing_pkgs = paste(pkg[is_missing_pkgs], collapse = ", ") #nolint
     cli::cli_alert_warning("{no_missing_versions} package{?s} with missing versions: \\
                            {missing_pkgs}")
 

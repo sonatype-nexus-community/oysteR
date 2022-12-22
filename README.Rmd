@@ -1,13 +1,12 @@
---- 
+---
 output: github_document
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # oysteR <a href="https://github.com/sonatype-nexus-community/oysteR"><img src="man/figures/logo.png" align="right" height="138.5" /></a>
-
 
 [![CRAN status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
 [![R-CMD-check](https://github.com/sonatype-nexus-community/oysteR/workflows/R-CMD-check/badge.svg)](https://github.com/sonatype-nexus-community/oysteR/actions)
@@ -41,7 +40,7 @@ All of these functions ultimately parse relevant files and call the `audit()` fu
 
 To get started, install the package and simply scan your installed packages
 
-```{r, eval = FALSE} 
+```{r, eval = FALSE}
 library("oysteR")
 audit = audit_installed_r_pkgs()
 ```
@@ -52,7 +51,7 @@ get_vulnerabilities(audit)
 
 ### Within testthat
 
-You can include this as part of your Unit testing framework, via {testthat}. 
+You can include this as part of your Unit testing framework, via {testthat}.
 Simply create a file in tests/testthat and add
 ```
 test_that("Test expect_secure", {
@@ -61,7 +60,7 @@ test_that("Test expect_secure", {
   oysteR::expect_secure("PKG_NAME")
 })
 ```
-This test will pass if there are no known vulnerabilities. 
+This test will pass if there are no known vulnerabilities.
 Remember to add {oysteR} under Suggests in your DESCRIPTION file.
 
 ### Authentication
@@ -75,7 +74,7 @@ Set the following environment variables in your `.Renviron` file:
 
   - `OSSINDEX_USER` (this is set to your email address)
   - `OSSINDEX_TOKEN` (this is set to your API token)
-  
+
 Or create a config file at `~/.ossindex/.oss-index-config` and add
 ```
 # This config file is picked up by other Sonatype apps

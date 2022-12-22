@@ -169,7 +169,3 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
 
   return(aud)
 }
-
-
-
-

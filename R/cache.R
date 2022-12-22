@@ -1,5 +1,5 @@
 get_cache_dir = function() {
-  R_user_dir = utils::getFromNamespace("R_user_dir", "tools")
+  R_user_dir = utils::getFromNamespace("R_user_dir", "tools") #nolint
   R_user_dir("oysteR", which = "cache")
 }
 

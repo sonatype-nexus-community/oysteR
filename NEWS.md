@@ -1,19 +1,19 @@
-# oysteR 0.1.3.9002 _2021-06-16_ 
+# oysteR 0.1.3.9002 _2021-06-16_
   * Bug: Incorrectly states how many packages were found in the database (see #62)
   * Feature: Auto-generate md table (thanks to @hrbrmstr)
 
-# oysteR 0.1.3 _2021-03-11-_ 
+# oysteR 0.1.3 _2021-03-11-_
   * Internal: Return missing values as `NA`'s (see #59)
 
-# oysteR 0.1.2 _2021-02-26_ 
-  * Feature: Add `audit_conda()` functions 
+# oysteR 0.1.2 _2021-02-26_
+  * Feature: Add `audit_conda()` functions
   * Feature: Add Josiah Parry as an author
   * Feature: Handle missing versions in a nice way
 
 # oysteR 0.1.1 _2021-01-08_
   * Use `dontrun{}` in examples that may hit rate limits.
 
-# oysteR 0.1.0 _2020-12-17_ 
+# oysteR 0.1.0 _2020-12-17_
   * Feature: Add API caching. Calls are now cached for 12 hours (on R4+ only)
   * Feature: Extract packages from `requirements.txt`, `renv.lock`, and `environment.yml` files
   * Feature: Handle more general vulnerabilities

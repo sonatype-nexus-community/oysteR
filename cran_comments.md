@@ -1,7 +1,7 @@
 ## New Submission
   * Previous submission v0.0.3 was rejected with comments (addressed below)
   * Previous CRAN handler: Swetlana Herbrandt <herbrandt@statistik.tu-dortmund.de>
-  
+
 ## Test environments
   * local Ubuntu install, R version 4.0.0
   * CircleCI, linux, R version 3.6.1 (rocker/verse:3.6.1 image)
@@ -9,7 +9,7 @@
 
 ## R CMD check results
 
-There were no ERRORs or WARNINGs. 
+There were no ERRORs or WARNINGs.
 There was 1 NOTE on checking CRAN incoming feasibility
 
 ## Comments from previous submission
@@ -30,7 +30,7 @@ Done
 
 > Please fix and resubmit.
 
-`installed.packages()` is core to this package's functionality - check the users 
+`installed.packages()` is core to this package's functionality - check the users
 installed packages for vulnerabilities. We do __not__ use this to
  * find out if a named package is installed, or
  * find out if a package is usable, or

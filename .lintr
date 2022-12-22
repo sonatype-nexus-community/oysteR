@@ -1,6 +1,10 @@
-linters: with_defaults(
+linters: linters_with_defaults(
+    line_length_linter(100),
     assignment_linter = NULL,
-    object_name_linter = NULL,
-    trailing_whitespace_linter = NULL,
-    line_length_linter(100)
+    undesirable_operator_linter = undesirable_operator_linter(
+        modify_defaults(
+                default_undesirable_operators,
+                "<-" = "Use =, not <-, for assignment."
+        )
+    )
   )

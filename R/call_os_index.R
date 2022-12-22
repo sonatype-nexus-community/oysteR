@@ -53,7 +53,6 @@ get_config = function() {
                      type = "basic")
 }
 
-
 # Just pass NULL to POST if no authentication
 # 1. Check .Renviron, the oss config file
 get_post_authenticate = function(verbose) {
@@ -133,8 +132,8 @@ call_oss_index = function(purls, verbose) {
     r = httr::POST(os_index_url, user_agent, body = body,
                    encode = "json", authenticate)
     check_status_code(r)
-    batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
-    results = c(results, batchResult)
+    batch_result = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
+    results = c(results, batch_result)
   }
 
   results = purrr::map(results, clean_response) %>%
