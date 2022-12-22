@@ -14,9 +14,9 @@
 
 globalVariables(c("no_of_pkgs", "no_of_vul", "no_of_vul_comps"))
 audit_verbose = function(results) {
-  no_of_pkgs = nrow(results)
-  no_of_vul_comps = sum(results$no_of_vulnerabilities != 0, na.rm = TRUE)
-  no_of_vul = sum(results$no_of_vulnerabilities, na.rm = TRUE)
+  no_of_pkgs = nrow(results) # nolint
+  no_of_vul_comps = sum(results$no_of_vulnerabilities != 0, na.rm = TRUE) # nolint
+  no_of_vul = sum(results$no_of_vulnerabilities, na.rm = TRUE) # nolint
 
   cli::cli_h2("Vulnerability overview")
   cli::cli_alert_info("{no_of_pkgs} package{?s} w{?as/ere} scanned")

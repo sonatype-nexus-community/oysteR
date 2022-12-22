@@ -13,29 +13,30 @@
 # limitations under the License."
 
 globalVariables("content")
-#' @importFrom httr status_code POST
-#' @importFrom rjson fromJSON
 # Check status code
 check_status_code = function(r) {
   status_code = httr::status_code(r)
   if (status_code == 401) {
-    stop("Invalid credentials for OSS Index.
-         Please check your username and API token and try again.", call. = FALSE) # nocov
-  } else if (status_code == 429) {
-    stop("You've made too many requests.
+    cli::cli_abort("Invalid credentials for OSS Index.
+         Please check your username and API token and try again.") # nocov
+  }
+  if (status_code == 429) {
+    cli::cli_abort("You've made too many requests.
          Please wait and try again later,
-         or use your OSS Index credentials to bypass the rate limits.", call. = FALSE) # nocov
-  } else if (status_code == 400) {
-    stop("The OSS Index API returned a status code of 400: Bad Request.
+         or use your OSS Index credentials to bypass the rate limits.") # nocov
+  }
+  if (status_code == 400) {
+    cli::cli_abort("The OSS Index API returned a status code of 400: Bad Request.
          Check the format of the purls in your request.
-         See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE) # nocov
-  } else if (status_code != 200) {
+         See also: https://ossindex.sonatype.org/doc/rest") # nocov
+  }
+  if (status_code != 200) {
     content = httr::content(r, "text", encoding = "UTF-8")
-    msg = glue::glue("There was some problem connecting to the OSS Index API.\\
+    cli::cli_abort("There was some problem connecting to the OSS Index API.\\
                 The server responded with:
                   Status Code: {status_code}
                   Response Body: {content}")
-    stop(msg, call. = FALSE)
+
   }
   return(invisible(NULL))
 }
@@ -52,7 +53,6 @@ get_config = function() {
                      config$ossi$Token,
                      type = "basic")
 }
-
 
 # Just pass NULL to POST if no authentication
 # 1. Check .Renviron, the oss config file
@@ -98,9 +98,6 @@ clean_response = function(entry) {
                  no_of_vulnerabilities = no_of_vulnerabilities)
 }
 
-#' @importFrom httr user_agent
-#' @importFrom utils packageVersion
-#' @keywords internal
 get_user_agent = function() {
   version = utils::packageVersion("oysteR")
   ua = paste0("oysteR/", version)
@@ -108,10 +105,6 @@ get_user_agent = function() {
 }
 
 globalVariables("vulnerabilities")
-#' @importFrom dplyr bind_rows mutate
-#' @importFrom purrr map map_dbl
-#' @importFrom dplyr %>%
-#' @keywords internal
 call_oss_index = function(purls, verbose) {
   if (length(purls) == 0L) return(no_purls_case())
   if (isTRUE(verbose)) cli::cli_h2("Calling sonatype API: https://www.sonatype.com/")
@@ -133,8 +126,8 @@ call_oss_index = function(purls, verbose) {
     r = httr::POST(os_index_url, user_agent, body = body,
                    encode = "json", authenticate)
     check_status_code(r)
-    batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
-    results = c(results, batchResult)
+    batch_result = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
+    results = c(results, batch_result)
   }
 
   results = purrr::map(results, clean_response) %>%

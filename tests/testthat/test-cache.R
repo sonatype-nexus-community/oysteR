@@ -16,6 +16,5 @@ test_that("Test cache", {
     file.copy(from = paste0(cache_file, "-testthat"), cache_file)
 
   }
-
 }
 )

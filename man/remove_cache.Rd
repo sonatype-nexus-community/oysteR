@@ -6,6 +6,9 @@
 \usage{
 remove_cache()
 }
+\value{
+NULL. Function used for side effects
+}
 \description{
 The OSS cache is located at \code{tools::R_user_dir("oysteR", which = "cache")}.
 The function \code{R_user_dir()} is only available for R >= 4.0.0.
