@@ -2,7 +2,7 @@ test_that("Test audit_deps", {
   skip_on_cran()
 
   # Known vulnerabilitiy
-  aud = audit("widgetframe", "0.3.1", type = "cran")
+  aud = audit("haven", "2.5.1", type = "cran")
   vul = get_vulnerabilities(aud)
   expect_true(ncol(vul) == 14)
   expect_true(nrow(vul) == 1)

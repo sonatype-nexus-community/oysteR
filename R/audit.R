@@ -58,9 +58,9 @@ audit = function(pkg, version, type, verbose = TRUE) {
   update_cache(audit)
   # Replace NA versions
   audit = dplyr::bind_rows(audit, cache) %>%
-    mutate(description = dplyr::if_else(is.na(version), NA_character_, .data$description),
-           no_of_vulnerabilities = dplyr::if_else(is.na(version), NA_integer_,
-                                                  .data$no_of_vulnerabilities),
+    dplyr::mutate(description = dplyr::if_else(is.na(version), NA_character_, .data$description),
+                 no_of_vulnerabilities = dplyr::if_else(is.na(version), NA_integer_,
+                                                        .data$no_of_vulnerabilities),
     )
   if (isTRUE(verbose)) {
     audit_verbose(audit)
@@ -74,7 +74,6 @@ audit = function(pkg, version, type, verbose = TRUE) {
 #' and checking them against the OSS Index.
 #' @param verbose Default \code{TRUE}.
 #' @return A tibble/data.frame.
-#' @importFrom utils installed.packages
 #' @export
 #' @examples
 #' \dontrun{

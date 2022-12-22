@@ -1,6 +1,6 @@
-# oysteR 0.1.3.9002 _2021-06-16_
+# oysteR 0.1.4 _2022-12-22_
   * Bug: Incorrectly states how many packages were found in the database (see #62)
-  * Feature: Auto-generate md table (thanks to @hrbrmstr)
+  * Feature: Auto-generate md table (thanks to @hrbrmstr for the idea)
 
 # oysteR 0.1.3 _2021-03-11-_
   * Internal: Return missing values as `NA`'s (see #59)

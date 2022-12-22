@@ -5,6 +5,7 @@
 #' `type` must of the same length or else be of length one.
 #'
 #' @keywords internal
+#' @noRd
 generate_purls = function(pkg, version, type) {
   # Add in safety net
   if ((is.null(pkg) && is.null(version)) ||
@@ -13,10 +14,10 @@ generate_purls = function(pkg, version, type) {
   # type and version must be the same length as pkg or
   # of length 1.
   if (length(pkg) != length(version)) {
-    stop("pkgs must be the same length as version.", call. = FALSE)
+    cli::cli_abort("pkgs must be the same length as version.")
   }
   if ((length(type) != 1L) && (length(pkg) != length(type))) {
-    stop("type must be 1 or the same length as pkgs", call. =  FALSE)
+    cli::cli_abort("type must be 1 or the same length as pkgs")
   }
   # Make lower case to make caching better
   type = tolower(type)
@@ -50,13 +51,13 @@ generate_purls = function(pkg, version, type) {
 
 #' Get data frame of installed packages
 #'
-#' @importFrom tibble as_tibble tibble
 #' @keywords internal
+#' @noRd
 get_r_pkgs = function(verbose = TRUE) {
   if (isTRUE(verbose)) {
     cli::cli_alert_info("Calling {.pkg installed.packages()}, this may take time")
   }
-  pkgs = tibble::as_tibble(installed.packages()[, c(1, 3)])
+  pkgs = tibble::as_tibble(utils::installed.packages()[, c(1, 3)])
   # XXX: Remove line when audit_dep is removed
   colnames(pkgs) = c("package", "version")
   return(pkgs)

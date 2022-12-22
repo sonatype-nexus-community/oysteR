@@ -1,7 +1,7 @@
 check_file_exists = function(dir, fname) {
   fpath = file.path(dir, fname)
   if (!file.exists(fpath)) {
-    stop(fpath, " not found", call. = FALSE)
+    cli::cli_abort("{fpath} not found")
   }
   return(fpath)
 }
@@ -29,7 +29,6 @@ get_pkg_deps = function(pkgs) {
 #' the packages in the fields & calculates the dependency tree.
 #' @inheritParams audit_renv_lock
 #' @param fields The DESCRIPTION field to parse. Default is Depends, Import, & Suggests.
-#' @importFrom stringr str_split str_squish str_remove
 #' @export
 #' @examples
 #' \dontrun{
@@ -51,7 +50,7 @@ audit_description = function(dir = ".",
   pkgs = purrr::map(out, clean_description_field)
   all_dep = unlist(purrr::map(pkgs, get_pkg_deps))
   all_dep = sort(unique(all_dep))
-  inst_pkgs = installed.packages()
+  inst_pkgs = utils::installed.packages()
   pkgs = inst_pkgs[rownames(inst_pkgs) %in% all_dep, "Version"]
   versions = as.vector(pkgs)
   pkgs = names(pkgs)
@@ -67,12 +66,6 @@ audit_description = function(dir = ".",
 #'
 #' @param dir The file path of an renv.lock file.
 #' @param verbose Default \code{TRUE}.
-#'
-#' @importFrom jsonlite read_json
-#' @importFrom dplyr %>% mutate
-#' @importFrom tibble as_tibble
-#' @importFrom purrr map_chr pluck
-#' @importFrom rlang .data
 #' @export
 #' @examples
 #' \dontrun{
@@ -99,9 +92,6 @@ audit_renv_lock = function(dir = ".", verbose = TRUE) {
 #' @param dir The file path of a requirements.txt file.
 #' @inheritParams audit_renv_lock
 #'
-#' @importFrom dplyr %>% mutate
-#' @importFrom purrr map_dfr
-#' @importFrom tibble as_tibble
 #' @export
 #' @examples
 #' \dontrun{
@@ -112,8 +102,9 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
   fname = check_file_exists(dir, "requirements.txt")
   audit = readLines(fname) %>%
     strsplit(">=|==|>") %>%
-    map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
-    mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose))
+    purrr::map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
+    dplyr::mutate(audit(pkg = .data$package, version = .data$version, type = "pypi",
+                        verbose = verbose))
   return(audit)
 }
 
@@ -127,10 +118,6 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
 #' @param fname The file name of conda environment yaml file.
 #' @param verbose Default \code{TRUE}.
 #'
-#' @importFrom purrr keep map map_dfr pluck discard
-#' @importFrom rlang .data
-#' @importFrom tibble tibble
-#' @importFrom yaml read_yaml
 #' @export
 #' @examples \dontrun{
 #' # Looks for a environment.yml file in dir
@@ -165,7 +152,7 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
   }
 
   all_deps = dplyr::bind_rows(conda_deps, pip_deps)
-  aud = audit(all_deps$package, all_deps$version, all_deps$type, verbose = verbose)
+  aud = audit(all_deps$package, all_deps$version, type = all_deps$type, verbose = verbose)
 
   return(aud)
 }

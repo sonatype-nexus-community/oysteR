@@ -26,14 +26,13 @@ ensure_cache = function() {
 ## 2. Add a timestamp of when the results were obtained
 ## 3. Future calls would read the cache and prune as necessary
 ## 4. Store cache as an rds file - very efficient R binary file.
-#' @importFrom rlang .data
 get_cache = function() {
   ## Only available for R4+
   if (getRversion() < "4.0.0") return(no_purls_case())
   path = ensure_cache()
   audits = readRDS(path) %>%
     dplyr::filter(.data$time > Sys.time() - 60 * 60 * 12) %>%
-    dplyr::select(-.data$time)
+    dplyr::select(-"time")
   audits
 }
 
@@ -57,9 +56,10 @@ update_cache = function(audits) {
 #' The OSS cache is located at `tools::R_user_dir("oysteR", which = "cache")`.
 #' The function `R_user_dir()` is only available for R >= 4.0.0.
 #' Packages are cached for 12 hours, then refreshed at the next audit
+#' @return NULL. Function used for side effects
 #' @export
 remove_cache = function() {
   path = get_cache_file()
   if (file.exists(path)) file.remove(path)
-  return(NULL)
+  return(invisible(NULL))
 }
