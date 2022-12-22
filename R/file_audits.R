@@ -74,7 +74,7 @@ audit_description = function(dir = ".",
 #' }
 audit_renv_lock = function(dir = ".", verbose = TRUE) {
   fname = check_file_exists(dir, "renv.lock")
-  renv_lock = jsonlite::read_json(fname)
+  renv_lock = rjson::fromJSON(paste(readLines(fname), collapse = ""))
   renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
   audit(pkg = names(renv_pkgs), version = renv_pkgs, type = "cran", verbose = verbose)
 }

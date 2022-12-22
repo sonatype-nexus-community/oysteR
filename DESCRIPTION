@@ -25,7 +25,6 @@ Imports:
     cli,
     dplyr,
     httr,
-    jsonlite,
     purrr,
     rjson,
     rlang,
