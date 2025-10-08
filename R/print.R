@@ -23,5 +23,5 @@ audit_verbose = function(results) {
   cli::cli_alert_info("{no_of_vul_comps} package{?s} had known vulnerabilit{?y/ies}")
   cli::cli_alert_info("A total of {no_of_vul} known vulnerabilit{?y/ies} w{?as/ere} identified")
   cli::cli_alert_info("See https://github.com/sonatype-nexus-community/oysteR/ for details.")
-  return(invisible(NULL))
+  invisible(NULL)
 }

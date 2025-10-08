@@ -7,8 +7,12 @@
 #' @keywords internal
 generate_purls = function(pkg, version, type) {
   # Add in safety net
-  if ((is.null(pkg) && is.null(version)) ||
-      (length(pkg) == 0L && length(version) == 0L)) return(list())
+  if (
+    (is.null(pkg) && is.null(version)) ||
+      (length(pkg) == 0L && length(version) == 0L)
+  ) {
+    return(list())
+  }
   # Institute checks for both version and type.
   # type and version must be the same length as pkg or
   # of length 1.
@@ -16,7 +20,7 @@ generate_purls = function(pkg, version, type) {
     stop("pkgs must be the same length as version.", call. = FALSE)
   }
   if ((length(type) != 1L) && (length(pkg) != length(type))) {
-    stop("type must be 1 or the same length as pkgs", call. =  FALSE)
+    stop("type must be 1 or the same length as pkgs", call. = FALSE)
   }
   # Make lower case to make caching better
   type = tolower(type)
@@ -31,9 +35,11 @@ generate_purls = function(pkg, version, type) {
   # https://github.com/sonatype-nexus-community/oysteR/issues/59
   if (no_missing_versions > 0) {
     cli::cli_h3("Missing pkg versions")
-    missing_pkgs = paste(pkg[is_missing_pkgs], collapse = ', ')
-    cli::cli_alert_warning("{no_missing_versions} package{?s} with missing versions: \\
-                           {missing_pkgs}")
+    missing_pkgs = paste(pkg[is_missing_pkgs], collapse = ", ")
+    cli::cli_alert_warning(
+      "{no_missing_versions} package{?s} with missing versions: \\
+                           {missing_pkgs}"
+    )
 
     cli::cli_alert_warning("This pkgs can't be checked")
     cli::cat_line()
@@ -44,8 +50,7 @@ generate_purls = function(pkg, version, type) {
   # generate purls
   purls = as.list(paste0("pkg:", type, "/", pkg, "@", version))
 
-  # return purls
-  return(purls)
+  purls
 }
 
 #' Get data frame of installed packages
@@ -59,5 +64,5 @@ get_r_pkgs = function(verbose = TRUE) {
   pkgs = tibble::as_tibble(installed.packages()[, c(1, 3)])
   # XXX: Remove line when audit_dep is removed
   colnames(pkgs) = c("package", "version")
-  return(pkgs)
+  pkgs
 }

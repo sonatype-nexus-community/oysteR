@@ -6,19 +6,21 @@ get_cache_dir = function() {
 get_cache_file = function() {
   dir = get_cache_dir()
   path = file.path(dir, "cached-deps.rds")
-  return(path)
+  path
 }
 
 ensure_cache = function() {
   path = get_cache_file()
-  if (file.exists(path)) return(path)
+  if (file.exists(path)) {
+    return(path)
+  }
 
   dir.create(get_cache_dir(), recursive = TRUE, showWarnings = FALSE)
   audits = no_purls_case()
   audits$time = integer(0)
   class(audits$time) = c("POSIXct", "POSIXt")
   saveRDS(audits, file = path)
-  return(path)
+  path
 }
 
 ## General cache idea
@@ -29,7 +31,9 @@ ensure_cache = function() {
 #' @importFrom rlang .data
 get_cache = function() {
   ## Only available for R4+
-  if (getRversion() < "4.0.0") return(no_purls_case())
+  if (getRversion() < "4.0.0") {
+    return(no_purls_case())
+  }
   path = ensure_cache()
   audits = readRDS(path) %>%
     dplyr::filter(.data$time > Sys.time() - 60 * 60 * 12) %>%
@@ -38,7 +42,9 @@ get_cache = function() {
 }
 
 update_cache = function(audits) {
-  if (getRversion() < "4.0.0") return(audits)
+  if (getRversion() < "4.0.0") {
+    return(audits)
+  }
   audits$time = Sys.time()
   path = ensure_cache()
 
@@ -49,7 +55,7 @@ update_cache = function(audits) {
     dplyr::bind_rows(audits)
 
   saveRDS(audits, file = path)
-  return(audits)
+  audits
 }
 
 #' Remove cache
@@ -60,6 +66,8 @@ update_cache = function(audits) {
 #' @export
 remove_cache = function() {
   path = get_cache_file()
-  if (file.exists(path)) file.remove(path)
-  return(NULL)
+  if (file.exists(path)) {
+    file.remove(path)
+  }
+  NULL
 }
