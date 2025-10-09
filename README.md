@@ -6,10 +6,10 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/oysteR)](https://CRAN.R-project.org/package=oysteR)
 [![R-CMD-check](https://github.com/sonatype-nexus-community/oysteR/workflows/R-CMD-check/badge.svg)](https://github.com/sonatype-nexus-community/oysteR/actions)
-[![CircleCI](https://circleci.com/gh/sonatype-nexus-community/oysteR.svg?style=shield)](https://circleci.com/gh/sonatype-nexus-community/oysteR)
+[![CircleCI](https://app.circleci.com/pipelines/github/sonatype-nexus-community/oysteR.svg?style=shield)](https://app.circleci.com/pipelines/github/sonatype-nexus-community/oysteR)
 [![Codecov test
-coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
-[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://gitter.im/sonatype-nexus-community/oysteR?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+coverage](https://codecov.io/gh/sonatype-nexus-community/oysteR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/sonatype-nexus-community/oysteR?branch=master)
+[![Gitter](https://badges.gitter.im/sonatype-nexus-community/oysteR.svg)](https://app.gitter.im/#/room/#sonatype-nexus-community_oysteR:gitter.im?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Overview
 
@@ -108,7 +108,7 @@ project](https://github.com/OSSIndex/vulns).
 ## Getting help
 
 If you need help, then feel free to join us on the [oysteR
-Gitter](https://gitter.im/sonatype-nexus-community/oysteR) or raise an
+Gitter](https://app.gitter.im/#/room/#sonatype-nexus-community_oysteR:gitter.im) or raise an
 an [issue](https://github.com/sonatype-nexus-community/oysteR/issues)
 
 ## The Fine Print

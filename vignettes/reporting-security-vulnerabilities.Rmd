@@ -12,12 +12,11 @@ vignette: >
 ## When to report
 
 First check
-[Important advisories](https://support.sonatype.com/hc/en-us/sections/203012668-Security-Advisories) of known security vulnerabilities in Sonatype products
-to see if this has been previously reported.
+[Important advisories](https://support.sonatype.com/hc/en-us/sections/203012668-Security-Advisories) of known security vulnerabilities in Sonatype products to see if this has been previously reported.
 
 ## How to report
 
-Please email reports regarding security related issues you find to [mailto:security@sonatype.com](security@sonatype.com).
+Please email reports regarding security related issues you find to `security@sonatype.com`.
 
 Use our public key below to keep your message safe.
 
