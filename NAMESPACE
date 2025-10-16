@@ -2,7 +2,6 @@
 
 export(audit)
 export(audit_conda)
-export(audit_deps)
 export(audit_description)
 export(audit_installed_r_pkgs)
 export(audit_renv_lock)

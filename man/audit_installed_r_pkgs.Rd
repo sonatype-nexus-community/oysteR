@@ -4,10 +4,13 @@
 \alias{audit_installed_r_pkgs}
 \title{Audit Installed Packages}
 \usage{
-audit_installed_r_pkgs(verbose = TRUE)
+audit_installed_r_pkgs(verbose = TRUE, token = NULL)
 }
 \arguments{
 \item{verbose}{Default \code{TRUE}.}
+
+\item{token}{If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
+aren't available, try \code{"~/.ossindex/.oss-index-config"}}
 }
 \value{
 A tibble/data.frame.

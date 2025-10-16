@@ -14,8 +14,5 @@ test_that("Test cache", {
 
     ## Reinstate the cache file
     file.copy(from = paste0(cache_file, "-testthat"), cache_file)
-
   }
-
-}
-)
+})

@@ -23,6 +23,8 @@
 #' By default it will search all known versions. If not `*`, must be the same length as pkg.
 #' @param type The package management environment. For R packages, set equal to "cran".
 #' This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.
+#' @param token If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
+#' aren't available, try `"~/.ossindex/.oss-index-config"`
 #' @param verbose Default \code{TRUE}.
 #'
 #' @export
@@ -32,10 +34,13 @@
 #' version = c("1.4-5", "1.4.1")
 #' audit(pkg, version, type = "cran")
 #' }
-audit = function(pkg, version, type, verbose = TRUE) {
-
-  if (is.null(pkg)) pkg = character(0)
-  if (is.null(version)) version = character(0)
+audit = function(pkg, version, type, verbose = TRUE, token = NULL) {
+  if (is.null(pkg)) {
+    pkg = character(0)
+  }
+  if (is.null(version)) {
+    version = character(0)
+  }
   # Create the purls. Checks will be inherited
   purls = generate_purls(pkg, version, type)
   ## Get cache & remove cached purls
@@ -51,16 +56,20 @@ audit = function(pkg, version, type, verbose = TRUE) {
   pkgs = tibble::tibble(package = pkg, version = version, type = type)[!is_cached, ]
 
   ## Call OSS index on remaining
-  results = call_oss_index(purls, verbose = verbose)
+  results = call_oss_index(purls, verbose = verbose, token = token)
   audit = dplyr::bind_cols(pkgs, results)
 
   # Update cache and combine
   update_cache(audit)
   # Replace NA versions
   audit = dplyr::bind_rows(audit, cache) %>%
-    mutate(description = dplyr::if_else(is.na(version), NA_character_, .data$description),
-           no_of_vulnerabilities = dplyr::if_else(is.na(version), NA_integer_,
-                                                  .data$no_of_vulnerabilities),
+    mutate(
+      description = dplyr::if_else(is.na(version), NA_character_, .data$description),
+      no_of_vulnerabilities = dplyr::if_else(
+        is.na(version),
+        NA_integer_,
+        .data$no_of_vulnerabilities
+      ),
     )
   if (isTRUE(verbose)) {
     audit_verbose(audit)
@@ -72,7 +81,7 @@ audit = function(pkg, version, type, verbose = TRUE) {
 #'
 #' Audits all installed packages by calling \code{installed.packages()}
 #' and checking them against the OSS Index.
-#' @param verbose Default \code{TRUE}.
+#' @inheritParams audit
 #' @return A tibble/data.frame.
 #' @importFrom utils installed.packages
 #' @export
@@ -82,7 +91,7 @@ audit = function(pkg, version, type, verbose = TRUE) {
 #' # This calls installed.packages()
 #' pkgs = audit_installed_r_pkgs()
 #' }
-audit_installed_r_pkgs = function(verbose = TRUE) {
+audit_installed_r_pkgs = function(verbose = TRUE, token = NULL) {
   pkgs = get_r_pkgs(verbose = verbose)
-  audit(pkg = pkgs$package, version = pkgs$version, type = "cran", verbose = verbose)
+  audit(pkg = pkgs$package, version = pkgs$version, type = "cran", verbose = verbose, token = token)
 }

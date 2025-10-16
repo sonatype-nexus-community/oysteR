@@ -11,9 +11,11 @@ test_that("Test audit_deps", {
 
   # Pass explicit packages
   # Also test missing versions, and mixing numbers and characters
-  deps = expect_message(audit(pkg = c("abind", "acepack", "abind", "abind", "abind"),
-                              version = c("1.4-5", "1.4.1", NA, "", 1),
-                              type = "cran"))
+  deps = expect_message(audit(
+    pkg = c("abind", "acepack", "abind", "abind", "abind"),
+    version = c("1.4-5", "1.4.1", NA, "", 1),
+    type = "cran"
+  ))
   expect_equal(nrow(deps), 5)
   expect_equal(ncol(deps), 8)
 
