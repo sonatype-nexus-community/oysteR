@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/oysteR
     docker:
-      - image: rocker/verse:3.6.1
+      - image: rocker/verse:4
     steps:
       - checkout
       - run:

@@ -19,83 +19,69 @@ globalVariables("content")
 check_status_code = function(r) {
   status_code = httr::status_code(r)
   if (status_code == 401) {
-    stop("Invalid credentials for OSS Index.
-         Please check your username and API token and try again.", call. = FALSE) # nocov
+    stop(
+      "Invalid credentials for OSS Index.
+         Please check your username and API token and try again.",
+      call. = FALSE
+    ) # nocov
   } else if (status_code == 429) {
-    stop("You've made too many requests.
+    stop(
+      "You've made too many requests.
          Please wait and try again later,
-         or use your OSS Index credentials to bypass the rate limits.", call. = FALSE) # nocov
+         or use your OSS Index credentials to bypass the rate limits.",
+      call. = FALSE
+    ) # nocov
   } else if (status_code == 400) {
-    stop("The OSS Index API returned a status code of 400: Bad Request.
+    stop(
+      "The OSS Index API returned a status code of 400: Bad Request.
          Check the format of the purls in your request.
-         See also: https://ossindex.sonatype.org/doc/rest", call. = FALSE) # nocov
+         See also: https://ossindex.sonatype.org/doc/rest",
+      call. = FALSE
+    ) # nocov
   } else if (status_code != 200) {
     content = httr::content(r, "text", encoding = "UTF-8")
-    msg = glue::glue("There was some problem connecting to the OSS Index API.\\
+    msg = glue::glue(
+      "There was some problem connecting to the OSS Index API.\\
                 The server responded with:
                   Status Code: {status_code}
-                  Response Body: {content}")
+                  Response Body: {content}"
+    )
     stop(msg, call. = FALSE)
   }
-  return(invisible(NULL))
-}
-
-# This just seems ugly
-get_config = function() {
-  config = yaml::read_yaml("~/.ossindex/.oss-index-config")
-  if (is.null(config$ossi$Username) ||
-      is.null(config$ossi$Token)) {
-    return(NULL)
-  }
-
-  httr::authenticate(config$ossi$Username,
-                     config$ossi$Token,
-                     type = "basic")
-}
-
-
-# Just pass NULL to POST if no authentication
-# 1. Check .Renviron, the oss config file
-get_post_authenticate = function(verbose) {
-  user = Sys.getenv("OSSINDEX_USER", NA)
-  token = Sys.getenv("OSSINDEX_TOKEN", NA)
-  if (!is.na(user) && !is.na(token)) {
-    authenticate = httr::authenticate(user, token, type = "basic")
-  } else if (file.exists("~/.ossindex/.oss-index-config")) {
-    authenticate = get_config()
-  } else {
-    authenticate = NULL
-  }
-
-  if (isTRUE(verbose)) {
-    if (!is.null(authenticate)) {
-      cli::cli_alert("Using Sonatype tokens")
-    } else {
-      cli::cli_alert("No Sonatype tokens found")
-    }
-  }
-  return(authenticate)
+  invisible(NULL)
 }
 
 no_purls_case = function() {
-  results = tibble::tibble(oss_package = character(0), description = character(0),
-                           reference = character(0), vulnerabilities = list(),
-                           no_of_vulnerabilities = integer(0))
+  results = tibble::tibble(
+    oss_package = character(0),
+    description = character(0),
+    reference = character(0),
+    vulnerabilities = list(),
+    no_of_vulnerabilities = integer(0)
+  )
   class(results) = c("oysteR_deps", class(results))
-  return(results)
+  results
 }
 
 clean_response = function(entry) {
-  if (is.null(entry$coordinates)) entry$coordinates = NA_character_
-  if (is.null(entry$description)) entry$description = NA_character_
-  if (is.null(entry$reference)) entry$reference = NA_character_
+  if (is.null(entry$coordinates)) {
+    entry$coordinates = NA_character_
+  }
+  if (is.null(entry$description)) {
+    entry$description = NA_character_
+  }
+  if (is.null(entry$reference)) {
+    entry$reference = NA_character_
+  }
   no_of_vulnerabilities = length(entry$vulnerabilities)
   entry$vulnerabilities = list(entry$vulnerabilities)
-  tibble::tibble(oss_package = entry$coordinates,
-                 description = entry$description,
-                 reference = entry$reference,
-                 vulnerabilities = entry$vulnerabilities,
-                 no_of_vulnerabilities = no_of_vulnerabilities)
+  tibble::tibble(
+    oss_package = entry$coordinates,
+    description = entry$description,
+    reference = entry$reference,
+    vulnerabilities = entry$vulnerabilities,
+    no_of_vulnerabilities = no_of_vulnerabilities
+  )
 }
 
 #' @importFrom httr user_agent
@@ -104,7 +90,7 @@ clean_response = function(entry) {
 get_user_agent = function() {
   version = utils::packageVersion("oysteR")
   ua = paste0("oysteR/", version)
-  return(httr::user_agent(ua))
+  httr::user_agent(ua)
 }
 
 globalVariables("vulnerabilities")
@@ -112,14 +98,18 @@ globalVariables("vulnerabilities")
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
 #' @keywords internal
-call_oss_index = function(purls, verbose) {
-  if (length(purls) == 0L) return(no_purls_case())
-  if (isTRUE(verbose)) cli::cli_h2("Calling sonatype API: https://www.sonatype.com/")
+call_oss_index = function(purls, verbose, token) {
+  if (length(purls) == 0L) {
+    return(no_purls_case())
+  }
+  if (isTRUE(verbose)) {
+    cli::cli_h2("Calling sonatype API: https://www.sonatype.com/")
+  }
 
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
-
-  authenticate = get_post_authenticate(verbose)
+  token = get_token(token, verbose)
+  authenticate = httr::authenticate(token$user, token$token, type = "basic")
   user_agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
@@ -130,8 +120,7 @@ call_oss_index = function(purls, verbose) {
       cli::cli_alert_info("Calling API: batch {i} of {no_of_batches}")
     }
     body = list(coordinates = purls[start:end])
-    r = httr::POST(os_index_url, user_agent, body = body,
-                   encode = "json", authenticate)
+    r = httr::POST(os_index_url, user_agent, body = body, encode = "json", authenticate)
     check_status_code(r)
     batchResult = rjson::fromJSON(httr::content(r, "text", encoding = "UTF-8"))
     results = c(results, batchResult)
@@ -140,5 +129,5 @@ call_oss_index = function(purls, verbose) {
   results = purrr::map(results, clean_response) %>%
     dplyr::bind_rows()
   class(results) = c("oysteR_deps", class(results))
-  return(results)
+  results
 }

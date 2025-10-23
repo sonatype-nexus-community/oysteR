@@ -3,7 +3,7 @@ check_file_exists = function(dir, fname) {
   if (!file.exists(fpath)) {
     stop(fpath, " not found", call. = FALSE)
   }
-  return(fpath)
+  fpath
 }
 
 # Cleans and converts field to vector
@@ -16,9 +16,11 @@ clean_description_field = function(field) {
 
 ## Gets deps,
 get_pkg_deps = function(pkgs) {
-  dep = tools::package_dependencies(pkgs,
-                                    which = c("Depends", "Imports", "LinkingTo"),
-                                    recursive = TRUE)
+  dep = tools::package_dependencies(
+    pkgs,
+    which = c("Depends", "Imports", "LinkingTo"),
+    recursive = TRUE
+  )
   dep = unlist(dep)
   unique(c(pkgs, dep))
 }
@@ -36,10 +38,11 @@ get_pkg_deps = function(pkgs) {
 #' # Looks for a DESCRIPTION file in dir
 #' audit_description(dir = ".")
 #' }
-audit_description = function(dir = ".",
-                             fields = c("Depends", "Imports", "Suggests"),
-                             verbose = TRUE) {
-
+audit_description = function(
+  dir = ".",
+  fields = c("Depends", "Imports", "Suggests"),
+  verbose = TRUE
+) {
   ## Read DESCRIPTION and extract fields
   fname = check_file_exists(dir, "DESCRIPTION")
   des = read.dcf(fname)
@@ -112,7 +115,7 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
   fname = check_file_exists(dir, "requirements.txt")
   audit = readLines(fname) %>%
     strsplit(">=|==|>") %>%
-    map_dfr(~tibble::tibble(package = .x[1], version = .x[2])) %>%
+    map_dfr(~ tibble::tibble(package = .x[1], version = .x[2])) %>%
     mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose))
   return(audit)
 }
@@ -137,7 +140,6 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
 #' audit_conda(dir = ".")
 #' }
 audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
-
   # check if file exists if it does create file path
   # allow for fname because conda envs are not always title `environment.yml`
   env_fname = check_file_exists(dir, fname)
@@ -150,18 +152,17 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
   conda_deps_raw = unlist(purrr::keep(env_deps, is.character))
 
   conda_deps = strsplit(conda_deps_raw, ">=|==|>|=") %>%
-    purrr::map_dfr(~tibble::tibble(package = .x[1], version = .x[2], type = "conda"))
+    purrr::map_dfr(~ tibble::tibble(package = .x[1], version = .x[2], type = "conda"))
   # pip dependencies
   pip_deps_raw = purrr::map(env_deps, purrr::pluck, "pip") %>%
     unlist(purrr::discard(.data, is.null))
 
   # if there are no pip packages create empty tibble
   if (is.null(pip_deps_raw)) {
-    pip_deps = tibble::tibble(package = character(0), version = character(0),
-                              type = character(0))
+    pip_deps = tibble::tibble(package = character(0), version = character(0), type = character(0))
   } else {
     pip_deps = strsplit(pip_deps_raw, ">=|==|>") %>%
-      purrr::map_dfr(~tibble::tibble(package = .x[1], version = .x[2], type = "pypi"))
+      purrr::map_dfr(~ tibble::tibble(package = .x[1], version = .x[2], type = "pypi"))
   }
 
   all_deps = dplyr::bind_rows(conda_deps, pip_deps)
@@ -169,7 +170,3 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
 
   return(aud)
 }
-
-
-
-

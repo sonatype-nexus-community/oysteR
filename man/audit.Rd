@@ -4,7 +4,7 @@
 \alias{audit}
 \title{Search for Package Vulnerabilities}
 \usage{
-audit(pkg, version, type, verbose = TRUE)
+audit(pkg, version, type, verbose = TRUE, token = NULL)
 }
 \arguments{
 \item{pkg}{A vector of package names to search in the OSS Index.}
@@ -16,6 +16,9 @@ By default it will search all known versions. If not \code{*}, must be the same 
 This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.}
 
 \item{verbose}{Default \code{TRUE}.}
+
+\item{token}{If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
+aren't available, try \code{"~/.ossindex/.oss-index-config"}}
 }
 \description{
 Search the OSS Index for known package vulnerabilities in any of the supported ecosystems—
