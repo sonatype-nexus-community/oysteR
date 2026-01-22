@@ -98,7 +98,7 @@ globalVariables("vulnerabilities")
 #' @importFrom purrr map map_dbl
 #' @importFrom dplyr %>%
 #' @keywords internal
-call_oss_index = function(purls, verbose, token) {
+call_oss_index = function(purls, verbose, token, ossindex_url = NULL) {
   if (length(purls) == 0L) {
     return(no_purls_case())
   }
@@ -107,7 +107,7 @@ call_oss_index = function(purls, verbose, token) {
   }
 
   max_size = 128
-  os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
+  os_index_url = get_ossindex_url(ossindex_url)
   token = get_token(token, verbose)
   authenticate = httr::authenticate(token$user, token$token, type = "basic")
   user_agent = get_user_agent()

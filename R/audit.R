@@ -26,6 +26,8 @@
 #' @param token If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
 #' aren't available, try `"~/.ossindex/.oss-index-config"`
 #' @param verbose Default \code{TRUE}.
+#' @param ossindex_url Optional custom OSS Index URL. If NULL, looks at OSSINDEX_URL env variable,
+#' then `"~/.ossindex/.oss-index-config"`, then defaults to "https://ossindex.sonatype.org/api/v3/component-report"
 #'
 #' @export
 #' @examples
@@ -34,7 +36,7 @@
 #' version = c("1.4-5", "1.4.1")
 #' audit(pkg, version, type = "cran")
 #' }
-audit = function(pkg, version, type, verbose = TRUE, token = NULL) {
+audit = function(pkg, version, type, verbose = TRUE, token = NULL, ossindex_url = NULL) {
   if (is.null(pkg)) {
     pkg = character(0)
   }
@@ -56,7 +58,7 @@ audit = function(pkg, version, type, verbose = TRUE, token = NULL) {
   pkgs = tibble::tibble(package = pkg, version = version, type = type)[!is_cached, ]
 
   ## Call OSS index on remaining
-  results = call_oss_index(purls, verbose = verbose, token = token)
+  results = call_oss_index(purls, verbose = verbose, token = token, ossindex_url = ossindex_url)
   audit = dplyr::bind_cols(pkgs, results)
 
   # Update cache and combine
@@ -91,7 +93,7 @@ audit = function(pkg, version, type, verbose = TRUE, token = NULL) {
 #' # This calls installed.packages()
 #' pkgs = audit_installed_r_pkgs()
 #' }
-audit_installed_r_pkgs = function(verbose = TRUE, token = NULL) {
+audit_installed_r_pkgs = function(verbose = TRUE, token = NULL, ossindex_url = NULL) {
   pkgs = get_r_pkgs(verbose = verbose)
-  audit(pkg = pkgs$package, version = pkgs$version, type = "cran", verbose = verbose, token = token)
+  audit(pkg = pkgs$package, version = pkgs$version, type = "cran", verbose = verbose, token = token, ossindex_url = ossindex_url)
 }

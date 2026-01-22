@@ -1,3 +1,6 @@
+# oysteR (development version)
+  * feat: Add support for custom OSS Index URL via parameter, environment variable, or config file
+
 # oysteR 0.1.4 _2025-10-08_
   * bug: Incorrectly states how many packages were found in the database (see #62)
   * feat: Pass tokens as arguments

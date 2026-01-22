@@ -19,7 +19,7 @@
 #'  # Typically used inside testthat
 #'  oysteR::expect_secure("oysteR")
 #' }
-expect_secure = function(pkg, repo = "https://cran.rstudio.com", verbose = FALSE) {
+expect_secure = function(pkg, repo = "https://cran.rstudio.com", verbose = FALSE, ossindex_url = NULL) {
   ## Need to set the repo, as testthat seems to strip this out?
   repos = getOption("repos")
   on.exit(options(repos = repos))
@@ -27,7 +27,7 @@ expect_secure = function(pkg, repo = "https://cran.rstudio.com", verbose = FALSE
 
   ## Look up vulnerabilities
   pkg_loc = system.file("DESCRIPTION", package = pkg)
-  aud = audit_description(dirname(pkg_loc), verbose = verbose)
+  aud = audit_description(dirname(pkg_loc), verbose = verbose, ossindex_url = ossindex_url)
   no_of_vul = sum(aud$no_of_vulnerabilities)
 
   ## Report results

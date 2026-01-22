@@ -19,3 +19,27 @@ get_token = function(token, verbose = TRUE) {
   }
   token
 }
+
+get_ossindex_url = function(ossindex_url = NULL) {
+  # If URL is explicitly provided, use it
+  if (!is.null(ossindex_url)) {
+    return(ossindex_url)
+  }
+
+  # Check environment variable
+  env_url = Sys.getenv("OSSINDEX_URL", NA)
+  if (!is.na(env_url)) {
+    return(env_url)
+  }
+
+  # Check config file
+  if (file.exists("~/.ossindex/.oss-index-config")) {
+    config = yaml::read_yaml("~/.ossindex/.oss-index-config")
+    if (!is.null(config$ossi$Url)) {
+      return(config$ossi$Url)
+    }
+  }
+
+  # Default URL
+  return("https://ossindex.sonatype.org/api/v3/component-report")
+}
