@@ -41,7 +41,8 @@ get_pkg_deps = function(pkgs) {
 audit_description = function(
   dir = ".",
   fields = c("Depends", "Imports", "Suggests"),
-  verbose = TRUE
+  verbose = TRUE,
+  ossindex_url = NULL
 ) {
   ## Read DESCRIPTION and extract fields
   fname = check_file_exists(dir, "DESCRIPTION")
@@ -58,7 +59,7 @@ audit_description = function(
   pkgs = inst_pkgs[rownames(inst_pkgs) %in% all_dep, "Version"]
   versions = as.vector(pkgs)
   pkgs = names(pkgs)
-  audit(pkgs, versions, type = "CRAN", verbose = verbose)
+  audit(pkgs, versions, type = "CRAN", verbose = verbose, ossindex_url = ossindex_url)
 }
 
 #' Audit an renv.lock File
@@ -70,6 +71,7 @@ audit_description = function(
 #'
 #' @param dir The file path of an renv.lock file.
 #' @param verbose Default \code{TRUE}.
+#' @param ossindex_url Optional custom OSS Index URL. If NULL, uses default or configured URL.
 #'
 #' @importFrom jsonlite read_json
 #' @importFrom dplyr %>% mutate
@@ -82,11 +84,11 @@ audit_description = function(
 #' # Looks for renv.lock file in dir
 #' audit_renv_lock(dir = ".")
 #' }
-audit_renv_lock = function(dir = ".", verbose = TRUE) {
+audit_renv_lock = function(dir = ".", verbose = TRUE, ossindex_url = NULL) {
   fname = check_file_exists(dir, "renv.lock")
   renv_lock = jsonlite::read_json(fname)
   renv_pkgs = purrr::map_chr(renv_lock$Packages, purrr::pluck, "Version")
-  audit(pkg = names(renv_pkgs), version = renv_pkgs, type = "cran", verbose = verbose)
+  audit(pkg = names(renv_pkgs), version = renv_pkgs, type = "cran", verbose = verbose, ossindex_url = ossindex_url)
 }
 
 #' Audit a requirements.txt File
@@ -111,12 +113,12 @@ audit_renv_lock = function(dir = ".", verbose = TRUE) {
 #' # Looks for a requirements.txt file in dir
 #' audit_description(dir = ".")
 #' }
-audit_req_txt = function(dir = ".", verbose = TRUE) {
+audit_req_txt = function(dir = ".", verbose = TRUE, ossindex_url = NULL) {
   fname = check_file_exists(dir, "requirements.txt")
   audit = readLines(fname) %>%
     strsplit(">=|==|>") %>%
     map_dfr(~ tibble::tibble(package = .x[1], version = .x[2])) %>%
-    mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose))
+    mutate(audit(pkg = .data$package, version = .data$version, type = "pypi", verbose = verbose, ossindex_url = ossindex_url))
   return(audit)
 }
 
@@ -129,6 +131,7 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
 #' @param dir The directory containing a Conda environment yaml file.
 #' @param fname The file name of conda environment yaml file.
 #' @param verbose Default \code{TRUE}.
+#' @param ossindex_url Optional custom OSS Index URL. If NULL, uses default or configured URL.
 #'
 #' @importFrom purrr keep map map_dfr pluck discard
 #' @importFrom rlang .data
@@ -139,7 +142,7 @@ audit_req_txt = function(dir = ".", verbose = TRUE) {
 #' # Looks for a environment.yml file in dir
 #' audit_conda(dir = ".")
 #' }
-audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
+audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE, ossindex_url = NULL) {
   # check if file exists if it does create file path
   # allow for fname because conda envs are not always title `environment.yml`
   env_fname = check_file_exists(dir, fname)
@@ -166,7 +169,7 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
   }
 
   all_deps = dplyr::bind_rows(conda_deps, pip_deps)
-  aud = audit(all_deps$package, all_deps$version, all_deps$type, verbose = verbose)
+  aud = audit(all_deps$package, all_deps$version, all_deps$type, verbose = verbose, ossindex_url = ossindex_url)
 
   return(aud)
 }

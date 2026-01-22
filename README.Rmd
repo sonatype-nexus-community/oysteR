@@ -75,7 +75,7 @@ Set the following environment variables in your `.Renviron` file:
 
   - `OSSINDEX_USER` (this is set to your email address)
   - `OSSINDEX_TOKEN` (this is set to your API token)
-  
+
 Or create a config file at `~/.ossindex/.oss-index-config` and add
 ```
 # This config file is picked up by other Sonatype apps
@@ -85,6 +85,30 @@ ossi:
 ```
 
 These will be used by `{oysteR}` to authenticate with OSS Index, bumping up the amount of requests you can make.
+
+### Custom OSS Index URL
+
+If you need to use a custom OSS Index server (e.g., for enterprise deployments), you can override the default URL in three ways:
+
+1. **Pass as a parameter** (highest priority):
+```{r, eval = FALSE}
+audit_installed_r_pkgs(ossindex_url = "https://custom.ossindex.org/api/v3/component-report")
+```
+
+2. **Set environment variable** in your `.Renviron` file:
+```
+OSSINDEX_URL=https://custom.ossindex.org/api/v3/component-report
+```
+
+3. **Add to config file** at `~/.ossindex/.oss-index-config`:
+```
+ossi:
+   Username: XXXX
+   Token: YYY
+   Url: https://custom.ossindex.org/api/v3/component-report
+```
+
+The parameter takes precedence over the environment variable, which takes precedence over the config file.
 
 ## Contributing
 
