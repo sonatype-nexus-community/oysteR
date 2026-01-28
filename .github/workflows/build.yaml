@@ -1,14 +1,13 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - '**'
-      - '!gh-pages'
-  pull_request:
-    branches:
-      - '**'
-      - '!gh-pages'
+    pull_request:
+        paths-ignore:
+            - 'README.md'
+    push:
+        branches:
+            - main
+            - '!gh-pages'
 
 env:
     LC_APPLICATION_ID: oysteR
@@ -30,7 +29,7 @@ jobs:
 
       - name: Configure CRAN repos
         run: |
-          echo 'options(repos = c(CRAN = "https://cloud.r-project.org")
+          echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' > ~/.Rprofile
 
       - name: Check package
         run: R CMD check *tar.gz --as-cran
