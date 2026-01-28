@@ -33,6 +33,8 @@ jobs:
       - name: Configure CRAN repos
         run: |
           echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' > ~/.Rprofile
+          echo 'OSSINDEX_USER=${{ secrets.OSSI_USERNAME }}' >> ~/.Renviron
+          echo 'OSSINDEX_TOKEN=${{ secrets.OSSI_TOKEN }}' >> ~/.Renviron
 
       - name: Check package
         run: R CMD check *tar.gz --as-cran
