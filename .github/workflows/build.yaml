@@ -28,6 +28,10 @@ jobs:
       - name: Build package
         run: R CMD build .
 
+      - name: Configure CRAN repos
+        run: |
+          echo 'options(repos = c(CRAN = "https://cloud.r-project.org")
+
       - name: Check package
         run: R CMD check *tar.gz --as-cran
 
