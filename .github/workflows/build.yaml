@@ -21,6 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Install system dependencies
+        run: apt-get update && apt-get install -y texlive-fonts-recommended
+
       - name: Install package dependencies
         run: R -e "devtools::install_deps(dep = TRUE)"
 

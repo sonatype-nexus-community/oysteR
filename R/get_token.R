@@ -4,10 +4,12 @@ get_token = function(token, verbose = TRUE) {
     token = Sys.getenv("OSSINDEX_TOKEN", NA)
     if (!is.na(user) && !is.na(token)) {
       token = list(user = user, token = token)
+    } else if (file.exists("~/.ossindex/.oss-index-config")) {
+      config = yaml::read_yaml("~/.ossindex/.oss-index-config")
+      token = list(user = config$ossi$Username, token = config$ossi$Token)
+    } else {
+      token = NULL
     }
-  } else if (is.null(token) && file.exists("~/.ossindex/.oss-index-config")) {
-    config = yaml::read_yaml("~/.ossindex/.oss-index-config")
-    token = list(user = config$ossi$Username, token = config$ossi$Token)
   }
 
   if (isTRUE(verbose)) {
