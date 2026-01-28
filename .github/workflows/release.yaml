@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  release:
+    types: [created, published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/verse:4
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install package dependencies
+        run: R -e "devtools::install_deps(dep = TRUE)"
+
+      - name: Build package
+        run: R CMD build .
+
+      - name: Check package
+        run: R CMD check *tar.gz --as-cran
+
+      - name: Move R built package
+        run: mkdir -p built && mv oysteR_*.tar.gz built
+
+      - name: Upload check results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-results
+          path: oysteR.Rcheck/
+
+      - name: Upload built package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-package
+          path: built/
+
+      - name: Upload package to release
+        uses: softprops/action-gh-release@v2
+        if: success()
+        with:
+          files: built/oysteR_*.tar.gz
