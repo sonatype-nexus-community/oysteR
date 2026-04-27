@@ -67,15 +67,14 @@ add {oysteR} under Suggests in your DESCRIPTION file.
 Heavy use against OSS Index will likely run you into rate limiting
 (yikes!), but you can:
 
--   Register for an account on [OSS
-    Index](https://ossindex.sonatype.org/)
--   Retrieve your API token after registering (on the User Settings
-    page)
+-   Register for a free account on [Sonatype
+    Guide](https://guide.sonatype.com) and generate a Personal Access
+    Token at
+    [guide.sonatype.com/settings/tokens](https://guide.sonatype.com/settings/tokens)
 
-Set the following environment variables in your `.Renviron` file:
+Set the following environment variable in your `.Renviron` file:
 
--   `OSSINDEX_USER` (this is set to your email address)
--   `OSSINDEX_TOKEN` (this is set to your API token)
+-   `OSSINDEX_TOKEN` (your Sonatype Guide Personal Access Token)
 
 Or create a config file at `~/.ossindex/.oss-index-config` and add
 
