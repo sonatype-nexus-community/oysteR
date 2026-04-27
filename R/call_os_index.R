@@ -20,8 +20,9 @@ check_status_code = function(r) {
   status_code = httr::status_code(r)
   if (status_code == 401) {
     stop(
-      "Invalid credentials for OSS Index.
-         Please check your username and API token and try again.",
+      "Invalid credentials.
+         Please check your OSSINDEX_TOKEN (Guide PAT) or
+         OSSINDEX_USER/OSSINDEX_TOKEN (legacy OSS Index credentials) and try again.",
       call. = FALSE
     ) # nocov
   } else if (status_code == 429) {
@@ -107,9 +108,15 @@ call_oss_index = function(purls, verbose, token) {
   }
 
   max_size = 128
-  os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
-  token = get_token(token, verbose)
-  authenticate = httr::authenticate(token$user, token$token, type = "basic")
+  token    = get_token(token, verbose)
+
+  if (!is.null(token) && token$type == "bearer") {
+    os_index_url = "https://api.guide.sonatype.com/api/v3/component-report"
+    authenticate = httr::add_headers(Authorization = paste("Bearer", token$token))
+  } else {
+    os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
+    authenticate = httr::authenticate(token$user, token$token, type = "basic")
+  }
   user_agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
