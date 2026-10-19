@@ -1,13 +1,9 @@
 get_token = function(token, verbose = TRUE) {
   if (is.null(token)) {
-    user = Sys.getenv("OSSINDEX_USER", NA)
-    token = Sys.getenv("OSSINDEX_TOKEN", NA)
-    if (!is.na(user) && !is.na(token)) {
-      token = list(user = user, token = token)
-    }
-  } else if (is.null(token) && file.exists("~/.ossindex/.oss-index-config")) {
-    config = yaml::read_yaml("~/.ossindex/.oss-index-config")
-    token = list(user = config$ossi$Username, token = config$ossi$Token)
+    token = get_env_token()
+  }
+  if (is.null(token)) {
+    token = get_config_token()
   }
 
   if (isTRUE(verbose)) {
@@ -18,4 +14,25 @@ get_token = function(token, verbose = TRUE) {
     }
   }
   token
+}
+
+get_env_token = function() {
+  make_token(Sys.getenv("OSSINDEX_USER"), Sys.getenv("OSSINDEX_TOKEN"))
+}
+
+get_config_token = function(path = "~/.ossindex/.oss-index-config") {
+  if (!file.exists(path)) {
+    return(NULL)
+  }
+  config = yaml::read_yaml(path)
+  make_token(config$ossi$Username, config$ossi$Token)
+}
+
+# Returns NULL unless both credentials are non-empty strings
+make_token = function(user, token) {
+  is_valid = function(x) is.character(x) && length(x) == 1L && !is.na(x) && nzchar(x)
+  if (!is_valid(user) || !is_valid(token)) {
+    return(NULL)
+  }
+  list(user = user, token = token)
 }

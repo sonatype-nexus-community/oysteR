@@ -109,7 +109,11 @@ call_oss_index = function(purls, verbose, token) {
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
   token = get_token(token, verbose)
-  authenticate = httr::authenticate(token$user, token$token, type = "basic")
+  authenticate = if (!is.null(token)) {
+    httr::authenticate(token$user, token$token, type = "basic")
+  } else {
+    NULL
+  }
   user_agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()
