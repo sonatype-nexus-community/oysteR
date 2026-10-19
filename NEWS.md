@@ -2,6 +2,7 @@
   * bug: Fall back to `~/.ossindex/.oss-index-config` when the token environment variables are unset
   * bug: Use anonymous access when no tokens are found, instead of erroring
   * bug: Ignore empty or incomplete credentials
+  * bug: `audit_conda()` no longer errors when reading pip dependencies
 
 # oysteR 0.1.4 _2025-10-08_
   * bug: Incorrectly states how many packages were found in the database (see #62)
