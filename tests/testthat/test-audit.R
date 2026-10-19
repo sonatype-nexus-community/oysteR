@@ -1,5 +1,6 @@
 test_that("Test audit_deps", {
   skip_on_cran()
+  skip_if_no_token()
 
   # Test edge cases
   deps = audit(pkg = character(0), version = character(0), type = "cran")

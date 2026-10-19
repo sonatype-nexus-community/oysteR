@@ -1,5 +1,6 @@
 test_that("Test audit_description", {
   skip_on_cran()
+  skip_if_no_token()
 
   repos = getOption("repos")
   on.exit(options(repos = repos))
