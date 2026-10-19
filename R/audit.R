@@ -24,12 +24,13 @@
 #' @param type The package management environment. For R packages, set equal to "cran".
 #' This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.
 #' @param token If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
-#' aren't available, try `"~/.ossindex/.oss-index-config"`
+#' aren't available, try `"~/.ossindex/.oss-index-config"`. OSS Index requires credentials,
+#' so an error is raised if none are found.
 #' @param verbose Default \code{TRUE}.
 #'
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' pkg = c("abind", "acepack")
 #' version = c("1.4-5", "1.4.1")
 #' audit(pkg, version, type = "cran")

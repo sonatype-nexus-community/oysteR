@@ -1,5 +1,6 @@
 test_that("Test cache", {
   skip_on_cran()
+  skip_if_no_token()
   ## Test remove cache
   if (as.numeric(R.version$major) > 3) {
     cache_file = get_cache_file()

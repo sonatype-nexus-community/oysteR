@@ -1,5 +1,6 @@
 test_that("Test environment.yml file", {
   skip_on_cran()
+  skip_if_no_token()
 
   # Sanity check to make sure the directory exists
   expect_true(file.exists("environment.yml"))

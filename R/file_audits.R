@@ -155,7 +155,8 @@ audit_conda = function(dir = ".", fname = "environment.yml", verbose = TRUE) {
     purrr::map_dfr(~ tibble::tibble(package = .x[1], version = .x[2], type = "conda"))
   # pip dependencies
   pip_deps_raw = purrr::map(env_deps, purrr::pluck, "pip") %>%
-    unlist(purrr::discard(.data, is.null))
+    purrr::discard(is.null) %>%
+    unlist()
 
   # if there are no pip packages create empty tibble
   if (is.null(pip_deps_raw)) {
