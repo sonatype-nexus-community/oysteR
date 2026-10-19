@@ -27,7 +27,7 @@ e.g. CRAN, PyPI, Conda, NPM, Maven, etc.
 see https://ossindex.sonatype.org/ecosystems for full list.
 }
 \examples{
-\donttest{
+\dontrun{
 pkg = c("abind", "acepack")
 version = c("1.4-5", "1.4.1")
 audit(pkg, version, type = "cran")

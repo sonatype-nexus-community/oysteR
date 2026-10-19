@@ -30,7 +30,7 @@
 #'
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' pkg = c("abind", "acepack")
 #' version = c("1.4-5", "1.4.1")
 #' audit(pkg, version, type = "cran")
