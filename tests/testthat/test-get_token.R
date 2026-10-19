@@ -36,3 +36,8 @@ test_that("Config file is read, and incomplete files are ignored", {
   writeLines(c("ossi:", "  Username: ABC"), path)
   expect_null(get_config_token(path))
 })
+
+test_that("A clear error is given when no credentials are found", {
+  local_mocked_bindings(get_token = function(...) NULL)
+  expect_error(call_oss_index("pkg:cran/abind@1.4-5", FALSE, NULL), "requires credentials")
+})

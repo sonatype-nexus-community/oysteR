@@ -1,6 +1,6 @@
 # oysteR 0.1.5 _2026-10-19_
   * bug: Fall back to `~/.ossindex/.oss-index-config` when the token environment variables are unset
-  * bug: Use anonymous access when no tokens are found, instead of erroring
+  * bug: Give a clear error when no OSS Index credentials are found (anonymous access is no longer available)
   * bug: Ignore empty or incomplete credentials
   * bug: `audit_conda()` no longer errors when reading pip dependencies
 

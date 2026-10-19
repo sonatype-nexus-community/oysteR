@@ -109,11 +109,15 @@ call_oss_index = function(purls, verbose, token) {
   max_size = 128
   os_index_url = "https://ossindex.sonatype.org/api/v3/component-report"
   token = get_token(token, verbose)
-  authenticate = if (!is.null(token)) {
-    httr::authenticate(token$user, token$token, type = "basic")
-  } else {
-    NULL
+  if (is.null(token)) {
+    stop(
+      "OSS Index requires credentials.
+         Set OSSINDEX_USER and OSSINDEX_TOKEN, add them to ~/.ossindex/.oss-index-config,
+         or pass them via the `token` argument.",
+      call. = FALSE
+    )
   }
+  authenticate = httr::authenticate(token$user, token$token, type = "basic")
   user_agent = get_user_agent()
   no_of_batches = ceiling(length(purls) / max_size)
   results = list()

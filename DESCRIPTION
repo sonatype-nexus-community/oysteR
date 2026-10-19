@@ -56,7 +56,7 @@ Suggests:
     httptest,
     knitr,
     rmarkdown,
-    testthat (>= 2.1.0)
+    testthat (>= 3.1.7)
 VignetteBuilder:
     knitr
 Encoding: UTF-8

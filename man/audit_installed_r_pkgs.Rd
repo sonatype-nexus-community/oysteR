@@ -10,7 +10,8 @@ audit_installed_r_pkgs(verbose = TRUE, token = NULL)
 \item{verbose}{Default \code{TRUE}.}
 
 \item{token}{If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
-aren't available, try \code{"~/.ossindex/.oss-index-config"}}
+aren't available, try \code{"~/.ossindex/.oss-index-config"}. OSS Index requires credentials,
+so an error is raised if none are found.}
 }
 \value{
 A tibble/data.frame.

@@ -18,7 +18,8 @@ This defaults to \code{"cran"}. See https://ossindex.sonatype.org/ecosystems.}
 \item{verbose}{Default \code{TRUE}.}
 
 \item{token}{If NULL, looks at OSSINDEX_USER & OSSINDEX_TOKEN, env variables. If those
-aren't available, try \code{"~/.ossindex/.oss-index-config"}}
+aren't available, try \code{"~/.ossindex/.oss-index-config"}. OSS Index requires credentials,
+so an error is raised if none are found.}
 }
 \description{
 Search the OSS Index for known package vulnerabilities in any of the supported ecosystems—
