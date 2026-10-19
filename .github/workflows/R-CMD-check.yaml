@@ -28,6 +28,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
+      OSSINDEX_USER: ${{ secrets.OSSINDEX_USER }}
+      OSSINDEX_TOKEN: ${{ secrets.OSSINDEX_TOKEN }}
 
     steps:
       - uses: actions/checkout@v6
