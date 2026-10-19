@@ -1,4 +1,5 @@
 [format]
+assignment-style = "equal"
 line-width = 100
 indent-width = 2
 indent-style = "space"
